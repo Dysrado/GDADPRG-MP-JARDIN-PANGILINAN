@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{976bda1f-09a6-4688-a46d-c67a143cef3a}</ProjectGuid>
+    <RootNamespace>HO1</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SFML_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SFML_STATIC;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\SFML-2.5.1\include;C:\rapidjson-1.1.0\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\SFML-2.5.1\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>winmm.lib;opengl32.lib;freetype.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;sfml-audio-s-d.lib	;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\SFML-2.5.1\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\SFML-2.5.1\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-system.lib;sfml-graphics.lib;sfml-audio.lib;sfml-network.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Managers\AudioManager.cpp" />
+    <ClCompile Include="Components\EnemyBehaviour.cpp" />
+    <ClCompile Include="DOTA.cpp" />
+    <ClCompile Include="EmptyGameObject.cpp" />
+    <ClCompile Include="EnemyAirplane.cpp" />
+    <ClCompile Include="Components\EnemySwarmHandler.cpp" />
+    <ClCompile Include="ObjectPooling\ObjectPoolHolder.cpp" />
+    <ClCompile Include="ObjectPooling\APoolable.cpp" />
+    <ClCompile Include="ObjectPooling\GameObjectPool.cpp" />
+    <ClCompile Include="UI\PauseMenu.cpp" />
+    <ClCompile Include="UI\HUD.cpp" />
+    <ClCompile Include="Managers\ApplicationManager.cpp" />
+    <ClCompile Include="Components\UIButtonInputController.cpp" />
+    <ClCompile Include="Components\BGMovement.cpp" />
+    <ClCompile Include="Components\AirplaneSupportMovement.cpp" />
+    <ClCompile Include="Components\AComponent.cpp" />
+    <ClCompile Include="AGameObject.cpp" />
+    <ClCompile Include="AirplanePlayer.cpp" />
+    <ClCompile Include="AirplaneSupport.cpp" />
+    <ClCompile Include="BGObject.cpp" />
+    <ClCompile Include="Components\GenericInputController.cpp" />
+    <ClCompile Include="Components\PlayerInputController.cpp" />
+    <ClCompile Include="Components\PlayerMovement.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Managers\FontManager.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Managers\GameObjectManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Components\Renderer.cpp" />
+    <ClCompile Include="Screens\MainMenuScreen.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="UI\UIText.cpp" />
+    <ClCompile Include="UI\UIButton.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Managers\AudioManager.h" />
+    <ClInclude Include="Components\EnemyBehaviour.h" />
+    <ClInclude Include="DOTA.h" />
+    <ClInclude Include="EmptyGameObject.h" />
+    <ClInclude Include="EnemyAirplane.h" />
+    <ClInclude Include="Components\EnemySwarmHandler.h" />
+    <ClInclude Include="ObjectPooling\ObjectPoolHolder.h" />
+    <ClInclude Include="ObjectPooling\APoolable.h" />
+    <ClInclude Include="ObjectPooling\GameObjectPool.h" />
+    <ClInclude Include="UI\PauseMenu.h" />
+    <ClInclude Include="UI\HUD.h" />
+    <ClInclude Include="Managers\ApplicationManager.h" />
+    <ClInclude Include="Components\UIButtonInputController.h" />
+    <ClInclude Include="UI\ButtonListener.h" />
+    <ClInclude Include="Components\BGMovement.h" />
+    <ClInclude Include="Components\AirplaneSupportMovement.h" />
+    <ClInclude Include="Components\AComponent.h" />
+    <ClInclude Include="AGameObject.h" />
+    <ClInclude Include="AirplanePlayer.h" />
+    <ClInclude Include="AirplaneSupport.h" />
+    <ClInclude Include="BGObject.h" />
+    <ClInclude Include="Components\GenericInputController.h" />
+    <ClInclude Include="Components\PlayerInputController.h" />
+    <ClInclude Include="Components\PlayerMovement.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Managers\FontManager.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Managers\GameObjectManager.h" />
+    <ClInclude Include="Components\Renderer.h" />
+    <ClInclude Include="Screens\MainMenuScreen.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="UI\UIText.h" />
+    <ClInclude Include="UI\UIButton.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Media\Textures\bed0000.png" />
+    <Image Include="Media\Textures\bed0001.png" />
+    <Image Include="Media\Textures\bed0002.png" />
+    <Image Include="Media\Textures\bed0003.png" />
+    <Image Include="Media\Textures\bed0004.png" />
+    <Image Include="Media\Textures\bed0005.png" />
+    <Image Include="Media\Textures\bed0006.png" />
+    <Image Include="Media\Textures\bed0007.png" />
+    <Image Include="Media\Textures\bench0000.png" />
+    <Image Include="Media\Textures\bench0001.png" />
+    <Image Include="Media\Textures\bench0002.png" />
+    <Image Include="Media\Textures\bench0003.png" />
+    <Image Include="Media\Textures\bench0004.png" />
+    <Image Include="Media\Textures\bench0005.png" />
+    <Image Include="Media\Textures\bench0006.png" />
+    <Image Include="Media\Textures\bench0007.png" />
+    <Image Include="Media\Textures\boxGift_0000.png" />
+    <Image Include="Media\Textures\boxGift_0001.png" />
+    <Image Include="Media\Textures\boxGift_0002.png" />
+    <Image Include="Media\Textures\boxGift_0003.png" />
+    <Image Include="Media\Textures\boxGift_0004.png" />
+    <Image Include="Media\Textures\boxGift_0005.png" />
+    <Image Include="Media\Textures\boxGift_0006.png" />
+    <Image Include="Media\Textures\boxGift_0007.png" />
+    <Image Include="Media\Textures\coin0000.png" />
+    <Image Include="Media\Textures\coin0001.png" />
+    <Image Include="Media\Textures\coin0002.png" />
+    <Image Include="Media\Textures\coin0003.png" />
+    <Image Include="Media\Textures\coin0004.png" />
+    <Image Include="Media\Textures\coin0005.png" />
+    <Image Include="Media\Textures\coin0006.png" />
+    <Image Include="Media\Textures\coin0007.png" />
+    <Image Include="Media\Textures\Desert.png" />
+    <Image Include="Media\Textures\Eagle.png" />
+    <Image Include="Media\Textures\Raptor.png" />
+    <Image Include="Media\Textures\spike.png" />
+    <Image Include="Media\Textures\UI\bar_1.png" />
+    <Image Include="Media\Textures\UI\b_4.png" />
+    <Image Include="Media\Textures\UI\b_5.png" />
+    <Image Include="Media\Textures\UI\f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Media\Fonts\Sansation.ttf" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,5 @@
+﻿  Game.cpp
+E:\School Files\6th Term\GDADPRG\MP Base\Source Code\HO1\Game.cpp(50,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  TextureManager.cpp
+  Generating Code...
+  HO1.vcxproj -> E:\School Files\6th Term\GDADPRG\MP Base\Source Code\x64\Debug\HO1.exe

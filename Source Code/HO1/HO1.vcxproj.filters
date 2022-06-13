@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Managers\GameObjectManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AGameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BGObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AirplanePlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AirplaneSupport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\AComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\AirplaneSupportMovement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\PlayerMovement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\PlayerInputController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\GenericInputController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\BGMovement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Screens\MainMenuScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Managers\FontManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\UIButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\UIText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\UIButtonInputController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Managers\ApplicationManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\HUD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\PauseMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\EnemyBehaviour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyAirplane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectPooling\APoolable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectPooling\GameObjectPool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectPooling\ObjectPoolHolder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\EnemySwarmHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EmptyGameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOTA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Managers\AudioManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Managers\GameObjectManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AGameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BGObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AirplanePlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AirplaneSupport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\AComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\AirplaneSupportMovement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\PlayerMovement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\PlayerInputController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\GenericInputController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Renderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\BGMovement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\MainMenuScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Managers\FontManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\UIButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\UIText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\ButtonListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\UIButtonInputController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Managers\ApplicationManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\HUD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\PauseMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\EnemyBehaviour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyAirplane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectPooling\APoolable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectPooling\GameObjectPool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectPooling\ObjectPoolHolder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\EnemySwarmHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EmptyGameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOTA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Managers\AudioManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Media\Textures\spike.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\bed0000.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\bed0001.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\bed0002.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\bed0003.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\bed0004.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\bed0005.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\bed0006.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\bed0007.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\bench0000.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\bench0001.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\bench0002.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\bench0003.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\bench0004.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\bench0005.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\bench0006.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\bench0007.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\boxGift_0000.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\boxGift_0001.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\boxGift_0002.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\boxGift_0003.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\boxGift_0004.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\boxGift_0005.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\boxGift_0006.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\boxGift_0007.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\coin0000.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\coin0001.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\coin0002.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\coin0003.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\coin0004.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\coin0005.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\coin0006.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\coin0007.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\Desert.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\Eagle.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\Raptor.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\UI\b_4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\UI\b_5.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\UI\bar_1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Media\Textures\UI\f.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Media\Fonts\Sansation.ttf" />
+  </ItemGroup>
+</Project>
