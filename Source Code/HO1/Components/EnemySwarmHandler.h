@@ -4,7 +4,7 @@
 class EnemySwarmHandler : public AComponent
 {
 public:
-	EnemySwarmHandler(int numEnemies, std::string name, AGameObject* parent);
+	EnemySwarmHandler(int numEnemies, std::string name, AGameObject* parent, int type);
 	~EnemySwarmHandler();
 	void perform();
 private:

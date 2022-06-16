@@ -4,15 +4,30 @@
 #include "../EnemyDino.h"
 #include "../EnemyBird.h"
 
-EnemySwarmHandler::EnemySwarmHandler(int numEnemies, std::string name, AGameObject* parent) : AComponent(name, Script)
+EnemySwarmHandler::EnemySwarmHandler(int numEnemies, std::string name, AGameObject* parent, int type) : AComponent(name, Script)
 {
-	enemyPool = new GameObjectPool(
-		ObjectPoolHolder::ENEMY_POOL_TAG, 
-		//new EnemyAirplane("cactus"), 
-		//new EnemyDino("EnemyDino"),
-		new EnemyBird("EnemyBird"),
-		numEnemies, 
-		parent);
+	if (type == 3) {
+		enemyPool = new GameObjectPool(
+			ObjectPoolHolder::ENEMY_POOL_TAG,
+			new EnemyBird("EnemyBird"),
+			numEnemies,
+			parent);
+	}
+	else if(type == 2){
+		enemyPool = new GameObjectPool(
+			ObjectPoolHolder::ENEMY_POOL_TAG,
+			new EnemyDino("EnemyDino"),
+			numEnemies,
+			parent);
+	}
+	else {
+		enemyPool = new GameObjectPool(
+			ObjectPoolHolder::ENEMY_POOL_TAG,
+			new EnemyAirplane("cactus"), 
+			numEnemies,
+			parent);
+	}
+	
 	enemyPool->initialize();
 	ObjectPoolHolder::getInstance()->registerObjectPool(enemyPool);
 	enemyPool->requestPoolableBatch(5);

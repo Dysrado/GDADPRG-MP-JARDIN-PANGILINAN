@@ -1,14 +1,3 @@
-﻿  EnemyDino.cpp
-E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyDino.cpp(61,50): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyDino.cpp(61,34): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyDino.cpp(66,33): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyDino.cpp(92,53): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+﻿  Game.cpp
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Game.cpp(51,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   HO1.vcxproj -> E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\x64\Debug\HO1.exe
