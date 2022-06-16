@@ -8,8 +8,9 @@ public:
 	~EnemySwarmHandler();
 	void perform();
 private:
+	void randomizeInterval();
 	GameObjectPool* enemyPool;
-	const float SPAWN_INTERVAL = 0.01f;
+	float SPAWN_INTERVAL = 1.0f;
 	float ticks = 0.0f;
 };
 

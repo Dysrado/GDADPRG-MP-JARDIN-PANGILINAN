@@ -17,7 +17,7 @@ void PlayerMovement::perform() {
 		std::cout << "playerTransformable not found" << std::endl;
 	}
 
-	sf::Vector2f offset(0.f, 0.f);
+	/*sf::Vector2f offset(0.f, 0.f);
 	if (inputController->isUp()) {
 		offset.y -= this->SPEED_MULTIPLIER;
 		playerTransform->move(offset * deltaTime.asSeconds());
@@ -33,6 +33,6 @@ void PlayerMovement::perform() {
 	else if (inputController->isRight()) {
 		offset.x += this->SPEED_MULTIPLIER;
 		playerTransform->move(offset * deltaTime.asSeconds());
-	}
-	//AGameObject::update(deltaTime);
+	}*/
+
 }

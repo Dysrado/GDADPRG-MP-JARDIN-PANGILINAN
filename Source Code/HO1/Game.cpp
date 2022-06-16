@@ -9,6 +9,7 @@
 #include "Managers/ApplicationManager.h"
 #include "UI/HUD.h"
 #include "EnemyAirplane.h"
+#include "EnemyDino.h"
 #include "EmptyGameObject.h"
 #include "Components/EnemySwarmHandler.h"
 
@@ -49,7 +50,7 @@ Game::Game() : myWindow(sf::VideoMode(Game::WINDOW_WIDTH, Game::WINDOW_HEIGHT), 
 
 	srand(time(NULL)); // controls randomness of the enemy spawns
 	EmptyGameObject* enemiesManager = new EmptyGameObject("EnemiesManager");
-	EnemySwarmHandler* swarmHandler = new EnemySwarmHandler(200, "SwarmHandler", enemiesManager);
+	EnemySwarmHandler* swarmHandler = new EnemySwarmHandler(5, "SwarmHandler", enemiesManager);
 	enemiesManager->attachComponent(swarmHandler);
 	GameObjectManager::getInstance()->addObject(enemiesManager);
 
@@ -90,10 +91,9 @@ void Game::ProcessEvents()
 
 		default:
 			if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Space) {
-				//GameObjectManager::getInstance()->addObject(new EnemyAirplane("EnemyAirplane"));
+				GameObjectManager::getInstance()->addObject(new EnemyDino("EnemyDino"));
 				//this->planeObject->setEnabled(!this->planeObject->isEnabled());
 				sound.play();
-				
 			}
 			
 			GameObjectManager::getInstance()->processInput(event);

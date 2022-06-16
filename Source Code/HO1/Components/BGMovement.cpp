@@ -1,4 +1,5 @@
 #include "BGMovement.h"
+#include "PlayerInputController.h"
 
 BGMovement::BGMovement(std::string name) : AComponent(name, Script)
 {
@@ -7,6 +8,7 @@ BGMovement::BGMovement(std::string name) : AComponent(name, Script)
 void BGMovement::perform()
 {
 	BGObject* bgObject = (BGObject*)this->getOwner();
+	PlayerInputController* inputController = (PlayerInputController*)bgObject->getComponentsOfType(ComponentType::Input)[0];
 	sf::Transformable* bgObjectTransform = bgObject->getTransformable();
 
 	if (bgObjectTransform == NULL) {
@@ -15,12 +17,18 @@ void BGMovement::perform()
 	else {
 		sf::Vector2f offset(0.f, 0.f);
 
-		offset.y += SPEED_MULTIPLIER;
-		bgObjectTransform->move(offset * deltaTime.asSeconds());
-
-		sf::Vector2f localPos = bgObjectTransform->getPosition();
-		if (localPos.y >= Game::WINDOW_HEIGHT * 7) {
-			bgObjectTransform->setPosition(0, Game::WINDOW_HEIGHT);
+		if (inputController->isLeft()) {
+			offset.x += this->SPEED_MULTIPLIER;
+			bgObjectTransform->move(offset * deltaTime.asSeconds());
 		}
+		else if (inputController->isRight()) {
+			offset.x -= this->SPEED_MULTIPLIER;
+			bgObjectTransform->move(offset * deltaTime.asSeconds());
+		}
+
+		/*sf::Vector2f localPos = bgObjectTransform->getPosition();
+		if (localPos.x >= Game::WINDOW_WIDTH) {
+			bgObjectTransform->setPosition(0, 0);
+		}*/
 	}
 }

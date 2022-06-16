@@ -25,8 +25,10 @@ void TextureManager::loadAll() {
 	loadTexture("bar", "Media/Textures/UI/bar_1.png");
 	loadTexture("avenger", "Media/Textures/Avenger.png");
 	loadTexture("dota2_sheet", "Media/Textures/Dota2 Atlas.png");
+	loadTexture("dino_sheet", "Media/Textures/Spritesheet/dino_sheet.png");
+	loadTexture("ground", "Media/Textures/Dino/ground.png");
 	sf::Texture* bgTex;
-	bgTex = GetTexture("desert_bg");
+	bgTex = GetTexture("ground");
 	bgTex->setRepeated(true);
 	
 }

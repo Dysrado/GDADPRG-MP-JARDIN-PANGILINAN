@@ -6,11 +6,12 @@ EnemySwarmHandler::EnemySwarmHandler(int numEnemies, std::string name, AGameObje
 {
 	enemyPool = new GameObjectPool(
 		ObjectPoolHolder::ENEMY_POOL_TAG, 
-		new EnemyAirplane("enemy"), 
+		new EnemyAirplane("cactus"), 
 		numEnemies, 
 		parent);
 	enemyPool->initialize();
 	ObjectPoolHolder::getInstance()->registerObjectPool(enemyPool);
+	enemyPool->requestPoolableBatch(5);
 }
 
 EnemySwarmHandler::~EnemySwarmHandler()
@@ -25,6 +26,13 @@ void EnemySwarmHandler::perform()
 
 	if (this->ticks > SPAWN_INTERVAL) {
 		this->ticks = 0.0f;
+		randomizeInterval();
 		enemyPool->requestPoolable();
 	}
+}
+
+void EnemySwarmHandler::randomizeInterval()
+{
+	float random = 1 + rand() % 2;
+	SPAWN_INTERVAL = random;
 }

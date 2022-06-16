@@ -1,5 +1,5 @@
 #include "GameObjectPool.h"
-#include "../GameObjectManager.h"
+#include "../Managers/GameObjectManager.h"
 #include <iostream>
 
 GameObjectPool::GameObjectPool(std::string tag, APoolable* poolableCopy, int poolableSize, AGameObject* parent)

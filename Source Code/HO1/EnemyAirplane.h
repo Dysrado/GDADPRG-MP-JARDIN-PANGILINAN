@@ -15,7 +15,8 @@ public:
 
 private:
 	sf::Sprite* sprite = new sf::Sprite();
-	const int SPAWN_RANGE = 300;
+	//const int SPAWN_RANGE = 300;
+	const int LOCATION = 225;
 	int counter = 0;
 
 };
