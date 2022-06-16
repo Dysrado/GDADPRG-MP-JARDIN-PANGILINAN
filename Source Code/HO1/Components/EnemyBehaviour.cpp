@@ -12,22 +12,16 @@ void EnemyBehaviour::perform() {
 	PlayerInputController* inputController = (PlayerInputController*)this->getOwner()->getComponentsOfType(ComponentType::Input)[0];
 
 	// Force Moves it to the left
-	/*if (ticks < 5) {
+	if (isStatic == 0) {
 		transformable->move(-this->deltaTime.asSeconds() * SPEED_MULTIPLIER * 1.5f, 0);
-			if (inputController->isLeft()) {
-				ticks = 5;
-			}
-			if(!inputController->isLeft() && !inputController->isRight()){
-				ticks = 5;
-			}
-	}*/
+	}
 
-		if (inputController->isLeft()) {
-			transformable->move(this->deltaTime.asSeconds() * SPEED_MULTIPLIER * 1.5f, 0);
-		}
-		else if (inputController->isRight()) {
-			transformable->move(-this->deltaTime.asSeconds() * SPEED_MULTIPLIER * 1.5f, 0);
-		}
+	if (inputController->isLeft()) {
+		transformable->move(this->deltaTime.asSeconds() * SPEED_MULTIPLIER * 1.5f, 0);
+	}
+	else if (inputController->isRight()) {
+		transformable->move(-this->deltaTime.asSeconds() * SPEED_MULTIPLIER * 1.5f, 0);
+	}
 	
 	/*if (this->ticks > this->forwardDuration && this->movementType != Side) {
 		int counter = (this->movementType + 1) % EnemMovementType::Side + 1;
@@ -55,6 +49,12 @@ void EnemyBehaviour::perform() {
 void EnemyBehaviour::configure(float delay) {
 	/*this->delay = delay;*/
 	//this->ticks = 0.0f;
+	if (delay == 1) {
+		isStatic = true;
+	}
+	else {
+		isStatic = false;
+	}
 }
 
 void EnemyBehaviour::reset() {

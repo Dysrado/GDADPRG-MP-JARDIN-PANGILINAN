@@ -41,16 +41,25 @@ void EnemyDino::initialize() {
 		rapidjson::Value& icon = doc["frames"];
 		frame.left = icon["dino-down.png"]["frame"]["x"].GetInt();
 		frame.top = icon["dino-down.png"]["frame"]["y"].GetInt();
-		frame.width = icon["dino-down.png"]["frame"]["w"].GetInt();
+		frame.width = icon["dino-down.png"]["frame"]["w"].GetInt()/2;
 		frame.height = icon["dino-down.png"]["frame"]["h"].GetInt();
-		textureSize.x = icon["dino-down.png"]["sourceSize"]["w"].GetInt();
+		textureSize.x = icon["dino-down.png"]["sourceSize"]["w"].GetInt()/2;
 		textureSize.y = icon["dino-down.png"]["sourceSize"]["h"].GetInt();
+
+		frames.push_back(frame);
+		
+		frame.left = icon["dino-down.png"]["frame"]["x"].GetInt() + 118;
+		frame.top = icon["dino-down.png"]["frame"]["y"].GetInt();
+		frame.width = icon["dino-down.png"]["frame"]["w"].GetInt()/2;
+		frame.height = icon["dino-down.png"]["frame"]["h"].GetInt();
+
+		frames.push_back(frame);
 	}
 	this->sprite = new sf::Sprite();
 	sprite->setTexture(*TextureManager::getInstance()->GetTexture("dino_sheet"));
 	sprite->setTextureRect(frame);
 	sprite->setOrigin(textureSize.x / 2, textureSize.y);
-	//sprite->setScale(-1, 0); // flips the image
+	sprite->setScale(-1, 1); // flips the image
 	this->setPosition(Game::WINDOW_WIDTH / 2, 0);
 
 	//this->getTransformable()->move(rand() % SPAWN_RANGE - rand() % SPAWN_RANGE, 0);
@@ -66,7 +75,7 @@ void EnemyDino::initialize() {
 
 	EnemyBehaviour* behaviour = new EnemyBehaviour("EnemyDinoBehaviour");
 	this->attachComponent(behaviour);
-	behaviour->configure(1.f);
+	behaviour->configure(0.f);
 
 }
 
@@ -87,4 +96,16 @@ APoolable* EnemyDino::clone()
 {
 	APoolable* copyObj = new EnemyDino(this->name);
 	return copyObj;
+}
+
+void EnemyDino::update(sf::Time deltaTime) {
+	if (this->animClock.getElapsedTime().asSeconds() >= 0.2f) {
+		this->frameCtr += 1;
+		if (this->frameCtr >= 2) {
+			this->frameCtr = 0;
+		}
+		this->animClock.restart();
+		this->sprite->setTextureRect(this->frames[frameCtr]);
+	}
+	AGameObject::update(deltaTime);
 }

@@ -14,6 +14,7 @@ public:
 
 private:
 	const float SPEED_MULTIPLIER = 150.f;
+	bool isStatic = false;
 	//float ticks = 0.f;
 	//EnemMovementType movementType = Forward;
 	/*float delay = 0.f;

@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EnemyBird.cpp" />
     <ClCompile Include="EnemyDino.cpp" />
     <ClCompile Include="Managers\AudioManager.cpp" />
     <ClCompile Include="Components\EnemyBehaviour.cpp" />
@@ -187,6 +188,7 @@
     <ClCompile Include="UI\UIButton.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EnemyBird.h" />
     <ClInclude Include="EnemyDino.h" />
     <ClInclude Include="Managers\AudioManager.h" />
     <ClInclude Include="Components\EnemyBehaviour.h" />
