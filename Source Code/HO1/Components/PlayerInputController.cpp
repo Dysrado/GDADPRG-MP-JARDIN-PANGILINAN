@@ -11,7 +11,6 @@ PlayerInputController::~PlayerInputController() {
 
 void PlayerInputController::perform() {
 	bool keyFlag = false;
-	elapse = clock1.getElapsedTime();
 	if (event.type == sf::Event::KeyPressed) {
 		keyFlag = true;
 	}
@@ -26,7 +25,6 @@ void PlayerInputController::perform() {
 		break;*/
 
 	case sf::Keyboard::Space: 
-		std::cout << "ground is at" << floor << std::endl;
 		this->moveUp = keyFlag;
 
 			

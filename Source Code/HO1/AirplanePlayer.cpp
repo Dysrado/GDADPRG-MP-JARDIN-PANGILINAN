@@ -24,7 +24,7 @@ void AirplanePlayer::initialize(){
 	render->assignDrawable(sprite);
 	this->attachComponent(render);
 
-	PlayerInputController* inputController = new PlayerInputController("MyPlayerInput",this->transformable.getPosition().x);
+	PlayerInputController* inputController = new PlayerInputController("MyPlayerInput",this->transformable.getPosition().y);
 	this->attachComponent(inputController);
 
 	PlayerMovement* movement = new PlayerMovement("myMovement");

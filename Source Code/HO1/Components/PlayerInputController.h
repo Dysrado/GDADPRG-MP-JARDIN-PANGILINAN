@@ -22,7 +22,6 @@ private:
     bool moveLeft = false;
     bool moveRight = false;
     float floor;
-    sf::Clock clock1;
-    sf::Time elapse;
+
 };
 

@@ -9,6 +9,8 @@ public:
 
 private:
     const float SPEED_MULTIPLIER = 300.f;
-    int ticks;
+    sf::Clock clock;
+    sf::Time elapsed;
+    bool jump = false;
 };
 

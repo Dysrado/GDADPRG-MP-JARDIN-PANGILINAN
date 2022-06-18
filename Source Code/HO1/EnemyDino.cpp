@@ -9,6 +9,7 @@
 #include "rapidjson/stringbuffer.h"
 #include "rapidjson/writer.h"
 #include <cstdlib>
+#include "Components/EnemyInputController.h"
 
 EnemyDino::EnemyDino(std::string name) : APoolable(name) {
 
@@ -70,8 +71,8 @@ void EnemyDino::initialize() {
 	renderer->assignDrawable(sprite);
 	this->attachComponent(renderer);
 
-	/*PlayerInputController* inputController = new PlayerInputController("EnemyDinoInput");
-	this->attachComponent(inputController);*/
+	EnemyInputController* inputController = new EnemyInputController("EnemyDinoInput");
+	this->attachComponent(inputController);
 
 	EnemyBehaviour* behaviour = new EnemyBehaviour("EnemyDinoBehaviour");
 	this->attachComponent(behaviour);
