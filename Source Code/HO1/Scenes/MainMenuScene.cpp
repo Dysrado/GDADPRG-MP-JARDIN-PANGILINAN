@@ -1,15 +1,18 @@
 #include "MainMenuScene.h"
-#include "../Screens/MainMenuScreen.cpp"
+#include "../Screens/MainMenuScreen.h"
 
-MainMenuScene::MainMenuScene() : AScene("MainMenuScene") {
-
-}
-
-MainMenuScene::~MainMenuScene() {
+MainMenuScene::MainMenuScene() : AScene("MainMenuScene")
+{
 
 }
 
-void MainMenuScene::onLoadResources() {
+MainMenuScene::~MainMenuScene()
+{
+
+}
+
+void MainMenuScene::onLoadResources()
+{
 
 }
 
@@ -19,10 +22,7 @@ void MainMenuScene::onLoadObjects()
 	this->registerObject(menuScreen);
 }
 
-void MainMenuScene::onUnloadResources()
+void MainMenuScene::OnUnloadResources()
 {
-}
 
-void MainMenuScene::onUnloadObjects()
-{
 }

@@ -10,10 +10,6 @@ PauseMenu::PauseMenu(std::string name) : AGameObject(name), ButtonListener()
 
 PauseMenu::~PauseMenu()
 {
-	delete this->buttonYes;
-	delete this->button_YText;
-	delete this->buttonNo;
-	delete this->button_NText;
 	AGameObject::~AGameObject();
 }
 

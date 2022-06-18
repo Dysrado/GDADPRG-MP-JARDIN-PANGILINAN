@@ -1,6 +1,7 @@
 #include "EnemyBehaviour.h"
 #include "../Game.h"
 #include "../EnemyAirplane.h"
+#include "EnemyInputController.h"
 
 EnemyBehaviour::EnemyBehaviour(std::string name) : AComponent(name, Script) {
 	this->reset();
@@ -9,7 +10,7 @@ EnemyBehaviour::EnemyBehaviour(std::string name) : AComponent(name, Script) {
 void EnemyBehaviour::perform() {
 	//ticks += this->deltaTime.asSeconds();
 	sf::Transformable* transformable = this->getOwner()->getTransformable();
-	PlayerInputController* inputController = (PlayerInputController*)this->getOwner()->getComponentsOfType(ComponentType::Input)[0];
+	EnemyInputController* inputController = (EnemyInputController*)this->getOwner()->getComponentsOfType(ComponentType::Input)[0];
 
 	// Force Moves it to the left
 	if (isStatic == 0) {

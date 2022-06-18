@@ -10,10 +10,10 @@ MainMenuScreen::MainMenuScreen(std::string name) : AGameObject(name), ButtonList
 
 MainMenuScreen::~MainMenuScreen()
 {
-	delete this->button1;
+	/*delete this->button1;
 	delete this->button_1text;
 	delete this->button2;
-	delete this->button_2text;
+	delete this->button_2text;*/
 	AGameObject::~AGameObject();
 }
 

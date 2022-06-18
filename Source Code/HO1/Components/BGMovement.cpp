@@ -1,5 +1,6 @@
 #include "BGMovement.h"
 #include "PlayerInputController.h"
+#include "EnemyInputController.h"
 
 BGMovement::BGMovement(std::string name) : AComponent(name, Script)
 {
@@ -8,7 +9,7 @@ BGMovement::BGMovement(std::string name) : AComponent(name, Script)
 void BGMovement::perform()
 {
 	BGObject* bgObject = (BGObject*)this->getOwner();
-	PlayerInputController* inputController = (PlayerInputController*)bgObject->getComponentsOfType(ComponentType::Input)[0];
+	EnemyInputController* inputController = (EnemyInputController*)bgObject->getComponentsOfType(ComponentType::Input)[0];
 	sf::Transformable* bgObjectTransform = bgObject->getTransformable();
 
 	if (bgObjectTransform == NULL) {

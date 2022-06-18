@@ -9,9 +9,9 @@ AGameObject::AGameObject(std::string name)
 
 AGameObject::~AGameObject()
 {
-	if (this->sprite != NULL) {
-		delete this->sprite;
-	}
+	//if (this->sprite != NULL) {
+	//	delete this->sprite;
+	//}
 	for (int i = 0; i < componentList.size(); i++) {
 		delete componentList[i];
 	}
@@ -23,6 +23,10 @@ AGameObject::~AGameObject()
 	}
 	childList.clear();
 	childList.shrink_to_fit();
+
+	if (this->mParent != NULL) {
+		this->mParent = NULL;
+	}
 }
 
 void AGameObject::draw(sf::RenderWindow* targetWindow, sf::RenderStates renderStates)

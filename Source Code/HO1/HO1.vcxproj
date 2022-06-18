@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="EnemyBird.cpp" />
     <ClCompile Include="EnemyDino.cpp" />
+    <ClCompile Include="Components\EnemyInputController.cpp" />
     <ClCompile Include="Managers\AudioManager.cpp" />
     <ClCompile Include="Components\EnemyBehaviour.cpp" />
     <ClCompile Include="EmptyGameObject.cpp" />
@@ -163,6 +164,7 @@
     <ClCompile Include="ObjectPooling\GameObjectPool.cpp" />
     <ClCompile Include="Managers\SceneManager.cpp" />
     <ClCompile Include="Scenes\AScene.cpp" />
+    <ClCompile Include="Scenes\MainMenuScene.cpp" />
     <ClCompile Include="UI\PauseMenu.cpp" />
     <ClCompile Include="UI\HUD.cpp" />
     <ClCompile Include="Managers\ApplicationManager.cpp" />
@@ -191,6 +193,7 @@
   <ItemGroup>
     <ClInclude Include="EnemyBird.h" />
     <ClInclude Include="EnemyDino.h" />
+    <ClInclude Include="Components\EnemyInputController.h" />
     <ClInclude Include="Managers\AudioManager.h" />
     <ClInclude Include="Components\EnemyBehaviour.h" />
     <ClInclude Include="EmptyGameObject.h" />
@@ -201,6 +204,7 @@
     <ClInclude Include="ObjectPooling\GameObjectPool.h" />
     <ClInclude Include="Managers\SceneManager.h" />
     <ClInclude Include="Scenes\AScene.h" />
+    <ClInclude Include="Scenes\MainMenuScene.h" />
     <ClInclude Include="UI\PauseMenu.h" />
     <ClInclude Include="UI\HUD.h" />
     <ClInclude Include="Managers\ApplicationManager.h" />

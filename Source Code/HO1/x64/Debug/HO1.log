@@ -1,1 +1,14 @@
-﻿  HO1.vcxproj -> C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\x64\Debug\HO1.exe
+﻿  EnemyBird.cpp
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyBird.cpp(62,50): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyBird.cpp(62,34): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyBird.cpp(73,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyBird.cpp(107,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  HO1.vcxproj -> E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\x64\Debug\HO1.exe

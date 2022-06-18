@@ -5,12 +5,11 @@ class MainMenuScene : public AScene
 public:
 	MainMenuScene();
 	~MainMenuScene();
+
 	void onLoadResources();
 	void onLoadObjects();
 
-	void onUnloadResources();
-	void onUnloadObjects();
+	void OnUnloadResources();
 
 };
-
 

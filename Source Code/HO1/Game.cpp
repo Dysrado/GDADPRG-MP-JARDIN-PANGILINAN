@@ -100,7 +100,7 @@ void Game::ProcessEvents()
 			if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Space) {
 				//GameObjectManager::getInstance()->addObject(new EnemyDino("EnemyDino"));
 				//this->planeObject->setEnabled(!this->planeObject->isEnabled());
-				sound.play();
+				//sound.play();
 			}
 			
 			GameObjectManager::getInstance()->processInput(event);

@@ -9,6 +9,7 @@
 #include "rapidjson/stringbuffer.h"
 #include "rapidjson/writer.h"
 #include <cstdlib>
+#include "Components/EnemyInputController.h"
 
 EnemyBird::EnemyBird(std::string name) : APoolable(name) {
 
@@ -76,7 +77,7 @@ void EnemyBird::initialize() {
 	renderer->assignDrawable(sprite);
 	this->attachComponent(renderer);
 
-	PlayerInputController* inputController = new PlayerInputController("EnemyBirdInput", this->transformable.getPosition().x);
+	EnemyInputController* inputController = new EnemyInputController("EnemyBirdInput");
 	this->attachComponent(inputController);
 
 	EnemyBehaviour* behaviour = new EnemyBehaviour("EnemyBirdBehaviour");
