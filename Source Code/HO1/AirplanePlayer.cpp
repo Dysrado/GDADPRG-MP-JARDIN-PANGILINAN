@@ -15,16 +15,16 @@ void AirplanePlayer::initialize(){
 	this->setEnabled(true);
 
 	sf::Sprite* sprite = new sf::Sprite();
-	sprite->setTexture(*TextureManager::getInstance()->GetTexture("eagle"));
+	sprite->setTexture(*TextureManager::getInstance()->GetTexture("dino"));
 	sf::Vector2u textureSize = sprite->getTexture()->getSize();
 	sprite->setOrigin(textureSize.x / 2, textureSize.y / 2);
-	this->transformable.setPosition(Game::WINDOW_WIDTH / 2, Game::WINDOW_HEIGHT / 2);
+	this->transformable.setPosition(Game::WINDOW_WIDTH / 2, (Game::WINDOW_HEIGHT / 2) + 150.f);
 
 	Renderer* render = new Renderer("PlayerSprite");
 	render->assignDrawable(sprite);
 	this->attachComponent(render);
 
-	PlayerInputController* inputController = new PlayerInputController("MyPlayerInput");
+	PlayerInputController* inputController = new PlayerInputController("MyPlayerInput",this->transformable.getPosition().x);
 	this->attachComponent(inputController);
 
 	PlayerMovement* movement = new PlayerMovement("myMovement");

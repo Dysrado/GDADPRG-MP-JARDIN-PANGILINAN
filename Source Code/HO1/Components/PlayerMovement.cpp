@@ -17,11 +17,19 @@ void PlayerMovement::perform() {
 		std::cout << "playerTransformable not found" << std::endl;
 	}
 
-	/*sf::Vector2f offset(0.f, 0.f);
+	sf::Vector2f offset(0.f, 0.f);
 	if (inputController->isUp()) {
+	
+
+		//for (int i = 0; i < 5; i++) 
+	
 		offset.y -= this->SPEED_MULTIPLIER;
 		playerTransform->move(offset * deltaTime.asSeconds());
+		
+
+		std::cout << "moving up\n";
 	}
+	/*
 	else if (inputController->isDown()) {
 		offset.y += this->SPEED_MULTIPLIER;
 		playerTransform->move(offset * deltaTime.asSeconds());

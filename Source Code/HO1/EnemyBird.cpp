@@ -76,7 +76,7 @@ void EnemyBird::initialize() {
 	renderer->assignDrawable(sprite);
 	this->attachComponent(renderer);
 
-	PlayerInputController* inputController = new PlayerInputController("EnemyBirdInput");
+	PlayerInputController* inputController = new PlayerInputController("EnemyBirdInput", this->transformable.getPosition().x);
 	this->attachComponent(inputController);
 
 	EnemyBehaviour* behaviour = new EnemyBehaviour("EnemyBirdBehaviour");

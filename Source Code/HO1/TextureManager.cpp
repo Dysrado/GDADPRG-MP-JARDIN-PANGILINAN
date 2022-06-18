@@ -27,6 +27,7 @@ void TextureManager::loadAll() {
 	loadTexture("dota2_sheet", "Media/Textures/Dota2 Atlas.png");
 	loadTexture("dino_sheet", "Media/Textures/Spritesheet/dino_sheet.png");
 	loadTexture("ground", "Media/Textures/Dino/ground.png");
+	loadTexture("dino", "Media/Textures/Dino/dino-idle.png");
 	sf::Texture* bgTex;
 	bgTex = GetTexture("ground");
 	bgTex->setRepeated(true);

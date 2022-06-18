@@ -12,6 +12,9 @@
 #include "EnemyDino.h"
 #include "EmptyGameObject.h"
 #include "Components/EnemySwarmHandler.h"
+#include "Managers/SceneManager.h"
+#include "Scenes/MainMenuScene.h"
+
 
 
 /* Constructures and Deconstructures */
@@ -23,6 +26,8 @@ Game::Game() : myWindow(sf::VideoMode(Game::WINDOW_WIDTH, Game::WINDOW_HEIGHT), 
 	FontManager::getInstance()->loadAll();
 	AudioManager::getInstance()->loadAll();
 	ApplicationManager::getInstance()->initialize(&myWindow);
+	/*SceneManager::getInstance()->registerScene(new MainMenuScene());
+	SceneManager::getInstance()->loadScene(MAIN_MENU_SCENE_NAME);*/
 
 	BGObject* bgObject = new BGObject("BGObject");
 	GameObjectManager::getInstance()->addObject(bgObject);
@@ -30,13 +35,13 @@ Game::Game() : myWindow(sf::VideoMode(Game::WINDOW_WIDTH, Game::WINDOW_HEIGHT), 
 	this->planeObject = new AirplanePlayer("PlaneObject");
 	GameObjectManager::getInstance()->addObject(planeObject);
 
-	AirplaneSupport* support1 = new AirplaneSupport("AirSupport_1");
-	planeObject->attachChild(support1);
-	support1->setPosition(50, 100);
+	//AirplaneSupport* support1 = new AirplaneSupport("AirSupport_1");
+	//planeObject->attachChild(support1);
+	//support1->setPosition(50, 100);
 
-	AirplaneSupport* support2 = new AirplaneSupport("AirSupport_2");
-	planeObject->attachChild(support2);
-	support2->setPosition(-50, 100);
+	//AirplaneSupport* support2 = new AirplaneSupport("AirSupport_2");
+	//planeObject->attachChild(support2);
+	//support2->setPosition(-50, 100);
 
 	HUD* hud = new HUD("HUD");
 	GameObjectManager::getInstance()->addObject(hud);
@@ -76,6 +81,7 @@ void Game::Run()
 			Update(TimePerFrame);
 		}
 		Render();
+		SceneManager::getInstance()->checkLoadScene();
 	}
 }
 

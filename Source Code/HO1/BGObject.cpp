@@ -25,7 +25,7 @@ void BGObject::initialize()
 	render->assignDrawable(sprite);
 	this->attachComponent(render);
 
-	PlayerInputController* inputController = new PlayerInputController("GroundInput");
+	PlayerInputController* inputController = new PlayerInputController("GroundInput",this->transformable.getPosition().x);
 	this->attachComponent(inputController);
 
 	BGMovement* movement = new BGMovement("myBGMovement");

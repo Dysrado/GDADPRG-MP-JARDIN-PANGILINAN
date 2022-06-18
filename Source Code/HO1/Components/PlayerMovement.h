@@ -9,5 +9,6 @@ public:
 
 private:
     const float SPEED_MULTIPLIER = 300.f;
+    int ticks;
 };
 

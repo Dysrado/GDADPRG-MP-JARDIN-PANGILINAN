@@ -76,3 +76,13 @@ void GameObjectManager::deleteObjectByName(std::string name)
 	}
 }
 
+void GameObjectManager::deleteAllObjectsInScene()
+{
+	for (int i = 0; i < gameObjectList.size(); i++) {
+		delete this->gameObjectList[i];
+	}
+	gameObjectMap.clear();
+	gameObjectList.clear();
+	this->gameObjectList.shrink_to_fit();
+}
+

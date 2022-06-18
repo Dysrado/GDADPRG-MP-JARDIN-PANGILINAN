@@ -18,7 +18,7 @@ public:
 	void addObject(AGameObject* gameObject);
 	void deleteObject(AGameObject* gameObject);
 	void deleteObjectByName(std::string name);
-
+	void deleteAllObjectsInScene();
 private:
 	GameObjectManager() {};
 	static GameObjectManager* sharedInstance;

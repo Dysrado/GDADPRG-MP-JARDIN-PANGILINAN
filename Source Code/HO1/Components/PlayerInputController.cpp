@@ -1,7 +1,8 @@
 #include "PlayerInputController.h"
 #include "../Managers/ApplicationManager.h"
-PlayerInputController::PlayerInputController(std::string name) : GenericInputController(name) {
-
+PlayerInputController::PlayerInputController(std::string name, float ground) : GenericInputController(name) {
+	floor = ground;
+	
 }
 
 PlayerInputController::~PlayerInputController() {
@@ -10,21 +11,25 @@ PlayerInputController::~PlayerInputController() {
 
 void PlayerInputController::perform() {
 	bool keyFlag = false;
+	elapse = clock1.getElapsedTime();
 	if (event.type == sf::Event::KeyPressed) {
 		keyFlag = true;
 	}
 	else if (event.type == sf::Event::KeyReleased) {
 		keyFlag = false;
 	}
-
+	
 	switch (event.key.code) {
 	// up movement
-	case sf::Keyboard::W:
+	/*case sf::Keyboard::W:
 		this->moveUp = keyFlag;
-		break;
+		break;*/
 
-	case sf::Keyboard::Space:
+	case sf::Keyboard::Space: 
+		std::cout << "ground is at" << floor << std::endl;
 		this->moveUp = keyFlag;
+
+			
 		break;
 
 	// down
@@ -41,6 +46,8 @@ void PlayerInputController::perform() {
 	case sf::Keyboard::D:
 		this->moveRight = keyFlag;
 		break;
+
+		this->moveUp = false;
 
 
 	/*case sf::Keyboard::P:

@@ -70,8 +70,8 @@ void EnemyDino::initialize() {
 	renderer->assignDrawable(sprite);
 	this->attachComponent(renderer);
 
-	PlayerInputController* inputController = new PlayerInputController("EnemyDinoInput");
-	this->attachComponent(inputController);
+	/*PlayerInputController* inputController = new PlayerInputController("EnemyDinoInput");
+	this->attachComponent(inputController);*/
 
 	EnemyBehaviour* behaviour = new EnemyBehaviour("EnemyDinoBehaviour");
 	this->attachComponent(behaviour);

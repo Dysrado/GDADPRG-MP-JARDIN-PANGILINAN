@@ -1,11 +1,12 @@
 #pragma once
 #include "GenericInputController.h"
+
 class PlayerInputController :
     public GenericInputController
 {
 
 public:
-    PlayerInputController(std::string name);
+    PlayerInputController(std::string name, float ground);
     ~PlayerInputController();
 
     void perform();
@@ -20,5 +21,8 @@ private:
     bool moveDown = false;
     bool moveLeft = false;
     bool moveRight = false;
+    float floor;
+    sf::Clock clock1;
+    sf::Time elapse;
 };
 

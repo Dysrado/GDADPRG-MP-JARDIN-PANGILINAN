@@ -12,6 +12,17 @@ AGameObject::~AGameObject()
 	if (this->sprite != NULL) {
 		delete this->sprite;
 	}
+	for (int i = 0; i < componentList.size(); i++) {
+		delete componentList[i];
+	}
+	componentList.clear();
+	componentList.shrink_to_fit();
+	for (int i = 0; i < childList.size(); i++) {
+		delete childList[0];
+
+	}
+	childList.clear();
+	childList.shrink_to_fit();
 }
 
 void AGameObject::draw(sf::RenderWindow* targetWindow, sf::RenderStates renderStates)
