@@ -2,6 +2,7 @@
 #include "Components/Renderer.h"
 #include "Components/BGMovement.h"
 #include "Components/PlayerInputController.h"
+#include "Components/EnemyInputController.h"
 
 BGObject::BGObject(std::string name) : AGameObject(name){}
 
@@ -15,7 +16,7 @@ void BGObject::initialize()
 	sf::Vector2u textureSize = this->sprite->getTexture()->getSize();
 	sprite->setTextureRect(sf::IntRect(0, 0, textureSize.x * 4, textureSize.y));
 
-	sprite->setOrigin(0, 0);
+	sprite->setOrigin(textureSize.x, 0);
 	
 	sprite->setPosition(0, -10);
 
@@ -25,7 +26,7 @@ void BGObject::initialize()
 	render->assignDrawable(sprite);
 	this->attachComponent(render);
 
-	PlayerInputController* inputController = new PlayerInputController("GroundInput",this->transformable.getPosition().x);
+	EnemyInputController* inputController = new EnemyInputController("GroundInput");
 	this->attachComponent(inputController);
 
 	BGMovement* movement = new BGMovement("myBGMovement");
