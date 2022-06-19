@@ -21,7 +21,7 @@ void UIButton::initialize()
 	sprite->setTexture(*this->normalTexture);
 	sf::Vector2u textureSize = sprite->getTexture()->getSize();
 	sprite->setOrigin(textureSize.x/2, textureSize.y/2);
-	sprite->setScale(0.4f,0.4f);
+	sprite->setScale(3.f,2.f);
 	Renderer* renderer = new Renderer("Button");
 	renderer->assignDrawable(sprite);
 	this->attachComponent(renderer);
