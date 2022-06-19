@@ -8,6 +8,7 @@ class BGMovement :
 public:
     BGMovement(std::string name);
     void perform();
+    float getDisplacement();
 
 private:
     const float SPEED_MULTIPLIER = 100.f;

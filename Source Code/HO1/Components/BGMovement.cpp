@@ -1,9 +1,14 @@
 #include "BGMovement.h"
 #include "PlayerInputController.h"
 #include "EnemyInputController.h"
+#include "../GoalPoint.h"
+#include "../Managers/ApplicationManager.h"
 
 BGMovement::BGMovement(std::string name) : AComponent(name, Script)
 {
+	std::cout << "Goal Created\n";
+	GoalPoint* goal = new GoalPoint("goal");
+	GameObjectManager::getInstance()->addObject(goal);
 }
 
 void BGMovement::perform()
@@ -34,7 +39,13 @@ void BGMovement::perform()
 			bgObjectTransform->setPosition(0, 0);
 		}*/
 	}
-	if (displacement >= 2.f) {
+	if (displacement >= 5.f) {
 		std::cout << "YOU WIN!!!\n";
+		//ApplicationManager::getInstance()->pauseApplication();
 	}
+}
+
+float BGMovement::getDisplacement()
+{
+	return displacement;
 }

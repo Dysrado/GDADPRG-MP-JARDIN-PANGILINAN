@@ -4,6 +4,7 @@
 #include "../Game.h"
 #include "../Managers/ApplicationManager.h"
 #include "PauseMenu.h"
+#include "../Components/BGMovement.h"
 
 HUD::HUD(std::string name) : AGameObject(name), ButtonListener()
 {
@@ -48,12 +49,19 @@ void HUD::initialize()
 	this->score_text->setPosition(0, -0);
 	this->score_text->setSize(40);
 	score_text->setText("Current Score: 0.0m");*/
+	distance_text = new UIText("distance");
+	this->attachChild(distance_text);
+	distance_text->setPosition(-Game::WINDOW_WIDTH + 130,-30);
 }
 
-void HUD::update( )
+void HUD::update(sf::Time deltaTime)
 {
-	
+	BGMovement* movement = (BGMovement*)GameObjectManager::getInstance()->findObjectByName("BGObject")->findComponentByName("myBGMovement");
+	float displacement = movement->getDisplacement();
 
+	distance_text->setText("M: " + std::to_string(displacement));
+
+	AGameObject::update(deltaTime);
 }
 
 void HUD::onButtonClick(UIButton* button)

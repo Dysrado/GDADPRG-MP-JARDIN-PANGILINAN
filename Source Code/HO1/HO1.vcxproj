@@ -154,6 +154,8 @@
     <ClCompile Include="EnemyBird.cpp" />
     <ClCompile Include="EnemyDino.cpp" />
     <ClCompile Include="Components\EnemyInputController.cpp" />
+    <ClCompile Include="Components\GoalMovement.cpp" />
+    <ClCompile Include="GoalPoint.cpp" />
     <ClCompile Include="Managers\AudioManager.cpp" />
     <ClCompile Include="Components\EnemyBehaviour.cpp" />
     <ClCompile Include="EmptyGameObject.cpp" />
@@ -193,6 +195,8 @@
     <ClInclude Include="EnemyBird.h" />
     <ClInclude Include="EnemyDino.h" />
     <ClInclude Include="Components\EnemyInputController.h" />
+    <ClInclude Include="Components\GoalMovement.h" />
+    <ClInclude Include="GoalPoint.h" />
     <ClInclude Include="Managers\AudioManager.h" />
     <ClInclude Include="Components\EnemyBehaviour.h" />
     <ClInclude Include="EmptyGameObject.h" />

@@ -10,12 +10,13 @@ public:
 	HUD(std::string name);
 	~HUD();
 	void initialize();
-	void update();
+	void update(sf::Time deltaTime);
 
 private:
 
 	UIButton* quitButton;
 	UIText* quitButton_text;
+	UIText* distance_text;
 
 	UIText* score_text;
 

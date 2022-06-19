@@ -3,6 +3,9 @@
 #include "../EnemyAirplane.h"
 #include "../EnemyDino.h"
 #include "../EnemyBird.h"
+#include "../Managers/GameObjectManager.h"
+#include "BGMovement.h"
+#include <cmath>
 
 EnemySwarmHandler::EnemySwarmHandler(int numEnemies, std::string name, AGameObject* parent, int type) : AComponent(name, Script)
 {
@@ -30,7 +33,7 @@ EnemySwarmHandler::EnemySwarmHandler(int numEnemies, std::string name, AGameObje
 	
 	enemyPool->initialize();
 	ObjectPoolHolder::getInstance()->registerObjectPool(enemyPool);
-	enemyPool->requestPoolableBatch(5);
+	//enemyPool->requestPoolableBatch(numEnemies);
 }
 
 EnemySwarmHandler::~EnemySwarmHandler()
@@ -41,6 +44,8 @@ EnemySwarmHandler::~EnemySwarmHandler()
 void EnemySwarmHandler::perform()
 {
 	GameObjectPool* enemyPool = ObjectPoolHolder::getInstance()->getPool(ObjectPoolHolder::ENEMY_POOL_TAG);
+	//BGMovement* movement = (BGMovement*)GameObjectManager::getInstance()->findObjectByName("BGObject")->findComponentByName("myBGMovement");
+	//float displacement = movement->getDisplacement();
 	this->ticks += this->deltaTime.asSeconds();
 
 	if (this->ticks > SPAWN_INTERVAL) {
@@ -48,6 +53,13 @@ void EnemySwarmHandler::perform()
 		randomizeInterval();
 		enemyPool->requestPoolable();
 	}
+
+	/*if (std::remainder(displacement, 0.7) == 0) {
+		enemyPool->requestPoolable();
+		std::cout << "BOOOOOOOOOOOOOOM" << std::endl;
+	}*/
+	//std::cout << displacement << std::endl;
+
 }
 
 void EnemySwarmHandler::randomizeInterval()
