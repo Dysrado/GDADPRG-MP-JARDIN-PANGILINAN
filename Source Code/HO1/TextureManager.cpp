@@ -25,7 +25,7 @@ void TextureManager::loadAll() {
 	loadTexture("bar", "Media/Textures/UI/bar_1.png");
 	//loadTexture("avenger", "Media/Textures/Avenger.png");
 	//loadTexture("dota2_sheet", "Media/Textures/Dota2 Atlas.png");
-	loadTexture("dino_sheet", "Media/Textures/Spritesheet/dino_sheet.png");
+	loadTexture("dino_sheet", "Media/Textures/Spritesheet/dino_final_sheet.png");
 	loadTexture("ground", "Media/Textures/Dino/ground.png");
 	loadTexture("ground2", "Media/Textures/Dino/ground2.png");
 	loadTexture("ground3", "Media/Textures/Dino/ground3.png");

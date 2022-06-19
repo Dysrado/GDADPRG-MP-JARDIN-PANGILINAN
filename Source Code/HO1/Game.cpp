@@ -55,7 +55,7 @@ Game::Game() : myWindow(sf::VideoMode(Game::WINDOW_WIDTH, Game::WINDOW_HEIGHT), 
 
 	srand(time(NULL)); // controls randomness of the enemy spawns
 	EmptyGameObject* enemiesManager = new EmptyGameObject("EnemiesManager");
-	EnemySwarmHandler* swarmHandler = new EnemySwarmHandler(5, "SwarmHandler", enemiesManager, 3); 
+	EnemySwarmHandler* swarmHandler = new EnemySwarmHandler(5, "SwarmHandler", enemiesManager, 1); 
 	// last parameter for the EnemySwarmHandler is for the enemy type from range of 1 - 3
 	enemiesManager->attachComponent(swarmHandler);
 	GameObjectManager::getInstance()->addObject(enemiesManager);

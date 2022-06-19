@@ -9,6 +9,7 @@
 #include "rapidjson/stringbuffer.h"
 #include "rapidjson/writer.h"
 #include <cstdlib>
+#include <string>
 #include "Components/EnemyInputController.h"
 
 EnemyBird::EnemyBird(std::string name) : APoolable(name) {
@@ -23,7 +24,7 @@ EnemyBird::~EnemyBird() {
 
 void EnemyBird::initialize() {
 
-	FILE* file = fopen("Media/Textures/Spritesheet/dino_sheet.json", "rb");
+	FILE* file = fopen("Media/Textures/Spritesheet/dino_final_sheet.json", "rb");
 
 	sf::IntRect frame;
 	sf::Vector2u textureSize;
@@ -40,21 +41,17 @@ void EnemyBird::initialize() {
 		fclose(file);
 
 		rapidjson::Value& icon = doc["frames"];
-		frame.left = icon["enemy-bird.png"]["frame"]["x"].GetInt();
-		frame.top = icon["enemy-bird.png"]["frame"]["y"].GetInt();
-		frame.width = icon["enemy-bird.png"]["frame"]["w"].GetInt() / 2;
-		frame.height = icon["enemy-bird.png"]["frame"]["h"].GetInt();
-		textureSize.x = icon["enemy-bird.png"]["sourceSize"]["w"].GetInt() / 2;
-		textureSize.y = icon["enemy-bird.png"]["sourceSize"]["h"].GetInt();
-
-		frames.push_back(frame);
-
-		frame.left = icon["enemy-bird.png"]["frame"]["x"].GetInt() + 92;
-		frame.top = icon["enemy-bird.png"]["frame"]["y"].GetInt();
-		frame.width = icon["enemy-bird.png"]["frame"]["w"].GetInt() / 2;
-		frame.height = icon["enemy-bird.png"]["frame"]["h"].GetInt();
-
-		frames.push_back(frame);
+		for (int i = 1; i <= 2; i++) {
+			std::string index_str = "bird-" + std::to_string(i) + ".png";
+			frame.left = icon[index_str.c_str()]["frame"]["x"].GetInt();
+			frame.top = icon[index_str.c_str()]["frame"]["y"].GetInt();
+			frame.width = icon[index_str.c_str()]["frame"]["w"].GetInt();
+			frame.height = icon[index_str.c_str()]["frame"]["h"].GetInt();
+			textureSize.x = icon[index_str.c_str()]["sourceSize"]["w"].GetInt();
+			textureSize.y = icon[index_str.c_str()]["sourceSize"]["h"].GetInt();
+			frames.push_back(frame);
+		}
+		
 	}
 	this->sprite = new sf::Sprite();
 	sprite->setTexture(*TextureManager::getInstance()->GetTexture("dino_sheet"));

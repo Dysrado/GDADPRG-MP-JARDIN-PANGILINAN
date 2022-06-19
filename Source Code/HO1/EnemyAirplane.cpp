@@ -23,7 +23,7 @@ EnemyAirplane::~EnemyAirplane() {
 
 void EnemyAirplane::initialize() {
 
-	FILE* file = fopen("Media/Textures/Spritesheet/dino_sheet.json", "rb");
+	FILE* file = fopen("Media/Textures/Spritesheet/dino_final_sheet.json", "rb");
 
 	sf::IntRect frame;
 	sf::Vector2u textureSize;
