@@ -1,0 +1,140 @@
+{"frames": {
+
+"bird-1.png":
+{
+	"frame": {"x":204,"y":0,"w":92,"h":77},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":92,"h":77},
+	"sourceSize": {"w":92,"h":77}
+},
+"bird-2.png":
+{
+	"frame": {"x":296,"y":0,"w":92,"h":77},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":92,"h":77},
+	"sourceSize": {"w":92,"h":77}
+},
+"cactuses_big_1.png":
+{
+	"frame": {"x":168,"y":186,"w":50,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":96},
+	"sourceSize": {"w":50,"h":96}
+},
+"cactuses_big_2.png":
+{
+	"frame": {"x":218,"y":186,"w":100,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":96},
+	"sourceSize": {"w":100,"h":96}
+},
+"cactuses_big_3.png":
+{
+	"frame": {"x":318,"y":186,"w":150,"h":98},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":98},
+	"sourceSize": {"w":150,"h":98}
+},
+"cactuses_small_1.png":
+{
+	"frame": {"x":0,"y":0,"w":34,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":70},
+	"sourceSize": {"w":34,"h":70}
+},
+"cactuses_small_2.png":
+{
+	"frame": {"x":34,"y":0,"w":68,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":68,"h":70},
+	"sourceSize": {"w":68,"h":70}
+},
+"cactuses_small_3.png":
+{
+	"frame": {"x":102,"y":0,"w":102,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":102,"h":70},
+	"sourceSize": {"w":102,"h":70}
+},
+"ddown-1.png":
+{
+	"frame": {"x":0,"y":92,"w":118,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":118,"h":94},
+	"sourceSize": {"w":118,"h":94}
+},
+"ddown-2.png":
+{
+	"frame": {"x":118,"y":92,"w":118,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":118,"h":94},
+	"sourceSize": {"w":118,"h":94}
+},
+"dino-1.png":
+{
+	"frame": {"x":236,"y":92,"w":88,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":94},
+	"sourceSize": {"w":88,"h":94}
+},
+"dino-2.png":
+{
+	"frame": {"x":324,"y":92,"w":88,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":94},
+	"sourceSize": {"w":88,"h":94}
+},
+"dino-3.png":
+{
+	"frame": {"x":412,"y":92,"w":88,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":94},
+	"sourceSize": {"w":88,"h":94}
+},
+"dino-4.png":
+{
+	"frame": {"x":0,"y":186,"w":88,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":94},
+	"sourceSize": {"w":88,"h":94}
+},
+"dino-hurt.png":
+{
+	"frame": {"x":88,"y":186,"w":80,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":94},
+	"sourceSize": {"w":80,"h":94}
+},
+"dino-idle.png":
+{
+	"frame": {"x":388,"y":0,"w":88,"h":92},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":92},
+	"sourceSize": {"w":88,"h":92}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "dino_final_sheet.png",
+	"format": "RGBA8888",
+	"size": {"w":500,"h":284},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:958d92e763839cadeb7176bad00a73c5:184137d5fdc029e96c3230cb8be3443f:a6acfa0459bb514e657132acead8bbe2$"
+}
+}
