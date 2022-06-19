@@ -174,7 +174,6 @@
     <ClCompile Include="Components\AComponent.cpp" />
     <ClCompile Include="AGameObject.cpp" />
     <ClCompile Include="AirplanePlayer.cpp" />
-    <ClCompile Include="AirplaneSupport.cpp" />
     <ClCompile Include="BGObject.cpp" />
     <ClCompile Include="Components\GenericInputController.cpp" />
     <ClCompile Include="Components\PlayerInputController.cpp" />
@@ -215,7 +214,6 @@
     <ClInclude Include="Components\AComponent.h" />
     <ClInclude Include="AGameObject.h" />
     <ClInclude Include="AirplanePlayer.h" />
-    <ClInclude Include="AirplaneSupport.h" />
     <ClInclude Include="BGObject.h" />
     <ClInclude Include="Components\GenericInputController.h" />
     <ClInclude Include="Components\PlayerInputController.h" />

@@ -46,8 +46,8 @@ Game::Game() : myWindow(sf::VideoMode(Game::WINDOW_WIDTH, Game::WINDOW_HEIGHT), 
 	HUD* hud = new HUD("HUD");
 	GameObjectManager::getInstance()->addObject(hud);
 
-	soundBuffer = AudioManager::getInstance()->getBuffer("jump");
-	sound.setBuffer(*soundBuffer);
+	/*soundBuffer = AudioManager::getInstance()->getBuffer("jump");
+	sound.setBuffer(*soundBuffer);*/
 
 	// for JSON
 	/*dota = new DOTA("Dota");
@@ -100,7 +100,7 @@ void Game::ProcessEvents()
 			if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Space) {
 				//GameObjectManager::getInstance()->addObject(new EnemyDino("EnemyDino"));
 				//this->planeObject->setEnabled(!this->planeObject->isEnabled());
-				sound.play();
+				//sound.play();
 			}
 			
 			GameObjectManager::getInstance()->processInput(event);

@@ -1,5 +1,6 @@
 #pragma once
 #include "AGameObject.h"
+#include "Components/PlayerInputController.h"
 
 class AirplanePlayer : public AGameObject
 {
@@ -14,7 +15,7 @@ private:
 	std::vector<sf::IntRect> frames;
 	int frameCtr = 0; // index for the frame lise
 	sf::Clock animClock; // clock time for the animation
-	
-
+	float displacement = 0.f;
+	PlayerInputController* inputController;
 };
 

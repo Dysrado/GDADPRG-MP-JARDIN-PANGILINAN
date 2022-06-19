@@ -1,5 +1,6 @@
 #pragma once
 #include "AComponent.h"
+#include "../Managers/AudioManager.h"
 class PlayerMovement :
     public AComponent
 {
@@ -12,5 +13,8 @@ private:
     sf::Clock clock;
     sf::Time elapsed;
     bool jump = false;
+
+    sf::SoundBuffer* soundBuffer;
+    sf::Sound sound;
 };
 

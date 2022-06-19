@@ -39,9 +39,6 @@
     <ClCompile Include="AirplanePlayer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AirplaneSupport.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Components\AComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -150,9 +147,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AirplanePlayer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AirplaneSupport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Components\AComponent.h">

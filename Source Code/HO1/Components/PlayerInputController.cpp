@@ -1,7 +1,7 @@
 #include "PlayerInputController.h"
 #include "../Managers/ApplicationManager.h"
-PlayerInputController::PlayerInputController(std::string name, float ground) : GenericInputController(name) {
-	floor = ground;
+PlayerInputController::PlayerInputController(std::string name, float displacement) : GenericInputController(name) {
+	this->displacement = displacement;
 	
 }
 
@@ -39,13 +39,12 @@ void PlayerInputController::perform() {
 	case sf::Keyboard::A:
 		this->moveLeft = keyFlag;
 		break;
-
 	// right
 	case sf::Keyboard::D:
 		this->moveRight = keyFlag;
 		break;
 
-		this->moveUp = false;
+		//this->moveUp = false;
 
 
 	/*case sf::Keyboard::P:

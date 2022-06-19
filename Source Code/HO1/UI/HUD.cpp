@@ -44,6 +44,16 @@ void HUD::initialize()
 	this->quitButton_text->setSize(40);
 	quitButton_text->setText("QUIT");
 	this->quitButton->setButtonListener(this);
+	/*this->score_text = new UIText("text_score");
+	this->score_text->setPosition(0, -0);
+	this->score_text->setSize(40);
+	score_text->setText("Current Score: 0.0m");*/
+}
+
+void HUD::update( )
+{
+	
+
 }
 
 void HUD::onButtonClick(UIButton* button)

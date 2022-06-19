@@ -22,7 +22,7 @@ void TextureManager::loadAll() {
 	loadTexture("ui_bg", "Media/Textures/UI/f.png");
 	loadTexture("btn_normal", "Media/Textures/UI/b_normal.png");
 	loadTexture("btn_pressed", "Media/Textures/UI/b_pressed.png");
-	loadTexture("bar", "Media/Textures/UI/bar_1.png");
+	loadTexture("bar", "Media/Textures/UI/bar_2.png");
 	//loadTexture("avenger", "Media/Textures/Avenger.png");
 	//loadTexture("dota2_sheet", "Media/Textures/Dota2 Atlas.png");
 	loadTexture("dino_sheet", "Media/Textures/Spritesheet/dino_final_sheet.png");

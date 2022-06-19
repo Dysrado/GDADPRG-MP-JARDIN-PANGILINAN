@@ -30,12 +30,13 @@ private:
 
 	Entity mySampleEntity;
 
-	sf::SoundBuffer* soundBuffer;
-	sf::Sound sound;
+	//sf::SoundBuffer* soundBuffer;
+	//sf::Sound sound;
 
 	std::vector<Entity*> myEntityList;
 
 	AirplanePlayer* planeObject;
 	DOTA* dota;
+	float displacement = 0.0f;
 };
 

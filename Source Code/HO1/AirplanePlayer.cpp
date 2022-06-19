@@ -2,7 +2,6 @@
 #include <iostream>
 #include "TextureManager.h"
 #include "Game.h"
-#include "Components/PlayerInputController.h"
 #include "Components/PlayerMovement.h"
 #include "Components/Renderer.h"
 
@@ -56,16 +55,17 @@ void AirplanePlayer::initialize(){
 	render->assignDrawable(sprite);
 	this->attachComponent(render);
 
-	PlayerInputController* inputController = new PlayerInputController("MyPlayerInput",this->transformable.getPosition().y);
+	inputController = new PlayerInputController("MyPlayerInput",displacement);
 	this->attachComponent(inputController);
-
+	
 	PlayerMovement* movement = new PlayerMovement("myMovement");
 	this->attachComponent(movement);
-
+	this->frameCtr = 0;
+	this->sprite->setTextureRect(this->frames[frameCtr]);
 }
 
 void AirplanePlayer::update(sf::Time deltaTime) {
-	PlayerInputController* inputController = new PlayerInputController("MyPlayerInput", this->transformable.getPosition().y);
+	//PlayerInputController* inputController = new PlayerInputController("MyPlayerInput", displacement);
 	if (inputController->isLeft() || inputController->isRight()) {
 		if (this->animClock.getElapsedTime().asSeconds() >= 0.2f) {
 			this->frameCtr += 1;
@@ -75,6 +75,10 @@ void AirplanePlayer::update(sf::Time deltaTime) {
 			this->animClock.restart();
 			this->sprite->setTextureRect(this->frames[frameCtr]);
 		}
+	}
+	if (this->transformable.getPosition().y != (Game::WINDOW_HEIGHT / 2) + 150.f) {
+		this->frameCtr = 2;
+		this->sprite->setTextureRect(this->frames[frameCtr]);
 	}
 	AGameObject::update(deltaTime);
 }

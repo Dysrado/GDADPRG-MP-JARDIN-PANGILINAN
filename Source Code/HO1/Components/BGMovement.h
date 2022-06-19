@@ -11,5 +11,6 @@ public:
 
 private:
     const float SPEED_MULTIPLIER = 100.f;
+    float displacement;
 };
 

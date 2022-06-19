@@ -6,7 +6,7 @@ class PlayerInputController :
 {
 
 public:
-    PlayerInputController(std::string name, float ground);
+    PlayerInputController(std::string name, float displacement);
     ~PlayerInputController();
 
     void perform();
@@ -21,7 +21,7 @@ private:
     bool moveDown = false;
     bool moveLeft = false;
     bool moveRight = false;
-    float floor;
+    float displacement;
 
 };
 
