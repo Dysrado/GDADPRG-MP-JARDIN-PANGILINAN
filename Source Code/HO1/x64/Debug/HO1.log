@@ -1,0 +1,150 @@
+﻿  EnemyBird.cpp
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyBird.cpp(62,50): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyBird.cpp(62,34): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyBird.cpp(73,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyBird.cpp(107,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  EnemyDino.cpp
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyDino.cpp(62,50): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyDino.cpp(62,34): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyDino.cpp(67,33): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyDino.cpp(93,53): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+  EnemyInputController.cpp
+  AudioManager.cpp
+  EnemyBehaviour.cpp
+  EmptyGameObject.cpp
+  EnemyAirplane.cpp
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyAirplane.cpp(65,50): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyAirplane.cpp(65,34): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyAirplane.cpp(69,33): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyAirplane.cpp(95,53): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+  EnemySwarmHandler.cpp
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Components\EnemySwarmHandler.cpp(55,15): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  ObjectPoolHolder.cpp
+  APoolable.cpp
+  GameObjectPool.cpp
+  SceneManager.cpp
+  AScene.cpp
+  MainMenuScene.cpp
+  PauseMenu.cpp
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\UI\PauseMenu.cpp(21,53): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\UI\PauseMenu.cpp(21,34): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  HUD.cpp
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\UI\HUD.cpp(24,46): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\UI\HUD.cpp(24,31): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  ApplicationManager.cpp
+  UIButtonInputController.cpp
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Components\UIButtonInputController.cpp(25,63): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Components\UIButtonInputController.cpp(25,42): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  BGMovement.cpp
+  AirplaneSupportMovement.cpp
+  Generating Code...
+  Compiling...
+  AComponent.cpp
+  AGameObject.cpp
+  AirplanePlayer.cpp
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\AirplanePlayer.cpp(20,53): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\AirplanePlayer.cpp(20,34): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  AirplaneSupport.cpp
+  BGObject.cpp
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\BGObject.cpp(19,31): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\BGObject.cpp(23,28): warning C4305: 'argument': truncation from 'double' to 'float'
+  GenericInputController.cpp
+  PlayerInputController.cpp
+  PlayerMovement.cpp
+  Entity.cpp
+  FontManager.cpp
+  Game.cpp
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Game.cpp(56,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  GameObjectManager.cpp
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Managers\GameObjectManager.cpp(31,30): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+  Renderer.cpp
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Components\Renderer.cpp(13,24): warning C4150: deletion of pointer to incomplete type 'sf::Drawable'; no destructor called
+C:\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+  MainMenuScreen.cpp
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Screens\MainMenuScreen.cpp(25,50): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Screens\MainMenuScreen.cpp(25,33): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  TextureManager.cpp
+  UIText.cpp
+  UIButton.cpp
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\UI\UIButton.cpp(23,50): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\UI\UIButton.cpp(23,33): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\UI\UIButton.cpp(57,38): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  HO1.vcxproj -> E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\x64\Debug\HO1.exe

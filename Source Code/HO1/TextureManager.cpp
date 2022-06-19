@@ -16,17 +16,20 @@ void TextureManager::TestFunction() {
 }
 
 void TextureManager::loadAll() {
-	loadTexture("desert_bg", "Media/Textures/Desert.png");
-	loadTexture("eagle", "Media/Textures/Eagle.png");
-	loadTexture("raptor", "Media/Textures/Raptor.png");
+	//loadTexture("desert_bg", "Media/Textures/Desert.png");
+	//loadTexture("eagle", "Media/Textures/Eagle.png");
+	//loadTexture("raptor", "Media/Textures/Raptor.png");
 	loadTexture("ui_bg", "Media/Textures/UI/f.png");
 	loadTexture("btn_normal", "Media/Textures/UI/b_normal.png");
 	loadTexture("btn_pressed", "Media/Textures/UI/b_pressed.png");
 	loadTexture("bar", "Media/Textures/UI/bar_1.png");
-	loadTexture("avenger", "Media/Textures/Avenger.png");
-	loadTexture("dota2_sheet", "Media/Textures/Dota2 Atlas.png");
+	//loadTexture("avenger", "Media/Textures/Avenger.png");
+	//loadTexture("dota2_sheet", "Media/Textures/Dota2 Atlas.png");
 	loadTexture("dino_sheet", "Media/Textures/Spritesheet/dino_sheet.png");
 	loadTexture("ground", "Media/Textures/Dino/ground.png");
+	loadTexture("ground2", "Media/Textures/Dino/ground2.png");
+	loadTexture("ground3", "Media/Textures/Dino/ground3.png");
+	loadTexture("mainMenu", "Media/Textures/Dino/MainMenu.png");
 	loadTexture("dino", "Media/Textures/Dino/dino-idle.png");
 	sf::Texture* bgTex;
 	bgTex = GetTexture("ground");
