@@ -1,7 +1,9 @@
 #include "SceneManager.h"
 
 std::string SceneManager::MAIN_MENU_SCENE_NAME = "MainMenuScene";
-std::string SceneManager::GAME_SCENE_NAME = "GameScene";
+std::string SceneManager::LEVEL_1_NAME = "Level1";
+std::string SceneManager::LEVEL_2_NAME = "Level2";
+std::string SceneManager::LEVEL_3_NAME = "Level3";
 
 SceneManager* SceneManager::sharedInstance = NULL;
 

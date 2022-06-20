@@ -23,7 +23,7 @@ void GoalPoint::initialize()
 	sprite->setOrigin(textureSize.x / 2, textureSize.y / 2);
 	sprite->setScale(4, 4);
 
-	sprite->setPosition(Game::WINDOW_WIDTH + (Game::WINDOW_WIDTH/2) - 90, 550);
+	sprite->setPosition(Game::WINDOW_WIDTH * 10 + 400, 550);
 
 	Renderer* render = new Renderer("Coin");
 	render->assignDrawable(sprite);

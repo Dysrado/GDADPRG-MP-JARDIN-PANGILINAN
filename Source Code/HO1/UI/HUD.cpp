@@ -12,8 +12,6 @@ HUD::HUD(std::string name) : AGameObject(name), ButtonListener()
 
 HUD::~HUD()
 {
-	delete this->quitButton;
-	delete this->quitButton_text;
 	AGameObject::~AGameObject();
 }
 
@@ -28,7 +26,7 @@ void HUD::initialize()
 	renderer->assignDrawable(sprite);
 	this->attachComponent(renderer);
 
-	this->setPosition(Game::WINDOW_WIDTH, Game::WINDOW_HEIGHT);
+	this->setPosition(Game::WINDOW_WIDTH - 10, Game::WINDOW_HEIGHT - 10);
 
 	sf::Texture* btnNormal = TextureManager::getInstance()->GetTexture("btn_normal");
 	sf::Texture* btnPressed = TextureManager::getInstance()->GetTexture("btn_pressed");
@@ -45,13 +43,14 @@ void HUD::initialize()
 	this->quitButton_text->setSize(40);
 	quitButton_text->setText("QUIT");
 	this->quitButton->setButtonListener(this);
-	/*this->score_text = new UIText("text_score");
-	this->score_text->setPosition(0, -0);
-	this->score_text->setSize(40);
-	score_text->setText("Current Score: 0.0m");*/
+
 	distance_text = new UIText("distance");
 	this->attachChild(distance_text);
-	distance_text->setPosition(-Game::WINDOW_WIDTH + 130,-30);
+	distance_text->setPosition(-Game::WINDOW_WIDTH + 145,-25);
+
+	PauseMenu* pauseMenu = new PauseMenu("PauseMenu");
+	GameObjectManager::getInstance()->addObject(pauseMenu);
+	GameObjectManager::getInstance()->findObjectByName("PauseMenu")->setEnabled(false);
 }
 
 void HUD::update(sf::Time deltaTime)
@@ -68,8 +67,7 @@ void HUD::onButtonClick(UIButton* button)
 {
 	if (!ApplicationManager::getInstance()->isPaused()) {
 		//std::cout << button->getName() << " has been pressed" << std::endl;
-		PauseMenu* pauseMenu = new PauseMenu("PauseMenu");
-		GameObjectManager::getInstance()->addObject(pauseMenu);
+		GameObjectManager::getInstance()->findObjectByName("PauseMenu")->setEnabled(true);
 		ApplicationManager::getInstance()->pauseApplication();
 	}
 }

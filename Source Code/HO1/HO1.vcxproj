@@ -156,6 +156,12 @@
     <ClCompile Include="Components\EnemyInputController.cpp" />
     <ClCompile Include="Components\GoalMovement.cpp" />
     <ClCompile Include="GoalPoint.cpp" />
+    <ClCompile Include="Scenes\Level3.cpp" />
+    <ClCompile Include="Screens\Level3Screen.cpp" />
+    <ClCompile Include="Scenes\Level2.cpp" />
+    <ClCompile Include="Screens\Level2Screen.cpp" />
+    <ClCompile Include="Screens\Level1Screen.cpp" />
+    <ClCompile Include="Scenes\Level1.cpp" />
     <ClCompile Include="Managers\AudioManager.cpp" />
     <ClCompile Include="Components\EnemyBehaviour.cpp" />
     <ClCompile Include="EmptyGameObject.cpp" />
@@ -197,6 +203,12 @@
     <ClInclude Include="Components\EnemyInputController.h" />
     <ClInclude Include="Components\GoalMovement.h" />
     <ClInclude Include="GoalPoint.h" />
+    <ClInclude Include="Scenes\Level3.h" />
+    <ClInclude Include="Screens\Level3Screen.h" />
+    <ClInclude Include="Scenes\Level2.h" />
+    <ClInclude Include="Screens\Level2Screen.h" />
+    <ClInclude Include="Screens\Level1Screen.h" />
+    <ClInclude Include="Scenes\Level1.h" />
     <ClInclude Include="Managers\AudioManager.h" />
     <ClInclude Include="Components\EnemyBehaviour.h" />
     <ClInclude Include="EmptyGameObject.h" />

@@ -12,17 +12,19 @@ AGameObject::~AGameObject()
 	//if (this->sprite != NULL) {
 	//	delete this->sprite;
 	//}
-	for (int i = 0; i < componentList.size(); i++) {
-		delete componentList[i];
+	for (int i = 0; i < this->componentList.size(); i++) {
+		delete this->componentList[i];
 	}
-	componentList.clear();
-	componentList.shrink_to_fit();
-	for (int i = 0; i < childList.size(); i++) {
-		delete childList[0];
 
+	for (int i = 0; i < this->childList.size(); i++) {
+		delete this->childList[i];
 	}
-	childList.clear();
-	childList.shrink_to_fit();
+
+	this->componentList.clear();
+	this->componentList.shrink_to_fit();
+
+	this->childList.clear();
+	this->childList.shrink_to_fit();
 
 	if (this->mParent != NULL) {
 		this->mParent = NULL;

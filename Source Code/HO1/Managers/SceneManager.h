@@ -9,7 +9,9 @@ class SceneManager
 {
 public:
 	static std::string MAIN_MENU_SCENE_NAME;
-	static std::string GAME_SCENE_NAME;
+	static std::string LEVEL_1_NAME;
+	static std::string LEVEL_2_NAME;
+	static std::string LEVEL_3_NAME;
 
 	static SceneManager* getInstance();
 

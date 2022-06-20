@@ -7,7 +7,6 @@
 #include "Managers/AudioManager.h"
 #include "BGObject.h"
 #include "AirplanePlayer.h"
-#include "DOTA.h"
 
 class Game
 {
@@ -36,7 +35,6 @@ private:
 	std::vector<Entity*> myEntityList;
 
 	AirplanePlayer* planeObject;
-	DOTA* dota;
 	float displacement = 0.0f;
 };
 

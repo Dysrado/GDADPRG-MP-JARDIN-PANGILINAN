@@ -14,26 +14,35 @@
 #include "Components/EnemySwarmHandler.h"
 #include "Managers/SceneManager.h"
 #include "Scenes/MainMenuScene.h"
+#include "Scenes/Level1.h"
+#include "Scenes/Level2.h"
+#include "Scenes/Level3.h"
 
 
 
 /* Constructures and Deconstructures */
 Game::Game() : myWindow(sf::VideoMode(Game::WINDOW_WIDTH, Game::WINDOW_HEIGHT), "Jardin - Pangilinan")
 {	
+	srand(time(NULL));
 	myWindow.setFramerateLimit(60);
 
 	TextureManager::getInstance()->loadAll();
 	FontManager::getInstance()->loadAll();
 	AudioManager::getInstance()->loadAll();
 	ApplicationManager::getInstance()->initialize(&myWindow);
+
 	/*SceneManager::getInstance()->registerScene(new MainMenuScene());
 	SceneManager::getInstance()->loadScene(MAIN_MENU_SCENE_NAME);*/
 
-	BGObject* bgObject = new BGObject("BGObject");
-	GameObjectManager::getInstance()->addObject(bgObject);
+	SceneManager::getInstance()->registerScene(new Level1());
+	SceneManager::getInstance()->registerScene(new Level2());
+	SceneManager::getInstance()->registerScene(new Level3());
 
-	this->planeObject = new AirplanePlayer("PlaneObject");
-	GameObjectManager::getInstance()->addObject(planeObject);
+	SceneManager::getInstance()->loadScene(SceneManager::LEVEL_1_NAME);
+	//SceneManager::getInstance()->loadScene(SceneManager::LEVEL_2_NAME);
+	//SceneManager::getInstance()->loadScene(SceneManager::LEVEL_3_NAME);
+
+
 
 	//AirplaneSupport* support1 = new AirplaneSupport("AirSupport_1");
 	//planeObject->attachChild(support1);
@@ -42,10 +51,21 @@ Game::Game() : myWindow(sf::VideoMode(Game::WINDOW_WIDTH, Game::WINDOW_HEIGHT), 
 	//AirplaneSupport* support2 = new AirplaneSupport("AirSupport_2");
 	//planeObject->attachChild(support2);
 	//support2->setPosition(-50, 100);
+	//BGObject* bgObject = new BGObject("BGObject");
+	//GameObjectManager::getInstance()->addObject(bgObject);
 
-	HUD* hud = new HUD("HUD");
-	GameObjectManager::getInstance()->addObject(hud);
+	//this->planeObject = new AirplanePlayer("PlaneObject");
+	//GameObjectManager::getInstance()->addObject(planeObject);
 
+	//HUD* hud = new HUD("HUD");
+	//GameObjectManager::getInstance()->addObject(hud);
+
+	//srand(time(NULL)); // controls randomness of the enemy spawns
+	//EmptyGameObject* enemiesManager = new EmptyGameObject("EnemiesManager");
+	//EnemySwarmHandler* swarmHandler = new EnemySwarmHandler(5, "SwarmHandler", enemiesManager, 2); 
+	//// last parameter for the EnemySwarmHandler is for the enemy type from range of 1 - 3
+	//enemiesManager->attachComponent(swarmHandler);
+	//GameObjectManager::getInstance()->addObject(enemiesManager);
 	/*soundBuffer = AudioManager::getInstance()->getBuffer("jump");
 	sound.setBuffer(*soundBuffer);*/
 
@@ -53,12 +73,6 @@ Game::Game() : myWindow(sf::VideoMode(Game::WINDOW_WIDTH, Game::WINDOW_HEIGHT), 
 	/*dota = new DOTA("Dota");
 	GameObjectManager::getInstance()->addObject(dota);*/
 
-	srand(time(NULL)); // controls randomness of the enemy spawns
-	EmptyGameObject* enemiesManager = new EmptyGameObject("EnemiesManager");
-	EnemySwarmHandler* swarmHandler = new EnemySwarmHandler(5, "SwarmHandler", enemiesManager, 2); 
-	// last parameter for the EnemySwarmHandler is for the enemy type from range of 1 - 3
-	enemiesManager->attachComponent(swarmHandler);
-	GameObjectManager::getInstance()->addObject(enemiesManager);
 
 
 	/*MainMenuScreen* mainMenuScreen = new MainMenuScreen("MainMenuScreen");

@@ -39,7 +39,7 @@ void BGMovement::perform()
 			bgObjectTransform->setPosition(0, 0);
 		}*/
 	}
-	if (displacement >= 5.f) {
+	if (displacement >= 60.f) {
 		std::cout << "YOU WIN!!!\n";
 		//ApplicationManager::getInstance()->pauseApplication();
 	}

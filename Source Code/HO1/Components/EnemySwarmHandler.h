@@ -11,7 +11,7 @@ public:
 private:
 	void randomizeInterval();
 	GameObjectPool* enemyPool;
-	float SPAWN_INTERVAL = 1.f;
+	float SPAWN_INTERVAL = 2.f;
 	float ticks = 0.0f;
 };
 

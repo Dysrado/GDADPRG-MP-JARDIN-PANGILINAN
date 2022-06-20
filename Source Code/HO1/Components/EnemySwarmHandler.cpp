@@ -33,7 +33,12 @@ EnemySwarmHandler::EnemySwarmHandler(int numEnemies, std::string name, AGameObje
 	
 	enemyPool->initialize();
 	ObjectPoolHolder::getInstance()->registerObjectPool(enemyPool);
-	//enemyPool->requestPoolableBatch(numEnemies);
+	enemyPool->requestPoolableBatch(numEnemies);
+	enemyPool->requestPoolable();
+	enemyPool->requestPoolable();
+	enemyPool->requestPoolable();
+	enemyPool->requestPoolable();
+	enemyPool->requestPoolable();
 }
 
 EnemySwarmHandler::~EnemySwarmHandler()
@@ -64,6 +69,6 @@ void EnemySwarmHandler::perform()
 
 void EnemySwarmHandler::randomizeInterval()
 {
-	float random = 1 + rand() % 2;
+	float random = 1 + rand() % 3;
 	SPAWN_INTERVAL = random;
 }

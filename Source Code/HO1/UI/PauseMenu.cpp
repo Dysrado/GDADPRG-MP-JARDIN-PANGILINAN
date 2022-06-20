@@ -3,6 +3,8 @@
 #include "../Game.h"
 #include "../Components/Renderer.h"
 #include "../Managers/ApplicationManager.h"
+#include "../Managers/SceneManager.h"
+
 
 PauseMenu::PauseMenu(std::string name) : AGameObject(name), ButtonListener()
 {
@@ -71,7 +73,8 @@ void PauseMenu::onButtonClick(UIButton* button)
 		ApplicationManager::getInstance()->applicationQuit();
 	}
 	else if (button->getName() == "button_no") {
-		GameObjectManager::getInstance()->deleteObjectByName("PauseMenu");
+		//GameObjectManager::getInstance()->deleteObjectByName("PauseMenu");
+		GameObjectManager::getInstance()->findObjectByName("PauseMenu")->setEnabled(false);
 		ApplicationManager::getInstance()->resumeApplication();
 	}
 }

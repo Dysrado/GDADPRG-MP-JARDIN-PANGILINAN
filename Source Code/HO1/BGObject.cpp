@@ -11,8 +11,17 @@ void BGObject::initialize()
 	std::cout << "Declared as " << this->getName() << "\n";
 
 	sprite = new sf::Sprite();
-
-	sprite->setTexture(*TextureManager::getInstance()->GetTexture("ground"));
+	int random = rand() % 3;
+	if (random == 0) {
+		sprite->setTexture(*TextureManager::getInstance()->GetTexture("ground2"));
+	}
+	else if (random == 1) {
+		sprite->setTexture(*TextureManager::getInstance()->GetTexture("ground3"));
+	}
+	else {
+		sprite->setTexture(*TextureManager::getInstance()->GetTexture("ground"));
+	}
+	//sprite->setTexture(*TextureManager::getInstance()->GetTexture("ground"));
 	sf::Vector2u textureSize = this->sprite->getTexture()->getSize();
 	sprite->setTextureRect(sf::IntRect(0, 0, textureSize.x * 4, textureSize.y));
 
