@@ -31,7 +31,10 @@ public:
 
 	sf::Transformable* getTransformable();
 
+	sf::Transform getGlobalTransform();
 	AGameObject* getParent();
+
+	
 
 protected:
 	void setParent(AGameObject* gameObject);

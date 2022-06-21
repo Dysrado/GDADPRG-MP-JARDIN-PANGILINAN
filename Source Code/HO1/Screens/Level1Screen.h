@@ -14,6 +14,7 @@ public:
 	~Level1Screen();
 
 	void initialize();
+	void levelClear();
 
 private:
 	BGObject* bgObject;
@@ -23,5 +24,6 @@ private:
 	HUD* hud;
 
 	EmptyGameObject* enemiesManager;
+
 };
 

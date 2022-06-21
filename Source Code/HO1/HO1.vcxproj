@@ -151,11 +151,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Physics\Collider.cpp" />
     <ClCompile Include="EnemyBird.cpp" />
     <ClCompile Include="EnemyDino.cpp" />
     <ClCompile Include="Components\EnemyInputController.cpp" />
     <ClCompile Include="Components\GoalMovement.cpp" />
     <ClCompile Include="GoalPoint.cpp" />
+    <ClCompile Include="Physics\PhysicsManager.cpp" />
     <ClCompile Include="Scenes\Level3.cpp" />
     <ClCompile Include="Screens\Level3Screen.cpp" />
     <ClCompile Include="Scenes\Level2.cpp" />
@@ -196,13 +198,18 @@
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="UI\UIText.cpp" />
     <ClCompile Include="UI\UIButton.cpp" />
+    <ClCompile Include="UI\VictoryMenu.cpp" />
+    <ClCompile Include="Scenes\VictoryScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Physics\Collider.h" />
     <ClInclude Include="EnemyBird.h" />
     <ClInclude Include="EnemyDino.h" />
     <ClInclude Include="Components\EnemyInputController.h" />
     <ClInclude Include="Components\GoalMovement.h" />
     <ClInclude Include="GoalPoint.h" />
+    <ClInclude Include="Physics\CollisionListener.h" />
+    <ClInclude Include="Physics\PhysicsManager.h" />
     <ClInclude Include="Scenes\Level3.h" />
     <ClInclude Include="Screens\Level3Screen.h" />
     <ClInclude Include="Scenes\Level2.h" />
@@ -243,6 +250,8 @@
     <ClInclude Include="TextureManager.h" />
     <ClInclude Include="UI\UIText.h" />
     <ClInclude Include="UI\UIButton.h" />
+    <ClInclude Include="UI\VictoryMenu.h" />
+    <ClInclude Include="Scenes\VictoryScene.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Media\Textures\bed0000.png" />

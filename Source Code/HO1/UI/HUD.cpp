@@ -4,7 +4,8 @@
 #include "../Game.h"
 #include "../Managers/ApplicationManager.h"
 #include "PauseMenu.h"
-#include "../Components/BGMovement.h"
+
+#include "VictoryMenu.h"
 
 HUD::HUD(std::string name) : AGameObject(name), ButtonListener()
 {
@@ -51,16 +52,27 @@ void HUD::initialize()
 	PauseMenu* pauseMenu = new PauseMenu("PauseMenu");
 	GameObjectManager::getInstance()->addObject(pauseMenu);
 	GameObjectManager::getInstance()->findObjectByName("PauseMenu")->setEnabled(false);
+	
 }
 
 void HUD::update(sf::Time deltaTime)
 {
-	BGMovement* movement = (BGMovement*)GameObjectManager::getInstance()->findObjectByName("BGObject")->findComponentByName("myBGMovement");
+	movement = (BGMovement*)GameObjectManager::getInstance()->findObjectByName("BGObject")->findComponentByName("myBGMovement");
 	float displacement = movement->getDisplacement();
 
 	distance_text->setText("M: " + std::to_string(displacement));
 
 	AGameObject::update(deltaTime);
+}
+
+void HUD::levelCleared()
+{
+	/*movement = (BGMovement*)GameObjectManager::getInstance()->findObjectByName("BGObject")->findComponentByName("myBGMovement");
+	if (movement->goalPoint() ==  true) {
+
+		ApplicationManager::getInstance()->pauseApplication();
+		GameObjectManager::getInstance()->findObjectByName("VictoryMenu")->setEnabled(true);
+	}*/
 }
 
 void HUD::onButtonClick(UIButton* button)

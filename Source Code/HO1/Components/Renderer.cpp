@@ -9,12 +9,10 @@ Renderer::Renderer(std::string name) : AComponent(name, AComponent::Renderer)
 
 Renderer::~Renderer()
 {
-	if (this->drawable != NULL) {
+	/*if (this->drawable != NULL) {
 		delete this->drawable;
-	}
-	if (this->targetWindow != NULL) {
-		delete this->targetWindow;
-	}
+	}*/
+	
 	AComponent::~AComponent();
 }
 

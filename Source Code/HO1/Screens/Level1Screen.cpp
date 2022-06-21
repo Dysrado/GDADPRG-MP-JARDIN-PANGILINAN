@@ -26,4 +26,11 @@ void Level1Screen::initialize()
 	GameObjectManager::getInstance()->addObject(enemiesManager);
 	hud = new HUD("HUD");
 	GameObjectManager::getInstance()->addObject(hud);
+	
+	
+}
+
+void Level1Screen::levelClear()
+{
+
 }

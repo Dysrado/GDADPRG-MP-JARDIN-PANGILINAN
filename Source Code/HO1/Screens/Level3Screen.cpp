@@ -1,4 +1,5 @@
 #include "Level3Screen.h"
+#include "../Managers/ApplicationManager.h"
 
 Level3Screen::Level3Screen(std::string name) : AGameObject(name)
 {
@@ -26,4 +27,5 @@ void Level3Screen::initialize()
 
 	hud = new HUD("HUD");
 	GameObjectManager::getInstance()->addObject(hud);
+	ApplicationManager::getInstance()->resumeApplication();
 }

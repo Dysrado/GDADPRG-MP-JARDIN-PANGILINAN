@@ -9,6 +9,7 @@ class SceneManager
 {
 public:
 	static std::string MAIN_MENU_SCENE_NAME;
+	static std::string VICTORY_MENU_SCENE_NAME;
 	static std::string LEVEL_1_NAME;
 	static std::string LEVEL_2_NAME;
 	static std::string LEVEL_3_NAME;
@@ -20,6 +21,7 @@ public:
 	void unloadScene();
 	void checkLoadScene();
 	bool isSceneLoaded(std::string name);
+	std::string getActiveSceneName();
 
 private:
 	SceneManager() {};

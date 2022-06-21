@@ -201,6 +201,23 @@ sf::Transformable* AGameObject::getTransformable() {
 	return &this->transformable;
 }
 
+sf::Transform AGameObject::getGlobalTransform()
+{
+	AGameObject* parentObj = this;
+	std::vector<AGameObject*> parentList;
+	while (parentObj != NULL) {
+		parentList.push_back(parentObj);
+		parentObj = parentObj->getParent();
+	}
+
+	sf::Transform transform = sf::Transform::Identity;
+	int startIdx = parentList.size() - 1;
+	for (int i = startIdx; i >= 0; i--) {
+		transform = transform * parentList[i]->getTransformable()->getTransform();
+	}
+	return transform;
+}
+
 AGameObject* AGameObject::getParent()
 {
 	return this->mParent;

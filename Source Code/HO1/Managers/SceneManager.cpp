@@ -1,6 +1,7 @@
 #include "SceneManager.h"
 
 std::string SceneManager::MAIN_MENU_SCENE_NAME = "MainMenuScene";
+std::string SceneManager::VICTORY_MENU_SCENE_NAME = "VictoryScene";
 std::string SceneManager::LEVEL_1_NAME = "Level1";
 std::string SceneManager::LEVEL_2_NAME = "Level2";
 std::string SceneManager::LEVEL_3_NAME = "Level3";
@@ -43,4 +44,9 @@ void SceneManager::unloadScene() {
 }
 bool SceneManager::isSceneLoaded(std::string name) {
 	return this->activeScene->getSceneName() == name;
+}
+
+std::string SceneManager::getActiveSceneName()
+{
+	return this->activeScene->getSceneName();
 }

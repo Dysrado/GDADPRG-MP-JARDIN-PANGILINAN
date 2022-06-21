@@ -10,8 +10,9 @@
 #include "rapidjson/writer.h"
 #include <cstdlib>
 #include "Components/EnemyInputController.h"
+#include "Physics/CollisionListener.h"
 
-EnemyAirplane::EnemyAirplane(std::string name) : APoolable(name) {
+EnemyAirplane::EnemyAirplane(std::string name) : APoolable(name), CollisionListener() {
 
 }
 

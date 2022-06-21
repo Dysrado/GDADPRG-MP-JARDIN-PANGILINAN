@@ -3,6 +3,7 @@
 #include "EnemyInputController.h"
 #include "../GoalPoint.h"
 #include "../Managers/ApplicationManager.h"
+#include "../UI/VictoryMenu.h"
 
 BGMovement::BGMovement(std::string name) : AComponent(name, Script)
 {
@@ -11,6 +12,16 @@ BGMovement::BGMovement(std::string name) : AComponent(name, Script)
 	GameObjectManager::getInstance()->addObject(goal);
 }
 
+bool BGMovement::goalPoint()
+{
+	if (displacement >= GOAL_POINT) {
+		std::cout << "YOU WIN!!!\n";
+		return true;
+	}
+		//ApplicationManager::getInstance()->pauseApplication();\
+	return false;
+	return false;
+}
 void BGMovement::perform()
 {
 	BGObject* bgObject = (BGObject*)this->getOwner();
@@ -39,9 +50,12 @@ void BGMovement::perform()
 			bgObjectTransform->setPosition(0, 0);
 		}*/
 	}
-	if (displacement >= 60.f) {
+	//levelCleared = this->goalPoint();
+	if (displacement >= GOAL_POINT) {
 		std::cout << "YOU WIN!!!\n";
-		//ApplicationManager::getInstance()->pauseApplication();
+		VictoryMenu* victoryMenu = new VictoryMenu("VictoryMenu");
+		GameObjectManager::getInstance()->addObject(victoryMenu);
+		ApplicationManager::getInstance()->pauseApplication();
 	}
 }
 
@@ -49,3 +63,5 @@ float BGMovement::getDisplacement()
 {
 	return displacement;
 }
+
+

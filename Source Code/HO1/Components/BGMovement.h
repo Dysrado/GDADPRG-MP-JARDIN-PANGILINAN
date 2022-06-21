@@ -7,11 +7,14 @@ class BGMovement :
 {
 public:
     BGMovement(std::string name);
+    bool goalPoint();
     void perform();
     float getDisplacement();
+    bool levelCleared;
 
 private:
     const float SPEED_MULTIPLIER = 100.f;
     float displacement;
+    const float GOAL_POINT = 3.f;
 };
 

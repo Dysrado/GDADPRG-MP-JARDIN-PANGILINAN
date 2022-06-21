@@ -1,8 +1,172 @@
-﻿  BGObject.cpp
-E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\BGObject.cpp(28,31): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+﻿  AGameObject.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\AGameObject.cpp(214,38): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  AirplanePlayer.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\AirplanePlayer.cpp(51,53): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
           ]
-E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\BGObject.cpp(32,28): warning C4305: 'argument': truncation from 'double' to 'float'
-  HO1.vcxproj -> E:\School Files\Repos\GDADPRG MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\x64\Debug\HO1.exe
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\AirplanePlayer.cpp(51,34): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  BGObject.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\BGObject.cpp(28,31): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\BGObject.cpp(32,28): warning C4305: 'argument': truncation from 'double' to 'float'
+  AirplaneSupportMovement.cpp
+  BGMovement.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Components\BGMovement.cpp(22,1): warning C4010: single-line comment contains line-continuation character
+  EnemyBehaviour.cpp
+  EnemySwarmHandler.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Components\EnemySwarmHandler.cpp(72,15): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  GoalMovement.cpp
+  PlayerMovement.cpp
+  UIButtonInputController.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Components\UIButtonInputController.cpp(25,63): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Components\UIButtonInputController.cpp(25,42): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  EmptyGameObject.cpp
+  EnemyAirplane.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyAirplane.cpp(65,50): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyAirplane.cpp(65,34): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyAirplane.cpp(69,33): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyAirplane.cpp(95,53): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+  EnemyBird.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyBird.cpp(59,50): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyBird.cpp(59,34): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyBird.cpp(70,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyBird.cpp(104,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  EnemyDino.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyDino.cpp(57,50): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyDino.cpp(57,34): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyDino.cpp(62,33): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\EnemyDino.cpp(88,53): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+  Game.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Game.cpp(27,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  GoalPoint.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\GoalPoint.cpp(23,53): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\GoalPoint.cpp(23,34): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  GameObjectManager.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Managers\GameObjectManager.cpp(31,30): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  SceneManager.cpp
+  APoolable.cpp
+  GameObjectPool.cpp
+  Generating Code...
+  Compiling...
+  ObjectPoolHolder.cpp
+  AScene.cpp
+  Level1.cpp
+  Level2.cpp
+  Level3.cpp
+  MainMenuScene.cpp
+  VictoryScene.cpp
+  Level1Screen.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Screens\Level1Screen.cpp(21,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Level2Screen.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Screens\Level2Screen.cpp(21,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Level3Screen.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Screens\Level3Screen.cpp(21,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  MainMenuScreen.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Screens\MainMenuScreen.cpp(27,50): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\Screens\MainMenuScreen.cpp(27,33): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  HUD.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\UI\HUD.cpp(24,46): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\UI\HUD.cpp(24,31): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  PauseMenu.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\UI\PauseMenu.cpp(23,53): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\UI\PauseMenu.cpp(23,34): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  UIButton.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\UI\UIButton.cpp(23,50): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\UI\UIButton.cpp(23,33): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  UIText.cpp
+  VictoryMenu.cpp
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\UI\VictoryMenu.cpp(23,53): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\HO1\UI\VictoryMenu.cpp(23,34): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  main.cpp
+  Generating Code...
+  LINK : C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\x64\Debug\HO1.exe not found or not built by the last incremental link; performing full link
+  HO1.vcxproj -> C:\Users\rajja\source\repos\GDADPRG-MP\GDADPRG-MP-JARDIN-PANGILINAN\Source Code\x64\Debug\HO1.exe

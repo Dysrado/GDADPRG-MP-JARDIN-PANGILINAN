@@ -2,6 +2,8 @@
 #include "../TextureManager.h"
 #include "../Game.h"
 #include "../Components/Renderer.h"
+#include "../Managers/ApplicationManager.h"
+#include "../Managers/SceneManager.h"
 
 MainMenuScreen::MainMenuScreen(std::string name) : AGameObject(name), ButtonListener()
 {
@@ -20,7 +22,7 @@ MainMenuScreen::~MainMenuScreen()
 void MainMenuScreen::initialize()
 {
 	sf::Sprite* sprite = new sf::Sprite();
-	sprite->setTexture(*TextureManager::getInstance()->GetTexture("ui_bg"));
+	sprite->setTexture(*TextureManager::getInstance()->GetTexture("mainMenu"));
 	sf::Vector2u textureSize = sprite->getTexture()->getSize();
 	sprite->setOrigin(textureSize.x/2, textureSize.y/2);
 
@@ -47,7 +49,7 @@ void MainMenuScreen::initialize()
 	this->button1->attachChild(button_1text);
 	this->button_1text->setPosition(0, -20);
 	this->button_1text->setSize(64);
-	button_1text->setText("OPEN");
+	button_1text->setText("PLAY");
 	this->button1->setButtonListener(this);
 	
 	this->button2 = new UIButton("button_2", btnNormal, btnPressed);
@@ -65,10 +67,17 @@ void MainMenuScreen::initialize()
 
 void MainMenuScreen::onButtonClick(UIButton* button)
 {
-	std::cout << button->getName() << std::endl;
+	//std::cout << button->getName() << std::endl;
+	if (button->getName() == "button_2") {
+		ApplicationManager::getInstance()->applicationQuit();
+	}
+	else if (button->getName() == "button_1") {
+		//GameObjectManager::getInstance()->deleteObjectByName("PauseMenu");
+		SceneManager::getInstance()->loadScene(SceneManager::LEVEL_1_NAME);
+	}
 }
 
 void MainMenuScreen::onButtonReleased(UIButton* button)
 {
-	std::cout << button->getName() << std::endl;
+	//std::cout << button->getName() << std::endl;
 }
