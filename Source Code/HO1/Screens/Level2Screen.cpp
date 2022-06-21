@@ -12,6 +12,10 @@ Level2Screen::~Level2Screen()
 
 void Level2Screen::initialize()
 {
+	physicsManager = new EmptyGameObject("PhysicsManager");
+	GameObjectManager::getInstance()->addObject(physicsManager);
+	PhysicsManager::initialize("PhysicsManager", physicsManager);
+
 	bgObject = new BGObject("BGObject");
 	GameObjectManager::getInstance()->addObject(bgObject);
 

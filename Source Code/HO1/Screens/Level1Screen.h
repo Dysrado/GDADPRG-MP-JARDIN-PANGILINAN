@@ -7,6 +7,7 @@
 #include "../AirplaneSupport.h"
 #include "../AirplanePlayer.h"
 #include "../BGObject.h"
+
 class Level1Screen : public AGameObject
 {
 public:
@@ -24,6 +25,6 @@ private:
 	HUD* hud;
 
 	EmptyGameObject* enemiesManager;
-
+	EmptyGameObject* physicsManager;
 };
 

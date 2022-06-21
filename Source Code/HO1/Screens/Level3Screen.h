@@ -23,5 +23,6 @@ private:
 	HUD* hud;
 
 	EmptyGameObject* enemiesManager;
+	EmptyGameObject* physicsManager;
 };
 

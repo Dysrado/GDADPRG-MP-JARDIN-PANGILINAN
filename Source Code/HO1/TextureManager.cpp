@@ -19,10 +19,10 @@ void TextureManager::loadAll() {
 	//loadTexture("desert_bg", "Media/Textures/Desert.png");
 	//loadTexture("eagle", "Media/Textures/Eagle.png");
 	//loadTexture("raptor", "Media/Textures/Raptor.png");
-	loadTexture("ui_bg", "Media/Textures/UI/f.png");
+	loadTexture("ui_bg", "Media/Textures/UI/f2.png");
 	loadTexture("btn_normal", "Media/Textures/UI/b_normal.png");
 	loadTexture("btn_pressed", "Media/Textures/UI/b_pressed.png");
-	loadTexture("bar", "Media/Textures/UI/bar_2.png");
+	loadTexture("bar", "Media/Textures/UI/bar_3.png");
 	//loadTexture("avenger", "Media/Textures/Avenger.png");
 	//loadTexture("dota2_sheet", "Media/Textures/Dota2 Atlas.png");
 	loadTexture("dino_sheet", "Media/Textures/Spritesheet/dino_final_sheet.png");

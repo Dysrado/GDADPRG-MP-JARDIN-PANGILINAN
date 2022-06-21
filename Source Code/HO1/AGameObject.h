@@ -33,15 +33,15 @@ public:
 
 	sf::Transform getGlobalTransform();
 	AGameObject* getParent();
-
+	//sf::Sprite* getSprite();
 	
 
 protected:
+	sf::Sprite* sprite;
 	void setParent(AGameObject* gameObject);
 
 	sf::Transformable transformable;
 	std::string name;
-	sf::Sprite* sprite;
 	sf::Texture* texture;
 	std::vector<AGameObject*> childList;
 	std::vector<AComponent*> componentList;

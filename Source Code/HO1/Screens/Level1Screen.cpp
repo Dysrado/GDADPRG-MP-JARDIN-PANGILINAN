@@ -1,4 +1,6 @@
 #include "Level1Screen.h"
+#include "../Physics/PhysicsManager.h"
+#include "../Managers/ApplicationManager.h"
 
 Level1Screen::Level1Screen(std::string name) : AGameObject(name)
 {
@@ -11,12 +13,15 @@ Level1Screen::~Level1Screen()
 
 void Level1Screen::initialize()
 {
+	physicsManager = new EmptyGameObject("PhysicsManager");
+	GameObjectManager::getInstance()->addObject(physicsManager);
+	PhysicsManager::initialize("PhysicsManager", physicsManager);
+	
 	bgObject = new BGObject("BGObject");
 	GameObjectManager::getInstance()->addObject(bgObject);
 
 	planeObject = new AirplanePlayer("PlaneObject");
 	GameObjectManager::getInstance()->addObject(planeObject);
-
 
 	srand(time(NULL)); // controls randomness of the enemy spawns
 	enemiesManager = new EmptyGameObject("EnemiesManager");
@@ -27,10 +32,17 @@ void Level1Screen::initialize()
 	hud = new HUD("HUD");
 	GameObjectManager::getInstance()->addObject(hud);
 	
+	ApplicationManager::getInstance()->resumeApplication();
+
+	//PhysicsManager::getInstance()->trackObject(planeObject->collider);
+	//this->registerObject(physicsManager);
+	//PhysicsManager::getInstance()->initialize("PhysicsManager", physicsManager);
+	//PhysicsManager::in
 	
+	//physicsManager->initialize("PhysicsManager", physicsManager)
 }
 
 void Level1Screen::levelClear()
 {
-
+	
 }

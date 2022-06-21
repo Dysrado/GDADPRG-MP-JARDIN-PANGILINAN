@@ -74,12 +74,15 @@ void VictoryMenu::onButtonClick(UIButton* button)
 
 		//SceneManager::getInstance()->unloadScene();*/
 		if (SceneManager::getInstance()->getActiveSceneName() == "Level1") {
+			//SceneManager::getInstance()->unloadScene();
 			SceneManager::getInstance()->loadScene(SceneManager::LEVEL_2_NAME);
 		}
 		else if (SceneManager::getInstance()->getActiveSceneName() == "Level2") {
+			SceneManager::getInstance()->unloadScene();
 			SceneManager::getInstance()->loadScene(SceneManager::LEVEL_3_NAME);
 		}
 		else if (SceneManager::getInstance()->getActiveSceneName() == "Level3") {
+			SceneManager::getInstance()->unloadScene();
 			SceneManager::getInstance()->loadScene(SceneManager::VICTORY_MENU_SCENE_NAME);
 		}
 

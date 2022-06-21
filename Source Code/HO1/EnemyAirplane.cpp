@@ -10,7 +10,6 @@
 #include "rapidjson/writer.h"
 #include <cstdlib>
 #include "Components/EnemyInputController.h"
-#include "Physics/CollisionListener.h"
 
 EnemyAirplane::EnemyAirplane(std::string name) : APoolable(name), CollisionListener() {
 
@@ -81,6 +80,11 @@ void EnemyAirplane::initialize() {
 	this->attachComponent(behaviour);
 	behaviour->configure(1.f);
 
+	this->collider = new Collider("CactusCollider");
+
+	collider->setLocalBounds(sprite->getGlobalBounds());
+	collider->setCollisionListener(this);
+	this->attachComponent(collider);
 }
 
 void EnemyAirplane::onRelease() {
@@ -93,7 +97,9 @@ void EnemyAirplane::onActivate() {
 	
 	this->setPosition(0, Game::WINDOW_HEIGHT / 2);
 	//this->getTransformable()->move(Game::WINDOW_WIDTH, rand() % SPAWN_RANGE - rand() % SPAWN_RANGE);
+	PhysicsManager::getInstance()->trackObject(this->collider);
 	this->getTransformable()->move(Game::WINDOW_WIDTH, LOCATION);
+	//PhysicsManager::getInstance()->trackObject(collider);
 }
 
 APoolable* EnemyAirplane::clone()
@@ -101,3 +107,20 @@ APoolable* EnemyAirplane::clone()
 	APoolable* copyObj = new EnemyAirplane(this->name);
 	return copyObj;
 }
+
+void EnemyAirplane::onCollisionEnter(AGameObject* contact)
+{
+	/*if (contact->getName().find("PlaneObject") != std::string::npos) {
+		std::cout << "COLLIDING\n";
+
+	}*/
+	
+}
+
+void EnemyAirplane::onCollisionExit(AGameObject* contact)
+{
+}
+
+
+
+

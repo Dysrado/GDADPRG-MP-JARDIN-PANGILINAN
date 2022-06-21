@@ -11,7 +11,8 @@
 #include <cstdlib>
 #include "Components/EnemyInputController.h"
 
-EnemyDino::EnemyDino(std::string name) : APoolable(name) {
+
+EnemyDino::EnemyDino(std::string name) : APoolable(name), CollisionListener() {
 
 }
 
@@ -72,7 +73,11 @@ void EnemyDino::initialize() {
 	EnemyBehaviour* behaviour = new EnemyBehaviour("EnemyDinoBehaviour");
 	this->attachComponent(behaviour);
 	behaviour->configure(0.f);
+	this->collider = new Collider("DinoCollider");
 
+	collider->setLocalBounds(sprite->getGlobalBounds());
+	collider->setCollisionListener(this);
+	this->attachComponent(collider);
 }
 
 void EnemyDino::onRelease() {
@@ -82,6 +87,7 @@ void EnemyDino::onRelease() {
 void EnemyDino::onActivate() {
 	EnemyBehaviour* behaviour = (EnemyBehaviour*)this->findComponentByName("EnemyDinoBehaviour");
 	behaviour->reset();
+	PhysicsManager::getInstance()->trackObject(this->collider);
 
 	this->setPosition(0, Game::WINDOW_HEIGHT / 2);
 	//this->getTransformable()->move(Game::WINDOW_WIDTH, rand() % SPAWN_RANGE - rand() % SPAWN_RANGE);
@@ -104,4 +110,12 @@ void EnemyDino::update(sf::Time deltaTime) {
 		this->sprite->setTextureRect(this->frames[frameCtr]);
 	}
 	AGameObject::update(deltaTime);
+}
+
+void EnemyDino::onCollisionEnter(AGameObject* contact)
+{
+}
+
+void EnemyDino::onCollisionExit(AGameObject* contact)
+{
 }

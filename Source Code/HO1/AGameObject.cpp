@@ -223,6 +223,11 @@ AGameObject* AGameObject::getParent()
 	return this->mParent;
 }
 
+//sf::Transformable AGameObject::getTransform()
+//{
+//	return this->sprite;
+//}
+
 void AGameObject::setParent(AGameObject* parent)
 {
 	this->mParent = parent;

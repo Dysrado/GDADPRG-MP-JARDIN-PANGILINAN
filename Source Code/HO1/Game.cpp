@@ -18,6 +18,7 @@
 #include "Scenes/Level2.h"
 #include "Scenes/Level3.h"
 #include "Scenes/VictoryScene.h"
+#include "Physics/PhysicsManager.h"
 
 
 
@@ -31,15 +32,16 @@ Game::Game() : myWindow(sf::VideoMode(Game::WINDOW_WIDTH, Game::WINDOW_HEIGHT), 
 	FontManager::getInstance()->loadAll();
 	AudioManager::getInstance()->loadAll();
 	ApplicationManager::getInstance()->initialize(&myWindow);
-
+	/*EmptyGameObject* physicsManager = new EmptyGameObject("PhysicsManager");
+		this->*/
 	SceneManager::getInstance()->registerScene(new MainMenuScene());
 
 	SceneManager::getInstance()->registerScene(new Level1());
 	SceneManager::getInstance()->registerScene(new Level2());
 	SceneManager::getInstance()->registerScene(new Level3());
 	SceneManager::getInstance()->registerScene(new VictoryScene());
-
 	SceneManager::getInstance()->loadScene(SceneManager::MAIN_MENU_SCENE_NAME);
+
 	//SceneManager::getInstance()->loadScene(SceneManager::LEVEL_1_NAME);
 	//SceneManager::getInstance()->loadScene(SceneManager::LEVEL_2_NAME);
 	//SceneManager::getInstance()->loadScene(SceneManager::LEVEL_3_NAME);

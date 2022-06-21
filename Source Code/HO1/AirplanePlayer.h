@@ -1,14 +1,20 @@
 #pragma once
 #include "AGameObject.h"
 #include "Components/PlayerInputController.h"
+#include "Physics/Collider.h"
+#include "Physics/PhysicsManager.h"
 
-class AirplanePlayer : public AGameObject
+class AirplanePlayer : public AGameObject, public CollisionListener
 {
 public:
 	AirplanePlayer(std::string name);
 	void initialize();
 
 	void update(sf::Time deltaTime);
+	void onCollisionEnter(AGameObject* contact);
+	void onCollisionExit(AGameObject* contact);
+	Collider* collider;
+	
 
 private:
 	sf::Sprite* sprite = new sf::Sprite();

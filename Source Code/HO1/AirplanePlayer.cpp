@@ -9,8 +9,11 @@
 #include "rapidjson/filereadstream.h"
 #include "rapidjson/stringbuffer.h"
 #include "rapidjson/writer.h"
+#include "UI/DefeatMenu.h"
+#include "Managers/ApplicationManager.h"
 
-AirplanePlayer::AirplanePlayer(std::string name) : AGameObject(name) {}
+AirplanePlayer::AirplanePlayer(std::string name) : AGameObject(name), CollisionListener()
+{}
 
 void AirplanePlayer::initialize(){
 
@@ -62,9 +65,19 @@ void AirplanePlayer::initialize(){
 	this->attachComponent(movement);
 	this->frameCtr = 0;
 	this->sprite->setTextureRect(this->frames[frameCtr]);
+
+
+	this->collider = new Collider("PlayerCollider");
+	collider->setLocalBounds(sprite->getGlobalBounds());
+	collider->setCollisionListener(this);
+	this->attachComponent(collider);
+	
+	PhysicsManager::getInstance()->trackObject(this->collider);
 }
 
 void AirplanePlayer::update(sf::Time deltaTime) {
+	
+	//PhysicsManager::getInstance()->trackObject(this->collider);
 	//PlayerInputController* inputController = new PlayerInputController("MyPlayerInput", displacement);
 	if (inputController->isLeft() || inputController->isRight()) {
 		if (this->animClock.getElapsedTime().asSeconds() >= 0.2f) {
@@ -81,6 +94,26 @@ void AirplanePlayer::update(sf::Time deltaTime) {
 		this->sprite->setTextureRect(this->frames[frameCtr]);
 	}
 	AGameObject::update(deltaTime);
+	//if(this->sprite->getGlobalBounds().intersects(Game))
 }
+
+void AirplanePlayer::onCollisionEnter(AGameObject* contact)
+{
+	
+	if (contact->getName().find("cactus") != std::string::npos || 
+		contact->getName().find("EnemyDino") != std::string::npos ||
+		contact->getName().find("EnemyBird") != std::string::npos) {
+		DefeatMenu* defeatMenu = new DefeatMenu("DefeatMenu");
+		GameObjectManager::getInstance()->addObject(defeatMenu);
+		ApplicationManager::getInstance()->pauseApplication();
+
+	}
+	
+}
+
+void AirplanePlayer::onCollisionExit(AGameObject* contact)
+{
+}
+
 
 

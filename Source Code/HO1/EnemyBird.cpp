@@ -12,7 +12,7 @@
 #include <string>
 #include "Components/EnemyInputController.h"
 
-EnemyBird::EnemyBird(std::string name) : APoolable(name) {
+EnemyBird::EnemyBird(std::string name) : APoolable(name), CollisionListener() {
 
 }
 
@@ -82,6 +82,11 @@ void EnemyBird::initialize() {
 	behaviour->configure(0.f);
 
 	this->animClock.restart();
+	this->collider = new Collider("BirdCollider");
+
+	collider->setLocalBounds(sprite->getGlobalBounds());
+	collider->setCollisionListener(this);
+	this->attachComponent(collider);
 }
 
 void EnemyBird::onRelease() {
@@ -91,6 +96,7 @@ void EnemyBird::onRelease() {
 void EnemyBird::onActivate() {
 	EnemyBehaviour* behaviour = (EnemyBehaviour*)this->findComponentByName("EnemyBirdBehaviour");
 	behaviour->reset();
+	PhysicsManager::getInstance()->trackObject(this->collider);
 
 	this->setPosition(0, Game::WINDOW_HEIGHT / 2);
 	//this->getTransformable()->move(Game::WINDOW_WIDTH, rand() % SPAWN_RANGE - rand() % SPAWN_RANGE);
@@ -121,4 +127,12 @@ void EnemyBird::update(sf::Time deltaTime) {
 		this->sprite->setTextureRect(this->frames[frameCtr]);
 	}
 	AGameObject::update(deltaTime);
+}
+
+void EnemyBird::onCollisionEnter(AGameObject* contact)
+{
+}
+
+void EnemyBird::onCollisionExit(AGameObject* contact)
+{
 }
