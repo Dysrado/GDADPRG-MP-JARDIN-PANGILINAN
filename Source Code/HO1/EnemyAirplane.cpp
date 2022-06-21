@@ -63,7 +63,7 @@ void EnemyAirplane::initialize() {
 	sprite->setTexture(*TextureManager::getInstance()->GetTexture("dino_sheet"));
 	sprite->setTextureRect(frame);
 	sprite->setOrigin(textureSize.x / 2, textureSize.y);
-	this->setPosition(Game::WINDOW_WIDTH / 2 + 20, 0);
+	this->setPosition(Game::WINDOW_WIDTH / 2 + 60, 0);
 
 	//this->getTransformable()->move(rand() % SPAWN_RANGE - rand() % SPAWN_RANGE, 0);
 	this->getTransformable()->move(LOCATION, 0);
@@ -98,7 +98,7 @@ void EnemyAirplane::onActivate() {
 	this->setPosition(0, Game::WINDOW_HEIGHT / 2);
 	//this->getTransformable()->move(Game::WINDOW_WIDTH, rand() % SPAWN_RANGE - rand() % SPAWN_RANGE);
 	PhysicsManager::getInstance()->trackObject(this->collider);
-	this->getTransformable()->move(Game::WINDOW_WIDTH, LOCATION);
+	this->getTransformable()->move(Game::WINDOW_WIDTH + 100, LOCATION);
 	//PhysicsManager::getInstance()->trackObject(collider);
 }
 

@@ -91,7 +91,7 @@ void EnemyDino::onActivate() {
 
 	this->setPosition(0, Game::WINDOW_HEIGHT / 2);
 	//this->getTransformable()->move(Game::WINDOW_WIDTH, rand() % SPAWN_RANGE - rand() % SPAWN_RANGE);
-	this->getTransformable()->move(Game::WINDOW_WIDTH, LOCATION);
+	this->getTransformable()->move(Game::WINDOW_WIDTH + 100, LOCATION);
 }
 
 APoolable* EnemyDino::clone()

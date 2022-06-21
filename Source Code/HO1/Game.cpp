@@ -131,9 +131,6 @@ void Game::Update(sf::Time deltaTime)
 {
 	if (!ApplicationManager::getInstance()->isPaused()) {
 		GameObjectManager::getInstance()->update(deltaTime);
-		
-		// for JSON
-		//dota->update();
 	}
 
 }

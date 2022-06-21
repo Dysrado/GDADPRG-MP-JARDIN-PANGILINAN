@@ -107,7 +107,7 @@ void EnemyBird::onActivate() {
 	else {
 		LOCATION = 225;
 	}
-	this->getTransformable()->move(Game::WINDOW_WIDTH, LOCATION);
+	this->getTransformable()->move(Game::WINDOW_WIDTH + 100, LOCATION);
 }
 
 APoolable* EnemyBird::clone()

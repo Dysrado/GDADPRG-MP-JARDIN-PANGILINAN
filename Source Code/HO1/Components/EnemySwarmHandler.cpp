@@ -33,12 +33,6 @@ EnemySwarmHandler::EnemySwarmHandler(int numEnemies, std::string name, AGameObje
 	
 	enemyPool->initialize();
 	ObjectPoolHolder::getInstance()->registerObjectPool(enemyPool);
-	enemyPool->requestPoolableBatch(numEnemies);
-	enemyPool->requestPoolable();
-	enemyPool->requestPoolable();
-	enemyPool->requestPoolable();
-	enemyPool->requestPoolable();
-	enemyPool->requestPoolable();
 }
 
 EnemySwarmHandler::~EnemySwarmHandler()
