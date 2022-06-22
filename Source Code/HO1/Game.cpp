@@ -24,20 +24,22 @@
 
 
 
-/* Constructures and Deconstructures */
+/* Constructure */
 Game::Game() : myWindow(sf::VideoMode(Game::WINDOW_WIDTH, Game::WINDOW_HEIGHT), "Jardin - Pangilinan")
 {	
 	srand(time(NULL));
 	myWindow.setFramerateLimit(60);
-	//int AirplanePlayer::playerLives = 4;
+
+	// Loads all of the needed media files
 	TextureManager::getInstance()->loadAll();
 	FontManager::getInstance()->loadAll();
 	AudioManager::getInstance()->loadAll();
 	ApplicationManager::getInstance()->initialize(&myWindow);
 	/*EmptyGameObject* physicsManager = new EmptyGameObject("PhysicsManager");
 		this->*/
-	SceneManager::getInstance()->registerScene(new MainMenuScene());
 
+	// Registers all of the Scenes
+	SceneManager::getInstance()->registerScene(new MainMenuScene());
 	SceneManager::getInstance()->registerScene(new Level1());
 	SceneManager::getInstance()->registerScene(new Level2());
 	SceneManager::getInstance()->registerScene(new Level3());
@@ -45,50 +47,8 @@ Game::Game() : myWindow(sf::VideoMode(Game::WINDOW_WIDTH, Game::WINDOW_HEIGHT), 
 	SceneManager::getInstance()->registerScene(new DefeatScene());
 	SceneManager::getInstance()->registerScene(new LevelSelectorScene());
 
+	// Loads the Main Menu
 	SceneManager::getInstance()->loadScene(SceneManager::MAIN_MENU_SCENE_NAME);
-	//SceneManager::getInstance()->loadScene(SceneManager::LEVEL_SELECTOR_SCENE_NAME);
-	//SceneManager::getInstance()->loadScene(SceneManager::VICTORY_MENU_SCENE_NAME);
-	//SceneManager::getInstance()->loadScene(SceneManager::DEFEAT_SCENE_NAME);
-
-	//SceneManager::getInstance()->loadScene(SceneManager::LEVEL_1_NAME);
-	//SceneManager::getInstance()->loadScene(SceneManager::LEVEL_2_NAME);
-	//SceneManager::getInstance()->loadScene(SceneManager::LEVEL_3_NAME);
-
-
-
-	//AirplaneSupport* support1 = new AirplaneSupport("AirSupport_1");
-	//planeObject->attachChild(support1);
-	//support1->setPosition(50, 100);
-
-	//AirplaneSupport* support2 = new AirplaneSupport("AirSupport_2");
-	//planeObject->attachChild(support2);
-	//support2->setPosition(-50, 100);
-	//BGObject* bgObject = new BGObject("BGObject");
-	//GameObjectManager::getInstance()->addObject(bgObject);
-
-	//this->planeObject = new AirplanePlayer("PlaneObject");
-	//GameObjectManager::getInstance()->addObject(planeObject);
-
-	//HUD* hud = new HUD("HUD");
-	//GameObjectManager::getInstance()->addObject(hud);
-
-	//srand(time(NULL)); // controls randomness of the enemy spawns
-	//EmptyGameObject* enemiesManager = new EmptyGameObject("EnemiesManager");
-	//EnemySwarmHandler* swarmHandler = new EnemySwarmHandler(5, "SwarmHandler", enemiesManager, 2); 
-	//// last parameter for the EnemySwarmHandler is for the enemy type from range of 1 - 3
-	//enemiesManager->attachComponent(swarmHandler);
-	//GameObjectManager::getInstance()->addObject(enemiesManager);
-	/*soundBuffer = AudioManager::getInstance()->getBuffer("jump");
-	sound.setBuffer(*soundBuffer);*/
-
-	// for JSON
-	/*dota = new DOTA("Dota");
-	GameObjectManager::getInstance()->addObject(dota);*/
-
-
-
-	/*MainMenuScreen* mainMenuScreen = new MainMenuScreen("MainMenuScreen");
-	GameObjectManager::getInstance()->addObject(mainMenuScreen);*/
 }
 
 /* Public Functions */
@@ -122,13 +82,7 @@ void Game::ProcessEvents()
 			this->myWindow.close();
 			break;
 
-		default:
-			if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Space) {
-				//GameObjectManager::getInstance()->addObject(new EnemyDino("EnemyDino"));
-				//this->planeObject->setEnabled(!this->planeObject->isEnabled());
-				//sound.play();
-			}
-			
+		default:			
 			GameObjectManager::getInstance()->processInput(event);
 			break;
 		}

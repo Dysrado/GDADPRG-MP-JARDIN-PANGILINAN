@@ -14,12 +14,11 @@ BGMovement::BGMovement(std::string name) : AComponent(name, Script)
 
 bool BGMovement::goalPoint()
 {
+	// Checks if the displacement is enough for a goal/win
 	if (displacement >= GOAL_POINT) {
 		std::cout << "YOU WIN!!!\n";
 		return true;
 	}
-		//ApplicationManager::getInstance()->pauseApplication();\
-	return false;
 	return false;
 }
 void BGMovement::perform()
@@ -27,13 +26,14 @@ void BGMovement::perform()
 	BGObject* bgObject = (BGObject*)this->getOwner();
 	PlayerInputController* inputController = (PlayerInputController*)bgObject->getComponentsOfType(ComponentType::Input)[0];
 	sf::Transformable* bgObjectTransform = bgObject->getTransformable();
-	//displacement = inputController->displacement
+	// Checks if the object is NULL
 	if (bgObjectTransform == NULL) {
 		std::cout << "bgObjectTransform not found" << std::endl;
 	}
 	else {
 		sf::Vector2f offset(0.f, 0.f);
 
+		// Moves the background left and right, and adjusts displacement accordingly
 		if (inputController->isLeft() && displacement > 0) {
 			displacement -= 0.01f;
 			offset.x += this->SPEED_MULTIPLIER;
@@ -44,13 +44,8 @@ void BGMovement::perform()
 			offset.x -= this->SPEED_MULTIPLIER;
 			bgObjectTransform->move(offset * deltaTime.asSeconds());
 		}
-
-		/*sf::Vector2f localPos = bgObjectTransform->getPosition();
-		if (localPos.x >= Game::WINDOW_WIDTH) {
-			bgObjectTransform->setPosition(0, 0);
-		}*/
 	}
-	//levelCleared = this->goalPoint();
+	// Checks if the displacement is enough for a goal/win
 	if (displacement >= GOAL_POINT) {
 		std::cout << "YOU WIN!!!\n";
 		VictoryMenu* victoryMenu = new VictoryMenu("VictoryMenu");
@@ -61,6 +56,7 @@ void BGMovement::perform()
 
 float BGMovement::getDisplacement()
 {
+	// Gets the displacement. This is used for other classes that needs to know the displacement
 	return displacement;
 }
 

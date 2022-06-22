@@ -22,12 +22,12 @@ EnemyAirplane::~EnemyAirplane() {
 
 
 void EnemyAirplane::initialize() {
-
+	// Reads the JSON file
 	FILE* file = fopen("Media/Textures/Spritesheet/dino_final_sheet.json", "rb");
 
 	sf::IntRect frame;
 	sf::Vector2u textureSize;
-	//assert(file != 0);
+
 	if (file == 0) {
 		std::cout << "Could not open file\n";
 	}
@@ -41,7 +41,7 @@ void EnemyAirplane::initialize() {
 
 		rapidjson::Value& icon = doc["frames"];
 		int random = rand() % 2;
-		if (random == 1) {
+		if (random == 1) { // Randomizes the Cactus Texture
 			frame.left = icon["cactuses_big_3.png"]["frame"]["x"].GetInt();
 			frame.top = icon["cactuses_big_3.png"]["frame"]["y"].GetInt();
 			frame.width = icon["cactuses_big_3.png"]["frame"]["w"].GetInt();
@@ -65,9 +65,8 @@ void EnemyAirplane::initialize() {
 	sprite->setOrigin(textureSize.x / 2, textureSize.y);
 	this->setPosition(Game::WINDOW_WIDTH / 2 + 60, 0);
 
-	//this->getTransformable()->move(rand() % SPAWN_RANGE - rand() % SPAWN_RANGE, 0);
+
 	this->getTransformable()->move(LOCATION, 0);
-	//this->getTransformable()->setRotation(180);
 
 	Renderer* renderer = new Renderer("EnemySprite");
 	renderer->assignDrawable(sprite);
@@ -96,10 +95,8 @@ void EnemyAirplane::onActivate() {
 	behaviour->reset();
 	
 	this->setPosition(0, Game::WINDOW_HEIGHT / 2);
-	//this->getTransformable()->move(Game::WINDOW_WIDTH, rand() % SPAWN_RANGE - rand() % SPAWN_RANGE);
 	PhysicsManager::getInstance()->trackObject(this->collider);
 	this->getTransformable()->move(Game::WINDOW_WIDTH + 100, LOCATION);
-	//PhysicsManager::getInstance()->trackObject(collider);
 }
 
 APoolable* EnemyAirplane::clone()

@@ -5,7 +5,6 @@
 #include "../Game.h"
 
 PlayerMovement::PlayerMovement(std::string name) : AComponent(name, Script){
-	//elapsed = sf::seconds(2.0f);
 	soundBuffer = AudioManager::getInstance()->getBuffer("jump");
 	sound.setBuffer(*soundBuffer);
 }
@@ -37,26 +36,10 @@ void PlayerMovement::perform() {
 		elapsed = clock.getElapsedTime();
 	}
 
-	if (/*jump == false &&*/ playerTransform->getPosition().y != (Game::WINDOW_HEIGHT / 2) + 150.f) {
+	if (playerTransform->getPosition().y != (Game::WINDOW_HEIGHT / 2) + 150.f) {
 		offset.y += this->SPEED_MULTIPLIER;
 		playerTransform->move(offset * deltaTime.asSeconds());
 		
 	}
-	/*if (playerTransform->getPosition().y == (Game::WINDOW_HEIGHT / 2) + 150.f) {
-		jump = false;
-	}*/
-	/*
-	else if (inputController->isDown()) {
-		offset.y += this->SPEED_MULTIPLIER;
-		playerTransform->move(offset * deltaTime.asSeconds());
-	}
-	else if (inputController->isLeft()) {
-		offset.x -= this->SPEED_MULTIPLIER;
-		playerTransform->move(offset * deltaTime.asSeconds());
-	}
-	else if (inputController->isRight()) {
-		offset.x += this->SPEED_MULTIPLIER;
-		playerTransform->move(offset * deltaTime.asSeconds());
-	}*/
 
 }

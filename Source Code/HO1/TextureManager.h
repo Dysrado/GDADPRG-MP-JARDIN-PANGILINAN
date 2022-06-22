@@ -6,7 +6,6 @@ class TextureManager
 {
 public:
 	static TextureManager* getInstance();
-	void TestFunction();
 
 	void loadAll();
 	sf::Texture* GetTexture(std::string);

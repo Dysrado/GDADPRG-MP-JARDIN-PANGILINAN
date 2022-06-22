@@ -67,12 +67,10 @@ void MainMenuScreen::initialize()
 
 void MainMenuScreen::onButtonClick(UIButton* button)
 {
-	//std::cout << button->getName() << std::endl;
-	if (button->getName() == "button_2") {
+	if (button->getName() == "button_2") { // Quits the game
 		ApplicationManager::getInstance()->applicationQuit();
 	}
-	else if (button->getName() == "button_1") {
-		//GameObjectManager::getInstance()->deleteObjectByName("PauseMenu");
+	else if (button->getName() == "button_1") { // Goes to the Level Selector Scene
 		SceneManager::getInstance()->loadScene(SceneManager::LEVEL_SELECTOR_SCENE_NAME);
 	}
 }
