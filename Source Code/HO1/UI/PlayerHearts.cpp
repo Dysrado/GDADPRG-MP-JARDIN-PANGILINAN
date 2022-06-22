@@ -19,7 +19,7 @@ void PlayerHearts::initialize()
 	sprite->setTexture(*TextureManager::getInstance()->GetTexture("heart"));
 	sf::Vector2u textureSize = sprite->getTexture()->getSize();
 	sprite->setOrigin(textureSize.x / 2, textureSize.y / 2);
-	sprite->setScale(3.f, 2.f);
+	sprite->setScale(.6f, .6f);
 	Renderer* renderer = new Renderer("Heart");
 	renderer->assignDrawable(sprite);
 	this->attachComponent(renderer);

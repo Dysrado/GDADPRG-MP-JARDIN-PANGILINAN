@@ -48,9 +48,17 @@ void HUD::initialize()
 
 	distance_text = new UIText("distance");
 	this->attachChild(distance_text);
-	distance_text->setPosition(-Game::WINDOW_WIDTH + 145,-25);
+	distance_text->setPosition(-Game::WINDOW_WIDTH + 90,-25);
 
+	heart = new PlayerHearts("heart");
+	this->attachChild(heart);
+	heart->setPosition(-150, -30);
 
+	this->heart_text = new UIText("heartText");
+	this->heart->attachChild(heart_text);
+	this->heart_text->setPosition(-60,0);
+	this->heart_text->setSize(30);
+	this->heart_text->setText(std::to_string(SceneManager::getInstance()->getLives()) + " x");
 
 	PauseMenu* pauseMenu = new PauseMenu("PauseMenu");
 	GameObjectManager::getInstance()->addObject(pauseMenu);
@@ -61,7 +69,7 @@ void HUD::initialize()
 void HUD::update(sf::Time deltaTime)
 {
 	movement = (BGMovement*)GameObjectManager::getInstance()->findObjectByName("BGObject")->findComponentByName("myBGMovement");
-	float displacement = movement->getDisplacement();
+	int displacement = movement->getDisplacement();
 
 	distance_text->setText("M: " + std::to_string(displacement));
 
