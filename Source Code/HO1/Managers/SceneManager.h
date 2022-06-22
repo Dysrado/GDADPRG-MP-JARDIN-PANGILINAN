@@ -22,11 +22,14 @@ public:
 	void checkLoadScene();
 	bool isSceneLoaded(std::string name);
 	std::string getActiveSceneName();
+	int getLives();
+	void reduceLives();
 
 private:
 	SceneManager() {};
 	SceneManager(SceneManager const&) {};
 	SceneManager& operator=(SceneManager const&) {};
+	int playerLives = 4 ;
 
 	static SceneManager* sharedInstance;
 

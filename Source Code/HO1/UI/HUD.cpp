@@ -4,6 +4,7 @@
 #include "../Game.h"
 #include "../Managers/ApplicationManager.h"
 #include "PauseMenu.h"
+#include "../Managers/SceneManager.h"
 
 #include "VictoryMenu.h"
 
@@ -48,6 +49,8 @@ void HUD::initialize()
 	distance_text = new UIText("distance");
 	this->attachChild(distance_text);
 	distance_text->setPosition(-Game::WINDOW_WIDTH + 145,-25);
+
+
 
 	PauseMenu* pauseMenu = new PauseMenu("PauseMenu");
 	GameObjectManager::getInstance()->addObject(pauseMenu);

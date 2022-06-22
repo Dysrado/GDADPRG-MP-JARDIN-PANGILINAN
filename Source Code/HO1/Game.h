@@ -23,18 +23,18 @@ private:
 	void Update(sf::Time);
 	void Render();
 
-	void createEntity(std::string key, float x, float y);
+	//void createEntity(std::string key, float x, float y);
 
 	sf::RenderWindow myWindow;
 
-	Entity mySampleEntity;
+	//Entity mySampleEntity;
 
 	//sf::SoundBuffer* soundBuffer;
 	//sf::Sound sound;
 
-	std::vector<Entity*> myEntityList;
+	//std::vector<Entity*> myEntityList;
 
-	AirplanePlayer* planeObject;
-	float displacement = 0.0f;
+	//AirplanePlayer* planeObject;
+	//float displacement = 0.0f;
 };
 

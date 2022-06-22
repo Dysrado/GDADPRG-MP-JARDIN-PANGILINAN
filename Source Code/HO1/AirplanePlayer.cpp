@@ -11,12 +11,13 @@
 #include "rapidjson/writer.h"
 #include "UI/DefeatMenu.h"
 #include "Managers/ApplicationManager.h"
+#include "Managers/SceneManager.h"
 
 AirplanePlayer::AirplanePlayer(std::string name) : AGameObject(name), CollisionListener()
 {}
 
 void AirplanePlayer::initialize(){
-
+	
 	std::cout << "Declared as " << this->getName() << std::endl;
 
 	this->setEnabled(true);
@@ -100,13 +101,16 @@ void AirplanePlayer::update(sf::Time deltaTime) {
 void AirplanePlayer::onCollisionEnter(AGameObject* contact)
 {
 	
-	if (contact->getName().find("cactus") != std::string::npos || 
+	if ((contact->getName().find("cactus") != std::string::npos ||
 		contact->getName().find("EnemyDino") != std::string::npos ||
-		contact->getName().find("EnemyBird") != std::string::npos) {
+		contact->getName().find("EnemyBird") != std::string::npos) && isCollided == false) {
+		isCollided = true;
 		DefeatMenu* defeatMenu = new DefeatMenu("DefeatMenu");
 		GameObjectManager::getInstance()->addObject(defeatMenu);
 		ApplicationManager::getInstance()->pauseApplication();
+		SceneManager::getInstance()->reduceLives();
 
+		std::cout << "Life: " << SceneManager::getInstance()->getLives() << std::endl;
 	}
 	
 }

@@ -50,3 +50,13 @@ std::string SceneManager::getActiveSceneName()
 {
 	return this->activeScene->getSceneName();
 }
+
+int SceneManager::getLives()
+{
+	return playerLives;
+}
+
+void SceneManager::reduceLives()
+{
+	playerLives -= 1;;
+}

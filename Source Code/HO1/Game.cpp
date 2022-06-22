@@ -27,7 +27,7 @@ Game::Game() : myWindow(sf::VideoMode(Game::WINDOW_WIDTH, Game::WINDOW_HEIGHT), 
 {	
 	srand(time(NULL));
 	myWindow.setFramerateLimit(60);
-
+	//int AirplanePlayer::playerLives = 4;
 	TextureManager::getInstance()->loadAll();
 	FontManager::getInstance()->loadAll();
 	AudioManager::getInstance()->loadAll();
@@ -143,18 +143,18 @@ void Game::Render()
 	this->myWindow.display();
 }
 
-
-void Game::createEntity(std::string key, float x, float y)
-{
-	Entity* entity = new Entity();
-
-	sf::Texture* myTexture;
-	myTexture = TextureManager::getInstance()->GetTexture(key);
-	entity->SetTexture(*myTexture);
-	entity->GetSprite()->setPosition(x, y);
-	entity->rootTexName = key;
-	entity->frames = 7;
-	myEntityList.push_back(entity);
-}
+//
+//void Game::createEntity(std::string key, float x, float y)
+//{
+//	Entity* entity = new Entity();
+//
+//	sf::Texture* myTexture;
+//	myTexture = TextureManager::getInstance()->GetTexture(key);
+//	entity->SetTexture(*myTexture);
+//	entity->GetSprite()->setPosition(x, y);
+//	entity->rootTexName = key;
+//	entity->frames = 7;
+//	myEntityList.push_back(entity);
+//}
 
 

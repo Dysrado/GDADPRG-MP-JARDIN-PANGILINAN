@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="UI\PlayerHearts.cpp" />
     <ClCompile Include="UI\DefeatMenu.cpp" />
     <ClCompile Include="Physics\Collider.cpp" />
     <ClCompile Include="EnemyBird.cpp" />
@@ -203,6 +204,7 @@
     <ClCompile Include="Scenes\VictoryScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="UI\PlayerHearts.h" />
     <ClInclude Include="UI\DefeatMenu.h" />
     <ClInclude Include="Physics\Collider.h" />
     <ClInclude Include="EnemyBird.h" />

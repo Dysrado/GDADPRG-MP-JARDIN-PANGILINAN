@@ -32,6 +32,7 @@ void TextureManager::loadAll() {
 	loadTexture("ground3", "Media/Textures/Dino/ground3.png");
 	loadTexture("mainMenu", "Media/Textures/Dino/MainMenu.png");
 	loadTexture("dino", "Media/Textures/Dino/dino-idle.png");
+	loadTexture("heart", "Media/Textures/UI/bigHeart.png");
 	sf::Texture* bgTex;
 	bgTex = GetTexture("ground");
 	bgTex->setRepeated(true);
