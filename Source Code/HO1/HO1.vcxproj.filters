@@ -168,6 +168,21 @@
     <ClCompile Include="UI\PlayerHearts.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Screens\LevelSelectorScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Screens\DefeatScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\DefeatScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\LevelSelectorScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Screens\VictoryScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -324,6 +339,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UI\PlayerHearts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\LevelSelectorScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\DefeatScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\DefeatScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\LevelSelectorScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\VictoryScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

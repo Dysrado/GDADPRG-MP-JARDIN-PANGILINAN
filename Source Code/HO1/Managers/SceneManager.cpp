@@ -2,6 +2,8 @@
 
 std::string SceneManager::MAIN_MENU_SCENE_NAME = "MainMenuScene";
 std::string SceneManager::VICTORY_MENU_SCENE_NAME = "VictoryScene";
+std::string SceneManager::LEVEL_SELECTOR_SCENE_NAME = "LevelSelectorScene";
+std::string SceneManager::DEFEAT_SCENE_NAME = "DefeatScene";
 std::string SceneManager::LEVEL_1_NAME = "Level1";
 std::string SceneManager::LEVEL_2_NAME = "Level2";
 std::string SceneManager::LEVEL_3_NAME = "Level3";
@@ -59,4 +61,9 @@ int SceneManager::getLives()
 void SceneManager::reduceLives()
 {
 	playerLives -= 1;;
+}
+
+void SceneManager::resetLives()
+{
+	playerLives = 4;
 }

@@ -10,6 +10,8 @@ class SceneManager
 public:
 	static std::string MAIN_MENU_SCENE_NAME;
 	static std::string VICTORY_MENU_SCENE_NAME;
+	static std::string LEVEL_SELECTOR_SCENE_NAME;
+	static std::string DEFEAT_SCENE_NAME;
 	static std::string LEVEL_1_NAME;
 	static std::string LEVEL_2_NAME;
 	static std::string LEVEL_3_NAME;
@@ -24,6 +26,7 @@ public:
 	std::string getActiveSceneName();
 	int getLives();
 	void reduceLives();
+	void resetLives();
 
 private:
 	SceneManager() {};

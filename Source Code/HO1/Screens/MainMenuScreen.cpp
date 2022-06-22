@@ -73,7 +73,7 @@ void MainMenuScreen::onButtonClick(UIButton* button)
 	}
 	else if (button->getName() == "button_1") {
 		//GameObjectManager::getInstance()->deleteObjectByName("PauseMenu");
-		SceneManager::getInstance()->loadScene(SceneManager::LEVEL_1_NAME);
+		SceneManager::getInstance()->loadScene(SceneManager::LEVEL_SELECTOR_SCENE_NAME);
 	}
 }
 

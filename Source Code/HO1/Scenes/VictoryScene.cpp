@@ -1,5 +1,5 @@
 #include "VictoryScene.h"
-#include "../Screens/MainMenuScreen.h"
+#include "../Screens/VictoryScreen.h"
 
 VictoryScene::VictoryScene() : AScene("VictoryScene")
 {
@@ -18,8 +18,9 @@ void VictoryScene::onLoadResources()
 
 void VictoryScene::onLoadObjects()
 {
-	MainMenuScreen* menuScreen = new MainMenuScreen("MainMenuScreen");
-	this->registerObject(menuScreen);
+	VictoryScreen* victoryScreen = new VictoryScreen("VictoryScreen");
+	//MainMenuScreen* menuScreen = new MainMenuScreen("MainMenuScreen");
+	this->registerObject(victoryScreen);
 }
 
 void VictoryScene::OnUnloadResources()

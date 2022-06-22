@@ -25,6 +25,8 @@ private:
 	float displacement = 0.f;
 	PlayerInputController* inputController;
 	bool isCollided = false;
+	sf::SoundBuffer* soundBuffer;
+	sf::Sound sound;
 	
 };
 

@@ -18,11 +18,11 @@ VictoryMenu::~VictoryMenu()
 void VictoryMenu::initialize()
 {
 	sf::Sprite* sprite = new sf::Sprite();
-	sprite->setTexture(*TextureManager::getInstance()->GetTexture("ui_bg"));
+	sprite->setTexture(*TextureManager::getInstance()->GetTexture("gray"));
 	sf::Vector2u textureSize = sprite->getTexture()->getSize();
 	sprite->setOrigin(textureSize.x / 2, textureSize.y / 2);
 
-	Renderer* renderer = new Renderer("Victory");
+	Renderer* renderer = new Renderer("VictoryMenu");
 	renderer->assignDrawable(sprite);
 	this->attachComponent(renderer);
 
@@ -89,7 +89,7 @@ void VictoryMenu::onButtonClick(UIButton* button)
 	}
 	else if (button->getName() == "button_no") {
 		//GameObjectManager::getInstance()->deleteObjectByName("PauseMenu");
-		ApplicationManager::getInstance()->applicationQuit();
+		SceneManager::getInstance()->loadScene(SceneManager::MAIN_MENU_SCENE_NAME);
 	}
 }
 

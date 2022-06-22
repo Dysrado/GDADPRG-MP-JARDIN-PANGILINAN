@@ -14,7 +14,10 @@
 #include "Managers/SceneManager.h"
 
 AirplanePlayer::AirplanePlayer(std::string name) : AGameObject(name), CollisionListener()
-{}
+{
+	soundBuffer = AudioManager::getInstance()->getBuffer("hit");
+	sound.setBuffer(*soundBuffer);
+}
 
 void AirplanePlayer::initialize(){
 	
@@ -105,12 +108,20 @@ void AirplanePlayer::onCollisionEnter(AGameObject* contact)
 		contact->getName().find("EnemyDino") != std::string::npos ||
 		contact->getName().find("EnemyBird") != std::string::npos) && isCollided == false) {
 		isCollided = true;
+		sound.play();
 		DefeatMenu* defeatMenu = new DefeatMenu("DefeatMenu");
 		GameObjectManager::getInstance()->addObject(defeatMenu);
+		
+
+		//GameObjectManager::getInstance()->findObjectByName
 		ApplicationManager::getInstance()->pauseApplication();
 		SceneManager::getInstance()->reduceLives();
+		if (SceneManager::getInstance()->getLives() == 0) {
+			//GameObjectManager::getInstance()->findObjectByName("DefeatMenu")->setEnabled(true);
+			SceneManager::getInstance()->loadScene(SceneManager::DEFEAT_SCENE_NAME);
 
-		std::cout << "Life: " << SceneManager::getInstance()->getLives() << std::endl;
+		}
+		//std::cout << "Life: " << SceneManager::getInstance()->getLives() << std::endl;
 	}
 	
 }

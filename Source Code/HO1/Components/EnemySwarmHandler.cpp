@@ -63,6 +63,6 @@ void EnemySwarmHandler::perform()
 
 void EnemySwarmHandler::randomizeInterval()
 {
-	float random = 1 + rand() % 3;
+	float random = 3 + rand() % 3;
 	SPAWN_INTERVAL = random;
 }

@@ -17,6 +17,8 @@
 #include "Scenes/Level1.h"
 #include "Scenes/Level2.h"
 #include "Scenes/Level3.h"
+#include "Scenes/LevelSelectorScene.h"
+#include "Scenes/DefeatScene.h"
 #include "Scenes/VictoryScene.h"
 #include "Physics/PhysicsManager.h"
 
@@ -40,7 +42,13 @@ Game::Game() : myWindow(sf::VideoMode(Game::WINDOW_WIDTH, Game::WINDOW_HEIGHT), 
 	SceneManager::getInstance()->registerScene(new Level2());
 	SceneManager::getInstance()->registerScene(new Level3());
 	SceneManager::getInstance()->registerScene(new VictoryScene());
+	SceneManager::getInstance()->registerScene(new DefeatScene());
+	SceneManager::getInstance()->registerScene(new LevelSelectorScene());
+
 	SceneManager::getInstance()->loadScene(SceneManager::MAIN_MENU_SCENE_NAME);
+	//SceneManager::getInstance()->loadScene(SceneManager::LEVEL_SELECTOR_SCENE_NAME);
+	//SceneManager::getInstance()->loadScene(SceneManager::VICTORY_MENU_SCENE_NAME);
+	//SceneManager::getInstance()->loadScene(SceneManager::DEFEAT_SCENE_NAME);
 
 	//SceneManager::getInstance()->loadScene(SceneManager::LEVEL_1_NAME);
 	//SceneManager::getInstance()->loadScene(SceneManager::LEVEL_2_NAME);

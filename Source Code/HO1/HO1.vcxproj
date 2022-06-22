@@ -151,6 +151,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Scenes\DefeatScene.cpp" />
+    <ClCompile Include="Screens\DefeatScreen.cpp" />
+    <ClCompile Include="Scenes\LevelSelectorScene.cpp" />
+    <ClCompile Include="Screens\LevelSelectorScreen.cpp" />
     <ClCompile Include="UI\PlayerHearts.cpp" />
     <ClCompile Include="UI\DefeatMenu.cpp" />
     <ClCompile Include="Physics\Collider.cpp" />
@@ -202,8 +206,13 @@
     <ClCompile Include="UI\UIButton.cpp" />
     <ClCompile Include="UI\VictoryMenu.cpp" />
     <ClCompile Include="Scenes\VictoryScene.cpp" />
+    <ClCompile Include="Screens\VictoryScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Scenes\DefeatScene.h" />
+    <ClInclude Include="Screens\DefeatScreen.h" />
+    <ClInclude Include="Scenes\LevelSelectorScene.h" />
+    <ClInclude Include="Screens\LevelSelectorScreen.h" />
     <ClInclude Include="UI\PlayerHearts.h" />
     <ClInclude Include="UI\DefeatMenu.h" />
     <ClInclude Include="Physics\Collider.h" />
@@ -256,6 +265,7 @@
     <ClInclude Include="UI\UIButton.h" />
     <ClInclude Include="UI\VictoryMenu.h" />
     <ClInclude Include="Scenes\VictoryScene.h" />
+    <ClInclude Include="Screens\VictoryScreen.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Media\Textures\bed0000.png" />
