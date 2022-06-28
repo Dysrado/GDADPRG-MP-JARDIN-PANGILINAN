@@ -19,6 +19,7 @@ HUD::~HUD()
 
 void HUD::initialize()
 {
+	// Initializes the Sprite, texture, buttons, texts, and UI's
 	sf::Sprite* sprite = new sf::Sprite();
 	sprite->setTexture(*TextureManager::getInstance()->GetTexture("bar"));
 	sf::Vector2u textureSize = sprite->getTexture()->getSize();
@@ -68,6 +69,7 @@ void HUD::initialize()
 
 void HUD::update(sf::Time deltaTime)
 {
+	// Updates the text depending on the displacement
 	movement = (BGMovement*)GameObjectManager::getInstance()->findObjectByName("BGObject")->findComponentByName("myBGMovement");
 	int displacement = movement->getDisplacement();
 
@@ -88,8 +90,7 @@ void HUD::levelCleared()
 
 void HUD::onButtonClick(UIButton* button)
 {
-	if (!ApplicationManager::getInstance()->isPaused()) {
-		//std::cout << button->getName() << " has been pressed" << std::endl;
+	if (!ApplicationManager::getInstance()->isPaused()) { // Pauses the game if the button is pressed and the game is not already paused
 		GameObjectManager::getInstance()->findObjectByName("PauseMenu")->setEnabled(true);
 		ApplicationManager::getInstance()->pauseApplication();
 	}

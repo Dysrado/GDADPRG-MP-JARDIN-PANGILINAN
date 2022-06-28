@@ -9,6 +9,7 @@
 
 EnemySwarmHandler::EnemySwarmHandler(int numEnemies, std::string name, AGameObject* parent, int type) : AComponent(name, Script)
 {
+	// Depending on the parameter "type" it chooses which enemy to use for the enemyPool
 	if (type == 3) {
 		enemyPool = new GameObjectPool(
 			ObjectPoolHolder::ENEMY_POOL_TAG,
@@ -43,26 +44,24 @@ EnemySwarmHandler::~EnemySwarmHandler()
 void EnemySwarmHandler::perform()
 {
 	GameObjectPool* enemyPool = ObjectPoolHolder::getInstance()->getPool(ObjectPoolHolder::ENEMY_POOL_TAG);
-	//BGMovement* movement = (BGMovement*)GameObjectManager::getInstance()->findObjectByName("BGObject")->findComponentByName("myBGMovement");
-	//float displacement = movement->getDisplacement();
 	this->ticks += this->deltaTime.asSeconds();
 
-	if (this->ticks > SPAWN_INTERVAL) {
+	if (this->ticks > SPAWN_INTERVAL) { // Spawns each enemies on a time interval
 		this->ticks = 0.0f;
 		randomizeInterval();
 		enemyPool->requestPoolable();
 	}
 
-	/*if (std::remainder(displacement, 0.7) == 0) {
-		enemyPool->requestPoolable();
-		std::cout << "BOOOOOOOOOOOOOOM" << std::endl;
-	}*/
-	//std::cout << displacement << std::endl;
-
 }
 
 void EnemySwarmHandler::randomizeInterval()
 {
-	float random = 3 + rand() % 3;
-	SPAWN_INTERVAL = random;
+	// Randomizes the Spawn Pattern
+	float random = 1 + rand() % 2;
+
+	if (random == 2) {
+		enemyPool->requestPoolable();
+		enemyPool->requestPoolable();
+		enemyPool->requestPoolable();
+	}
 }

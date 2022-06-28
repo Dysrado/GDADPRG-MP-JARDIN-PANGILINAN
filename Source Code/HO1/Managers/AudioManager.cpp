@@ -12,6 +12,7 @@ AudioManager* AudioManager::getInstance() {
 }
 
 void AudioManager::loadAll() {
+	// Loads the sfx on from the media folder
 	loadBuffer("hit", "Media/Audio/hit.wav");
 	loadBuffer("jump", "Media/Audio/jump.wav");
 	loadBuffer("reach", "Media/Audio/reach.wav");

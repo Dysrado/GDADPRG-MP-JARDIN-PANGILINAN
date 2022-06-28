@@ -23,12 +23,11 @@ EnemyDino::~EnemyDino() {
 
 
 void EnemyDino::initialize() {
-
+	// Gets the JSON file
 	FILE* file = fopen("Media/Textures/Spritesheet/dino_final_sheet.json", "rb");
 
 	sf::IntRect frame;
 	sf::Vector2u textureSize;
-	//assert(file != 0);
 	if (file == 0) {
 		std::cout << "Could not open file\n";
 	}
@@ -59,9 +58,7 @@ void EnemyDino::initialize() {
 	sprite->setScale(-1, 1); // flips the image
 	this->setPosition(Game::WINDOW_WIDTH / 2, 0);
 
-	//this->getTransformable()->move(rand() % SPAWN_RANGE - rand() % SPAWN_RANGE, 0);
 	this->getTransformable()->move(LOCATION, 0);
-	//this->getTransformable()->setRotation(180);
 
 	Renderer* renderer = new Renderer("EnemyDinoSprite");
 	renderer->assignDrawable(sprite);
@@ -90,8 +87,7 @@ void EnemyDino::onActivate() {
 	PhysicsManager::getInstance()->trackObject(this->collider);
 
 	this->setPosition(0, Game::WINDOW_HEIGHT / 2);
-	//this->getTransformable()->move(Game::WINDOW_WIDTH, rand() % SPAWN_RANGE - rand() % SPAWN_RANGE);
-	this->getTransformable()->move(Game::WINDOW_WIDTH + 100, LOCATION);
+	this->getTransformable()->move(Game::WINDOW_WIDTH + 100, LOCATION); // Spawns/Moves the Enemy Dino to the right side of the screen
 }
 
 APoolable* EnemyDino::clone()

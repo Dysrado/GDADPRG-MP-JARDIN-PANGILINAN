@@ -15,6 +15,7 @@ PlayerHearts::~PlayerHearts()
 
 void PlayerHearts::initialize()
 {
+	// Initializes the heart sprite, texture and renderer
 	this->sprite = new sf::Sprite();
 	sprite->setTexture(*TextureManager::getInstance()->GetTexture("heart"));
 	sf::Vector2u textureSize = sprite->getTexture()->getSize();

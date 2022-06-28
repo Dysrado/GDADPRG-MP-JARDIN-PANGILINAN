@@ -11,20 +11,13 @@ TextureManager* TextureManager::getInstance() {
 	return sharedInstance;
 }
 
-void TextureManager::TestFunction() {
-	std::cout << "Hellow mr simpleton\n";
-}
 
 void TextureManager::loadAll() {
-	//loadTexture("desert_bg", "Media/Textures/Desert.png");
-	//loadTexture("eagle", "Media/Textures/Eagle.png");
-	//loadTexture("raptor", "Media/Textures/Raptor.png");
+	// Loads all of the Textures
 	loadTexture("ui_bg", "Media/Textures/UI/f2.png");
 	loadTexture("btn_normal", "Media/Textures/UI/b_normal.png");
 	loadTexture("btn_pressed", "Media/Textures/UI/b_pressed.png");
 	loadTexture("bar", "Media/Textures/UI/bar_3.png");
-	//loadTexture("avenger", "Media/Textures/Avenger.png");
-	//loadTexture("dota2_sheet", "Media/Textures/Dota2 Atlas.png");
 	loadTexture("dino_sheet", "Media/Textures/Spritesheet/dino_final_sheet.png");
 	loadTexture("coin", "Media/Textures/Spritesheet/coin_sheet.png");
 	loadTexture("ground", "Media/Textures/Dino/ground.png");
@@ -37,8 +30,16 @@ void TextureManager::loadAll() {
 	loadTexture("black", "Media/Textures/Dino/LevelSelect.png");
 	loadTexture("gameover", "Media/Textures/Dino/game-over.png");
 	loadTexture("gray", "Media/Textures/Dino/gray.png");
+
+	// Sets the backgrounds to repeated to make it look seamless
 	sf::Texture* bgTex;
 	bgTex = GetTexture("ground");
+	bgTex->setRepeated(true);
+	sf::Texture* bgTex2;
+	bgTex = GetTexture("ground2");
+	bgTex->setRepeated(true);
+	sf::Texture* bgTex3;
+	bgTex = GetTexture("ground3");
 	bgTex->setRepeated(true);
 	
 }
@@ -50,7 +51,7 @@ void TextureManager::loadTexture(std::string key, std::string path) {
 }
 
 sf::Texture* TextureManager::GetTexture(std::string key) {
-	if(textureMap[key] != NULL){
+	if(textureMap[key] != NULL){ // Finds the texture in the texture HashMap
 		return textureMap[key];
 	}
 	else {

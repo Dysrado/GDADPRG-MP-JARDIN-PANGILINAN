@@ -23,12 +23,11 @@ EnemyBird::~EnemyBird() {
 
 
 void EnemyBird::initialize() {
-
+	// Opens the JSON File
 	FILE* file = fopen("Media/Textures/Spritesheet/dino_final_sheet.json", "rb");
 
 	sf::IntRect frame;
 	sf::Vector2u textureSize;
-	//assert(file != 0);
 	if (file == 0) {
 		std::cout << "Could not open file\n";
 	}
@@ -41,7 +40,7 @@ void EnemyBird::initialize() {
 		fclose(file);
 
 		rapidjson::Value& icon = doc["frames"];
-		for (int i = 1; i <= 2; i++) {
+		for (int i = 1; i <= 2; i++) { // Creates a list of coordinates for the textures in the sprite sheet
 			std::string index_str = "bird-" + std::to_string(i) + ".png";
 			frame.left = icon[index_str.c_str()]["frame"]["x"].GetInt();
 			frame.top = icon[index_str.c_str()]["frame"]["y"].GetInt();
@@ -60,15 +59,14 @@ void EnemyBird::initialize() {
 	this->setPosition(Game::WINDOW_WIDTH / 2, 0);
 
 	int random = 1 + rand() % 2;
-	if (random == 1) {
+	if (random == 1) { // Randomizes it if it spawns in a up or down position
 		LOCATION = 100;
 	}
 	else{
 		LOCATION = 225;
 	}
-	//this->getTransformable()->move(rand() % SPAWN_RANGE - rand() % SPAWN_RANGE, 0);
+
 	this->getTransformable()->move(LOCATION, 0);
-	//this->getTransformable()->setRotation(180);
 
 	Renderer* renderer = new Renderer("EnemyBirdSprite");
 	renderer->assignDrawable(sprite);
@@ -99,9 +97,8 @@ void EnemyBird::onActivate() {
 	PhysicsManager::getInstance()->trackObject(this->collider);
 
 	this->setPosition(0, Game::WINDOW_HEIGHT / 2);
-	//this->getTransformable()->move(Game::WINDOW_WIDTH, rand() % SPAWN_RANGE - rand() % SPAWN_RANGE);
 	int random = 1 + rand() % 2;
-	if (random == 1) {
+	if (random == 1) { // Randomizes it if it spawns in a up or down position
 		LOCATION = 100;
 	}
 	else {
