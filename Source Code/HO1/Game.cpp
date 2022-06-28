@@ -3,7 +3,6 @@
 #include "Game.h"
 #include <iostream>
 
-#include "AirplaneSupport.h"
 #include "Screens/MainMenuScreen.h"
 #include "Managers/FontManager.h"
 #include "Managers/ApplicationManager.h"
@@ -105,18 +104,6 @@ void Game::Render()
 	this->myWindow.display();
 }
 
-//
-//void Game::createEntity(std::string key, float x, float y)
-//{
-//	Entity* entity = new Entity();
-//
-//	sf::Texture* myTexture;
-//	myTexture = TextureManager::getInstance()->GetTexture(key);
-//	entity->SetTexture(*myTexture);
-//	entity->GetSprite()->setPosition(x, y);
-//	entity->rootTexName = key;
-//	entity->frames = 7;
-//	myEntityList.push_back(entity);
-//}
+
 
 

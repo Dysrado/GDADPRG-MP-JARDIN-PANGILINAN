@@ -78,6 +78,10 @@ void LevelSelectorScreen::initialize()
 	this->button_4text->setSize(64);
 	button_4text->setText("EXIT");
 	this->button4->setButtonListener(this);
+	if (music.openFromFile("Media/Audio/LevelSelectBGM.ogg"))
+		music.setVolume(15.f);
+	music.play();
+	music.setLoop(true);
 }
 
 void LevelSelectorScreen::onButtonClick(UIButton* button)

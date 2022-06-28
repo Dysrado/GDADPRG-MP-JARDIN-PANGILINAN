@@ -3,6 +3,7 @@
 #include "Components/BGMovement.h"
 #include "Components/PlayerInputController.h"
 #include "Components/EnemyInputController.h"
+#include "Managers/SceneManager.h"
 
 BGObject::BGObject(std::string name) : AGameObject(name){}
 
@@ -11,17 +12,16 @@ void BGObject::initialize()
 	std::cout << "Declared as " << this->getName() << "\n";
 
 	sprite = new sf::Sprite();
-	int random = rand() % 3;
-	if (random == 0) {
-		sprite->setTexture(*TextureManager::getInstance()->GetTexture("ground2"));
-	}
-	else if (random == 1) {
-		sprite->setTexture(*TextureManager::getInstance()->GetTexture("ground3"));
-	}
-	else {
+	
+	if (SceneManager::getInstance()->getActiveSceneName() == "Level1") {
 		sprite->setTexture(*TextureManager::getInstance()->GetTexture("ground"));
 	}
-	//sprite->setTexture(*TextureManager::getInstance()->GetTexture("ground"));
+	else if (SceneManager::getInstance()->getActiveSceneName() == "Level2") {
+		sprite->setTexture(*TextureManager::getInstance()->GetTexture("ground3"));
+	}
+	else if (SceneManager::getInstance()->getActiveSceneName() == "Level3") {
+		sprite->setTexture(*TextureManager::getInstance()->GetTexture("ground2"));
+	}
 	sf::Vector2u textureSize = this->sprite->getTexture()->getSize();
 	sprite->setTextureRect(sf::IntRect(0, 0, textureSize.x * 4, textureSize.y));
 

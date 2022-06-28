@@ -186,7 +186,6 @@
     <ClCompile Include="Managers\ApplicationManager.cpp" />
     <ClCompile Include="Components\UIButtonInputController.cpp" />
     <ClCompile Include="Components\BGMovement.cpp" />
-    <ClCompile Include="Components\AirplaneSupportMovement.cpp" />
     <ClCompile Include="Components\AComponent.cpp" />
     <ClCompile Include="AGameObject.cpp" />
     <ClCompile Include="AirplanePlayer.cpp" />
@@ -246,7 +245,6 @@
     <ClInclude Include="Components\UIButtonInputController.h" />
     <ClInclude Include="UI\ButtonListener.h" />
     <ClInclude Include="Components\BGMovement.h" />
-    <ClInclude Include="Components\AirplaneSupportMovement.h" />
     <ClInclude Include="Components\AComponent.h" />
     <ClInclude Include="AGameObject.h" />
     <ClInclude Include="AirplanePlayer.h" />

@@ -3,6 +3,8 @@
 #include "../AGameObject.h"
 #include "../UI/UIButton.h"
 #include "../UI/UIText.h"
+#include "../Managers/AudioManager.h"
+
 
 class MainMenuScreen : public AGameObject, public ButtonListener
 {
@@ -19,5 +21,6 @@ private:
 
 	void onButtonClick(UIButton* button);
 	void onButtonReleased(UIButton* button);
+	sf::Music music;
 };
 

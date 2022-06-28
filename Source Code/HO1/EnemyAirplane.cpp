@@ -107,10 +107,7 @@ APoolable* EnemyAirplane::clone()
 
 void EnemyAirplane::onCollisionEnter(AGameObject* contact)
 {
-	/*if (contact->getName().find("PlaneObject") != std::string::npos) {
-		std::cout << "COLLIDING\n";
-
-	}*/
+	
 	
 }
 

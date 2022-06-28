@@ -27,8 +27,6 @@ void VictoryScreen::initialize()
 	this->setPosition(Game::WINDOW_WIDTH / 2, Game::WINDOW_HEIGHT / 2);
 
 
-	// scales the whole menu
-	//this->getTransformable()->setScale(0.5f, 0.5f);
 
 	sf::Texture* btnNormal = TextureManager::getInstance()->GetTexture("btn_normal");
 	sf::Texture* btnPressed = TextureManager::getInstance()->GetTexture("btn_pressed");
@@ -65,7 +63,6 @@ void VictoryScreen::onButtonClick(UIButton* button)
 		ApplicationManager::getInstance()->applicationQuit();
 	}
 	else if (button->getName() == "button_1") {
-		//GameObjectManager::getInstance()->deleteObjectByName("PauseMenu");
 		SceneManager::getInstance()->loadScene(SceneManager::MAIN_MENU_SCENE_NAME);
 	}
 }

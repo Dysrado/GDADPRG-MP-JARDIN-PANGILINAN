@@ -78,15 +78,6 @@ void HUD::update(sf::Time deltaTime)
 	AGameObject::update(deltaTime);
 }
 
-void HUD::levelCleared()
-{
-	/*movement = (BGMovement*)GameObjectManager::getInstance()->findObjectByName("BGObject")->findComponentByName("myBGMovement");
-	if (movement->goalPoint() ==  true) {
-
-		ApplicationManager::getInstance()->pauseApplication();
-		GameObjectManager::getInstance()->findObjectByName("VictoryMenu")->setEnabled(true);
-	}*/
-}
 
 void HUD::onButtonClick(UIButton* button)
 {
@@ -98,5 +89,5 @@ void HUD::onButtonClick(UIButton* button)
 
 void HUD::onButtonReleased(UIButton* button)
 {
-	//std::cout << button->getName() << std::endl;
+	
 }

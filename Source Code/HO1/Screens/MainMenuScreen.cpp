@@ -63,15 +63,20 @@ void MainMenuScreen::initialize()
 	this->button_2text->setSize(64);
 	button_2text->setText("EXIT");
 	this->button2->setButtonListener(this);
+	if (music.openFromFile("Media/Audio/Title.ogg"))
+		music.setVolume(15.f);
+	music.play();
 }
 
 void MainMenuScreen::onButtonClick(UIButton* button)
 {
 	if (button->getName() == "button_2") { // Quits the game
 		ApplicationManager::getInstance()->applicationQuit();
+		music.stop();
 	}
 	else if (button->getName() == "button_1") { // Goes to the Level Selector Scene
 		SceneManager::getInstance()->loadScene(SceneManager::LEVEL_SELECTOR_SCENE_NAME);
+		music.stop();
 	}
 }
 

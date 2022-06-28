@@ -69,26 +69,27 @@ void VictoryMenu::initialize()
 
 void VictoryMenu::onButtonClick(UIButton* button)
 {
-	if (button->getName() == "button_yes") {
-			/*std::cout << "Moved to level 2\n";
-
-		//SceneManager::getInstance()->unloadScene();*/
+	if (button->getName() == "button_yes") {//Moves scene to the next level accordingly and stops music
+			
 		if (SceneManager::getInstance()->getActiveSceneName() == "Level1") {
-			//SceneManager::getInstance()->unloadScene();
+			music.stop();
 			SceneManager::getInstance()->loadScene(SceneManager::LEVEL_2_NAME);
 		}
 		else if (SceneManager::getInstance()->getActiveSceneName() == "Level2") {
+			music.stop();
 			SceneManager::getInstance()->unloadScene();
 			SceneManager::getInstance()->loadScene(SceneManager::LEVEL_3_NAME);
 		}
 		else if (SceneManager::getInstance()->getActiveSceneName() == "Level3") {
+			music.stop();
 			SceneManager::getInstance()->unloadScene();
 			SceneManager::getInstance()->loadScene(SceneManager::VICTORY_MENU_SCENE_NAME);
 		}
 
 	}
 	else if (button->getName() == "button_no") {
-		//GameObjectManager::getInstance()->deleteObjectByName("PauseMenu");
+		
+		music.stop();
 		SceneManager::getInstance()->loadScene(SceneManager::MAIN_MENU_SCENE_NAME);
 	}
 }

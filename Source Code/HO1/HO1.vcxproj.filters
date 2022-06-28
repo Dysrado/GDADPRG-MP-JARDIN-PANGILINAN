@@ -42,9 +42,6 @@
     <ClCompile Include="Components\AComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Components\AirplaneSupportMovement.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Components\PlayerMovement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -207,9 +204,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Components\AComponent.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Components\AirplaneSupportMovement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Components\PlayerMovement.h">

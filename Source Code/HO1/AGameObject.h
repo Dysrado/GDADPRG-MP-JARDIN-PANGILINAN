@@ -27,13 +27,11 @@ public:
 	AComponent* findComponentOfType(AComponent::ComponentType type, std::string name);
 
 	std::vector <AComponent*> getComponentsOfType(AComponent::ComponentType type);
-	/*std::vector <AComponent*> getComponentsOfTypeRecursive(AComponent::ComponentType type);*/
 
 	sf::Transformable* getTransformable();
 
 	sf::Transform getGlobalTransform();
 	AGameObject* getParent();
-	//sf::Sprite* getSprite();
 	
 
 protected:

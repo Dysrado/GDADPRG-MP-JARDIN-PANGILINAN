@@ -1,5 +1,6 @@
 #pragma once
 #include "AScene.h"
+#include "../Managers/AudioManager.h"
 class LevelSelectorScene
 	: public AScene
 {
@@ -11,6 +12,7 @@ public:
 	void onLoadObjects();
 
 	void OnUnloadResources();
-
+private:
+	sf::Music music;
 };
 

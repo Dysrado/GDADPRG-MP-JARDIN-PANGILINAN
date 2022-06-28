@@ -47,7 +47,6 @@ void BGMovement::perform()
 	}
 	// Checks if the displacement is enough for a goal/win
 	if (displacement >= GOAL_POINT) {
-		std::cout << "YOU WIN!!!\n";
 		VictoryMenu* victoryMenu = new VictoryMenu("VictoryMenu");
 		GameObjectManager::getInstance()->addObject(victoryMenu);
 		ApplicationManager::getInstance()->pauseApplication();

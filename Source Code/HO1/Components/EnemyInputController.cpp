@@ -44,12 +44,7 @@ void EnemyInputController::perform() {
 		break;
 
 
-		/*case sf::Keyboard::P:
-			ApplicationManager::getInstance()->pauseApplication();
-			break;
-		case sf::Keyboard::R:
-			ApplicationManager::getInstance()->resumeApplication();
-			break;*/
+
 
 	}
 }

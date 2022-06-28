@@ -4,9 +4,10 @@
 #include "../Components/EnemySwarmHandler.h"
 #include "../UI/HUD.h"
 #include "../EmptyGameObject.h"
-#include "../AirplaneSupport.h"
 #include "../AirplanePlayer.h"
 #include "../BGObject.h"
+#include "../Managers/AudioManager.h"
+
 
 class Level1Screen : public AGameObject
 {
@@ -26,5 +27,6 @@ private:
 
 	EmptyGameObject* enemiesManager;
 	EmptyGameObject* physicsManager;
+	sf::Music music;
 };
 

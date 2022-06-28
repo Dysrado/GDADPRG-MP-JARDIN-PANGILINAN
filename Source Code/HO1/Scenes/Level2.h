@@ -10,6 +10,7 @@ public:
 	void onLoadObjects();
 
 	void OnUnloadResources();
+private:
 
 };
 

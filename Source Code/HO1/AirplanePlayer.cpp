@@ -28,7 +28,7 @@ void AirplanePlayer::initialize(){
 
 	sf::IntRect frame;
 	sf::Vector2u textureSize;
-	//assert(file != 0);
+	
 	if (file == 0) {
 		std::cout << "Could not open file\n";
 	}
@@ -81,8 +81,6 @@ void AirplanePlayer::initialize(){
 
 void AirplanePlayer::update(sf::Time deltaTime) {
 	
-	//PhysicsManager::getInstance()->trackObject(this->collider);
-	//PlayerInputController* inputController = new PlayerInputController("MyPlayerInput", displacement);
 	if (inputController->isLeft() || inputController->isRight()) {
 		if (this->animClock.getElapsedTime().asSeconds() >= 0.2f) {
 			this->frameCtr += 1;
@@ -98,7 +96,7 @@ void AirplanePlayer::update(sf::Time deltaTime) {
 		this->sprite->setTextureRect(this->frames[frameCtr]);
 	}
 	AGameObject::update(deltaTime);
-	//if(this->sprite->getGlobalBounds().intersects(Game))
+	
 }
 
 void AirplanePlayer::onCollisionEnter(AGameObject* contact)
@@ -113,15 +111,15 @@ void AirplanePlayer::onCollisionEnter(AGameObject* contact)
 		GameObjectManager::getInstance()->addObject(defeatMenu);
 		
 
-		//GameObjectManager::getInstance()->findObjectByName
+		
 		ApplicationManager::getInstance()->pauseApplication();
 		SceneManager::getInstance()->reduceLives();
 		if (SceneManager::getInstance()->getLives() == 0) {
-			//GameObjectManager::getInstance()->findObjectByName("DefeatMenu")->setEnabled(true);
+		
 			SceneManager::getInstance()->loadScene(SceneManager::DEFEAT_SCENE_NAME);
 
 		}
-		//std::cout << "Life: " << SceneManager::getInstance()->getLives() << std::endl;
+	
 	}
 	
 }

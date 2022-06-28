@@ -32,4 +32,9 @@ void Level2Screen::initialize()
 	hud = new HUD("HUD");
 	GameObjectManager::getInstance()->addObject(hud);
 	ApplicationManager::getInstance()->resumeApplication();
+	if (music.openFromFile("Media/Audio/BGM2.ogg"))
+		music.setVolume(15.f);
+	music.play();
+	music.setLoop(true);
+
 }

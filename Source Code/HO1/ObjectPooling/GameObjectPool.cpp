@@ -54,7 +54,6 @@ APoolable* GameObjectPool::requestPoolable()
 	else {
 		releasePoolable(this->usedObjects[0]);
 		std::cout << "No more poolable " << this->_objectCopy->getName() << " available!\n";
-		//releasePoolableBatch(usedObjects);
 		return NULL;
 	}
 }

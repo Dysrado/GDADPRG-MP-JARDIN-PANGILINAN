@@ -18,8 +18,8 @@ void VictoryScene::onLoadResources()
 
 void VictoryScene::onLoadObjects()
 {
+	// Instantiates the Victory Screen along with the Audio
 	VictoryScreen* victoryScreen = new VictoryScreen("VictoryScreen");
-	//MainMenuScreen* menuScreen = new MainMenuScreen("MainMenuScreen");
 	this->registerObject(victoryScreen);
 }
 

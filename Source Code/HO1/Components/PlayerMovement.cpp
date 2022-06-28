@@ -5,6 +5,7 @@
 #include "../Game.h"
 
 PlayerMovement::PlayerMovement(std::string name) : AComponent(name, Script){
+	//sets sound buffers
 	soundBuffer = AudioManager::getInstance()->getBuffer("jump");
 	sound.setBuffer(*soundBuffer);
 }
@@ -21,6 +22,7 @@ void PlayerMovement::perform() {
 	}
 
 	sf::Vector2f offset(0.f, 0.f);
+	//can only jump if the player is on the ground
 	if (inputController->isUp() && playerTransform->getPosition().y == (Game::WINDOW_HEIGHT / 2) + 150.f) {
 		clock.restart();
 		jump = true;
@@ -31,11 +33,11 @@ void PlayerMovement::perform() {
 		offset.y -= this->SPEED_MULTIPLIER;
 		playerTransform->move(offset * deltaTime.asSeconds());
 	}
+	
 	if (elapsed.asSeconds() > 1.0f && jump == true){
-		
 		elapsed = clock.getElapsedTime();
 	}
-
+	//moves player back down
 	if (playerTransform->getPosition().y != (Game::WINDOW_HEIGHT / 2) + 150.f) {
 		offset.y += this->SPEED_MULTIPLIER;
 		playerTransform->move(offset * deltaTime.asSeconds());

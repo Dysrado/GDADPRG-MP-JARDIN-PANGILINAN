@@ -18,9 +18,7 @@ void Level1::onLoadObjects()
 	// Instantiates the Screen/Level along with the Audio
 	Level1Screen* screen = new Level1Screen("Level1Screen");
 	this->registerObject(screen);
-	if (music.openFromFile("Media/Audio/BGM.ogg"))
-		music.setVolume(25.f);
-	music.play();
+	
 }
 
 void Level1::OnUnloadResources()

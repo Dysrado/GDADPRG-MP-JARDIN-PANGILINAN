@@ -9,9 +9,7 @@ AGameObject::AGameObject(std::string name)
 
 AGameObject::~AGameObject()
 {
-	//if (this->sprite != NULL) {
-	//	delete this->sprite;
-	//}
+	
 	for (int i = 0; i < this->componentList.size(); i++) {
 		delete this->componentList[i];
 	}
@@ -181,20 +179,7 @@ std::vector<AComponent*> AGameObject::getComponentsOfType(AComponent::ComponentT
 	return foundList;
 }
 
-//std::vector<AComponent*> AGameObject::getComponentsOfTypeRecursive(AComponent::ComponentType type)
-//{
-//	std::vector<AComponent*> foundList;
-//	for (int i = 0; i < this->componentList.size(); i++) {
-//		if (this->componentList[i]->getType() == type) {
-//			foundList.push_back(this->componentList[i]);
-//		}
-//	}
-//
-//	for (int i = 0; i < this->childList.size(); i++) {
-//		foundList = this->getComponentsRecursiveProper(this->childList[i], type, foundList);
-//	}
-//	return foundList;
-//}
+
 
 
 sf::Transformable* AGameObject::getTransformable() {

@@ -9,7 +9,6 @@ public:
 
 private:
 	sf::Sprite* sprite;
-	//BGMovement* movement = (BGMovement*)GameObjectManager::getInstance()->findObjectByName("BGObject")->findComponentByName("myBGMovement");
-	//float displacement = movement->getDisplacement();
+
 };
 

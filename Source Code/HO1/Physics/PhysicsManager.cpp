@@ -60,11 +60,8 @@ void PhysicsManager::perform() {
 			}
 		}
 	}
-
-//	std::cout << "---" << std::endl;
 	for (int i = 0; i < this->trackedObjects.size(); i++) {
-		//std::cout << this->trackedObjects[i]->getOwner()->isEnabled() << std::endl;
-		//std::cout << this->trackedObjects[i]->getOwner()->getName() << std::endl;
+		
 		this->trackedObjects[i]->setChecked(false);
 	}
 	this->cleanUpObjects();

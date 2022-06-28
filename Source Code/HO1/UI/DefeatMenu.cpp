@@ -70,13 +70,12 @@ void DefeatMenu::initialize()
 }
 
 void DefeatMenu::onButtonClick(UIButton* button)
-{
+{//On button click, will reload the scene accordingly
 	if (button->getName() == "button_yes") {
-		/*std::cout << "Moved to level 2\n";
-
-	//SceneManager::getInstance()->unloadScene();*/
+		
 		if (SceneManager::getInstance()->getActiveSceneName() == "Level1") {
 			SceneManager::getInstance()->unloadScene();
+
 			SceneManager::getInstance()->loadScene(SceneManager::LEVEL_1_NAME);
 		}
 		else if (SceneManager::getInstance()->getActiveSceneName() == "Level2") {

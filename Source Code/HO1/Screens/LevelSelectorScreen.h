@@ -3,6 +3,7 @@
 #include "../AGameObject.h"
 #include "../UI/UIButton.h"
 #include "../UI/UIText.h"
+#include "../Managers/AudioManager.h"
 class LevelSelectorScreen : public AGameObject, public ButtonListener
 {
 public:
@@ -22,6 +23,7 @@ private:
 
 	void onButtonClick(UIButton* button);
 	void onButtonReleased(UIButton* button);
+	sf::Music music;
 };
 
 

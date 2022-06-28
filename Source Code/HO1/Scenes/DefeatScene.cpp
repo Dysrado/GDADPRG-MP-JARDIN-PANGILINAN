@@ -15,6 +15,7 @@ void DefeatScene::onLoadResources()
 
 void DefeatScene::onLoadObjects()
 {
+	//Loads the defeat screen to the scene
 	DefeatScreen* defeatScreen = new DefeatScreen("DefeatScreen");
 	this->registerObject(defeatScreen);
 }

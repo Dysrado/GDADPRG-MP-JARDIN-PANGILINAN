@@ -1,6 +1,5 @@
 #pragma once
 #include "AScene.h"
-#include "../Managers/AudioManager.h"
 
 class Level1 : public AScene
 {
@@ -13,6 +12,6 @@ public:
 
 	void OnUnloadResources();
 private:
-	sf::Music music;
+
 };
 

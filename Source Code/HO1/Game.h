@@ -23,7 +23,6 @@ private:
 	void Update(sf::Time);
 	void Render();
 
-	//void createEntity(std::string key, float x, float y);
 
 	sf::RenderWindow myWindow;
 

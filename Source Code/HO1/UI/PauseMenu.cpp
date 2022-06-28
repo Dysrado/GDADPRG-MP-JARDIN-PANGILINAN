@@ -29,9 +29,6 @@ void PauseMenu::initialize()
 	this->setPosition(Game::WINDOW_WIDTH / 2, Game::WINDOW_HEIGHT / 2);
 
 
-	// scales the whole menu
-	//this->getTransformable()->setScale(0.5f, 0.5f);
-
 	sf::Texture* btnNormal = TextureManager::getInstance()->GetTexture("btn_normal");
 	sf::Texture* btnPressed = TextureManager::getInstance()->GetTexture("btn_pressed");
 
@@ -73,7 +70,6 @@ void PauseMenu::onButtonClick(UIButton* button)
 		ApplicationManager::getInstance()->applicationQuit();
 	}
 	else if (button->getName() == "button_no") {
-		//GameObjectManager::getInstance()->deleteObjectByName("PauseMenu");
 		GameObjectManager::getInstance()->findObjectByName("PauseMenu")->setEnabled(false);
 		ApplicationManager::getInstance()->resumeApplication();
 	}

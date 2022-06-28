@@ -34,6 +34,11 @@ void Level1Screen::initialize()
 	
 	ApplicationManager::getInstance()->resumeApplication();
 
+	if (music.openFromFile("Media/Audio/BGM1.ogg"))
+		music.setVolume(15.f);
+	music.play();
+	music.setLoop(true);
+
 	//PhysicsManager::getInstance()->trackObject(planeObject->collider);
 	//this->registerObject(physicsManager);
 	//PhysicsManager::getInstance()->initialize("PhysicsManager", physicsManager);

@@ -18,7 +18,7 @@ public:
 
 private:
 	sf::Sprite* sprite = new sf::Sprite();
-	//static int playerLives;
+	
 	std::vector<sf::IntRect> frames;
 	int frameCtr = 0; // index for the frame lise
 	sf::Clock animClock; // clock time for the animation

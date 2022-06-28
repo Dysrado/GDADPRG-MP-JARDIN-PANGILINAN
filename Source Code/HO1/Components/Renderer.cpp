@@ -9,9 +9,7 @@ Renderer::Renderer(std::string name) : AComponent(name, AComponent::Renderer)
 
 Renderer::~Renderer()
 {
-	/*if (this->drawable != NULL) {
-		delete this->drawable;
-	}*/
+	
 	
 	AComponent::~AComponent();
 }

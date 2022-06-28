@@ -18,8 +18,10 @@ void MainMenuScene::onLoadResources()
 
 void MainMenuScene::onLoadObjects()
 {
+	// Instantiates the Main Menu along with the Audio
 	MainMenuScreen* menuScreen = new MainMenuScreen("MainMenuScreen");
 	this->registerObject(menuScreen);
+	
 }
 
 void MainMenuScene::OnUnloadResources()

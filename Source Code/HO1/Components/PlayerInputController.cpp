@@ -20,10 +20,6 @@ void PlayerInputController::perform() {
 	
 	switch (event.key.code) {
 	// up movement
-	/*case sf::Keyboard::W:
-		this->moveUp = keyFlag;
-		break;*/
-
 	case sf::Keyboard::Space: 
 		this->moveUp = keyFlag;
 
@@ -44,15 +40,6 @@ void PlayerInputController::perform() {
 		this->moveRight = keyFlag;
 		break;
 
-		//this->moveUp = false;
-
-
-	/*case sf::Keyboard::P:
-		ApplicationManager::getInstance()->pauseApplication();
-		break;
-	case sf::Keyboard::R:
-		ApplicationManager::getInstance()->resumeApplication();
-		break;*/
 
 	}
 }

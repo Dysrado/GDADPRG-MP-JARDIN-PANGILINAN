@@ -5,6 +5,7 @@
 #include "UIText.h"
 #include "../Components/BGMovement.h"
 #include "PlayerHearts.h"
+#include "../Managers/AudioManager.h"
 
 class HUD : public AGameObject, public ButtonListener
 {
@@ -13,7 +14,6 @@ public:
 	~HUD();
 	void initialize();
 	void update(sf::Time deltaTime);
-	void levelCleared();
 private:
 	BGMovement* movement;
 	UIButton* quitButton;
@@ -26,6 +26,7 @@ private:
 
 	void onButtonClick(UIButton* button);
 	void onButtonReleased(UIButton* button);
+	sf::Music music;
 
 };
 

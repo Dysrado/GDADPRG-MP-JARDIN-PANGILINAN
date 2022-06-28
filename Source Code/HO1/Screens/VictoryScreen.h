@@ -19,5 +19,6 @@ private:
 
 	void onButtonClick(UIButton* button);
 	void onButtonReleased(UIButton* button);
+	
 };
 
