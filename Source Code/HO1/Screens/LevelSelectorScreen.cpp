@@ -45,7 +45,7 @@ void LevelSelectorScreen::initialize()
 
 	this->button2 = new UIButton("button_2", btnNormal, btnPressed);
 	this->attachChild(this->button2);
-	//button2->setPosition(0, 0);
+	
 	button2->getTransformable()->setScale(0.7f, 0.7f);
 
 	this->button_2text = new UIText("text_2");
@@ -79,7 +79,7 @@ void LevelSelectorScreen::initialize()
 	button_4text->setText("EXIT");
 	this->button4->setButtonListener(this);
 	if (music.openFromFile("Media/Audio/LevelSelectBGM.ogg"))
-		music.setVolume(15.f);
+		music.setVolume(5.f);
 	music.play();
 	music.setLoop(true);
 }
@@ -90,15 +90,12 @@ void LevelSelectorScreen::onButtonClick(UIButton* button)
 		SceneManager::getInstance()->loadScene(SceneManager::LEVEL_1_NAME);
 	}
 	else if (button->getName() == "button_2") {
-		//GameObjectManager::getInstance()->deleteObjectByName("PauseMenu");
 		SceneManager::getInstance()->loadScene(SceneManager::LEVEL_2_NAME);
 	}
 	else if (button->getName() == "button_3") {
-		//GameObjectManager::getInstance()->deleteObjectByName("PauseMenu");
 		SceneManager::getInstance()->loadScene(SceneManager::LEVEL_3_NAME);
 	}
 	else if (button->getName() == "button_4") {
-		//GameObjectManager::getInstance()->deleteObjectByName("PauseMenu");
 		SceneManager::getInstance()->loadScene(SceneManager::MAIN_MENU_SCENE_NAME);
 	}
 }

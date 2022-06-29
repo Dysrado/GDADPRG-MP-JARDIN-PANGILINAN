@@ -1,6 +1,6 @@
 #include "EnemyBehaviour.h"
 #include "../Game.h"
-#include "../EnemyAirplane.h"
+#include "../EnemyCactus.h"
 #include "EnemyInputController.h"
 
 EnemyBehaviour::EnemyBehaviour(std::string name) : AComponent(name, Script) {

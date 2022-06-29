@@ -5,10 +5,10 @@
 #include "Physics/PhysicsManager.h"
 #include "Game.h"
 
-class AirplanePlayer : public AGameObject, public CollisionListener
+class DinoPlayer : public AGameObject, public CollisionListener
 {
 public:
-	AirplanePlayer(std::string name);
+	DinoPlayer(std::string name);
 	void initialize();
 
 	void update(sf::Time deltaTime);

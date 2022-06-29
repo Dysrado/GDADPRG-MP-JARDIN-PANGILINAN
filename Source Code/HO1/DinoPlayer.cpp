@@ -1,4 +1,4 @@
-#include "AirplanePlayer.h"
+#include "DinoPlayer.h"
 #include <iostream>
 #include "TextureManager.h"
 #include "Game.h"
@@ -13,15 +13,14 @@
 #include "Managers/ApplicationManager.h"
 #include "Managers/SceneManager.h"
 
-AirplanePlayer::AirplanePlayer(std::string name) : AGameObject(name), CollisionListener()
+DinoPlayer::DinoPlayer(std::string name) : AGameObject(name), CollisionListener()
 {
 	soundBuffer = AudioManager::getInstance()->getBuffer("hit");
 	sound.setBuffer(*soundBuffer);
 }
 
-void AirplanePlayer::initialize(){
+void DinoPlayer::initialize(){
 	
-	std::cout << "Declared as " << this->getName() << std::endl;
 
 	this->setEnabled(true);
 	FILE* file = fopen("Media/Textures/Spritesheet/dino_final_sheet.json", "rb");
@@ -79,7 +78,7 @@ void AirplanePlayer::initialize(){
 	PhysicsManager::getInstance()->trackObject(this->collider);
 }
 
-void AirplanePlayer::update(sf::Time deltaTime) {
+void DinoPlayer::update(sf::Time deltaTime) {
 	
 	if (inputController->isLeft() || inputController->isRight()) {
 		if (this->animClock.getElapsedTime().asSeconds() >= 0.2f) {
@@ -99,7 +98,7 @@ void AirplanePlayer::update(sf::Time deltaTime) {
 	
 }
 
-void AirplanePlayer::onCollisionEnter(AGameObject* contact)
+void DinoPlayer::onCollisionEnter(AGameObject* contact)
 {
 	
 	if ((contact->getName().find("cactus") != std::string::npos ||
@@ -124,7 +123,7 @@ void AirplanePlayer::onCollisionEnter(AGameObject* contact)
 	
 }
 
-void AirplanePlayer::onCollisionExit(AGameObject* contact)
+void DinoPlayer::onCollisionExit(AGameObject* contact)
 {
 }
 

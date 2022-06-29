@@ -1,6 +1,6 @@
 #include "EnemySwarmHandler.h"
 #include "../ObjectPooling/ObjectPoolHolder.h"
-#include "../EnemyAirplane.h"
+#include "../EnemyCactus.h"
 #include "../EnemyDino.h"
 #include "../EnemyBird.h"
 #include "../Managers/GameObjectManager.h"
@@ -27,7 +27,7 @@ EnemySwarmHandler::EnemySwarmHandler(int numEnemies, std::string name, AGameObje
 	else {
 		enemyPool = new GameObjectPool(
 			ObjectPoolHolder::ENEMY_POOL_TAG,
-			new EnemyAirplane("cactus"), 
+			new EnemyCactus("cactus"), 
 			numEnemies,
 			parent);
 	}

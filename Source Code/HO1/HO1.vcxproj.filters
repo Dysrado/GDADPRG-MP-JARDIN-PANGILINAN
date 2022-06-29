@@ -36,7 +36,7 @@
     <ClCompile Include="BGObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AirplanePlayer.cpp">
+    <ClCompile Include="DinoPlayer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Components\AComponent.cpp">
@@ -84,7 +84,7 @@
     <ClCompile Include="Components\EnemyBehaviour.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EnemyAirplane.cpp">
+    <ClCompile Include="EnemyCactus.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ObjectPooling\APoolable.cpp">
@@ -200,7 +200,7 @@
     <ClInclude Include="BGObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AirplanePlayer.h">
+    <ClInclude Include="DinoPlayer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Components\AComponent.h">
@@ -251,7 +251,7 @@
     <ClInclude Include="Components\EnemyBehaviour.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EnemyAirplane.h">
+    <ClInclude Include="EnemyCactus.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ObjectPooling\APoolable.h">

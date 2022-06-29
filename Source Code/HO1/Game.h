@@ -6,7 +6,7 @@
 #include "Managers/GameObjectManager.h"
 #include "Managers/AudioManager.h"
 #include "BGObject.h"
-#include "AirplanePlayer.h"
+#include "DinoPlayer.h"
 
 class Game
 {

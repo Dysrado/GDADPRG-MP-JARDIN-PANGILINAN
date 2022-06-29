@@ -19,7 +19,7 @@ void Level2Screen::initialize()
 	bgObject = new BGObject("BGObject");
 	GameObjectManager::getInstance()->addObject(bgObject);
 
-	planeObject = new AirplanePlayer("PlaneObject");
+	planeObject = new DinoPlayer("PlaneObject");
 	GameObjectManager::getInstance()->addObject(planeObject);
 
 	srand(time(NULL)); // controls randomness of the enemy spawns
@@ -33,7 +33,7 @@ void Level2Screen::initialize()
 	GameObjectManager::getInstance()->addObject(hud);
 	ApplicationManager::getInstance()->resumeApplication();
 	if (music.openFromFile("Media/Audio/BGM2.ogg"))
-		music.setVolume(15.f);
+		music.setVolume(5.f);
 	music.play();
 	music.setLoop(true);
 

@@ -7,7 +7,6 @@
 
 BGMovement::BGMovement(std::string name) : AComponent(name, Script)
 {
-	std::cout << "Goal Created\n";
 	GoalPoint* goal = new GoalPoint("goal");
 	GameObjectManager::getInstance()->addObject(goal);
 }
@@ -16,7 +15,6 @@ bool BGMovement::goalPoint()
 {
 	// Checks if the displacement is enough for a goal/win
 	if (displacement >= GOAL_POINT) {
-		std::cout << "YOU WIN!!!\n";
 		return true;
 	}
 	return false;

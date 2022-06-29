@@ -4,7 +4,7 @@
 #include "../Components/EnemySwarmHandler.h"
 #include "../UI/HUD.h"
 #include "../EmptyGameObject.h"
-#include "../AirplanePlayer.h"
+#include "../DinoPlayer.h"
 #include "../BGObject.h"
 #include "../Managers/AudioManager.h"
 
@@ -19,7 +19,7 @@ public:
 private:
 	BGObject* bgObject;
 
-	AirplanePlayer* planeObject;
+	DinoPlayer* planeObject;
 
 	HUD* hud;
 

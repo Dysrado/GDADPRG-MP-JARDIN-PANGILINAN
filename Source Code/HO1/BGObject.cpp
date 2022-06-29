@@ -9,7 +9,6 @@ BGObject::BGObject(std::string name) : AGameObject(name){}
 
 void BGObject::initialize()
 {
-	std::cout << "Declared as " << this->getName() << "\n";
 
 	sprite = new sf::Sprite();
 	

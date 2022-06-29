@@ -1,4 +1,4 @@
-#include "EnemyAirplane.h"
+#include "EnemyCactus.h"
 #include "TextureManager.h"
 #include "Game.h"
 #include "Components/Renderer.h"
@@ -11,17 +11,17 @@
 #include <cstdlib>
 #include "Components/EnemyInputController.h"
 
-EnemyAirplane::EnemyAirplane(std::string name) : APoolable(name), CollisionListener() {
+EnemyCactus::EnemyCactus(std::string name) : APoolable(name), CollisionListener() {
 
 }
 
 
-EnemyAirplane::~EnemyAirplane() {
+EnemyCactus::~EnemyCactus() {
 	delete this->sprite;
 }
 
 
-void EnemyAirplane::initialize() {
+void EnemyCactus::initialize() {
 	// Reads the JSON file
 	FILE* file = fopen("Media/Textures/Spritesheet/dino_final_sheet.json", "rb");
 
@@ -86,11 +86,11 @@ void EnemyAirplane::initialize() {
 	this->attachComponent(collider);
 }
 
-void EnemyAirplane::onRelease() {
+void EnemyCactus::onRelease() {
 
 }
 
-void EnemyAirplane::onActivate() {
+void EnemyCactus::onActivate() {
 	EnemyBehaviour* behaviour = (EnemyBehaviour*)this->findComponentByName("EnemyBehaviour");
 	behaviour->reset();
 	
@@ -99,19 +99,19 @@ void EnemyAirplane::onActivate() {
 	this->getTransformable()->move(Game::WINDOW_WIDTH + 100, LOCATION);
 }
 
-APoolable* EnemyAirplane::clone()
+APoolable* EnemyCactus::clone()
 {
-	APoolable* copyObj = new EnemyAirplane(this->name);
+	APoolable* copyObj = new EnemyCactus(this->name);
 	return copyObj;
 }
 
-void EnemyAirplane::onCollisionEnter(AGameObject* contact)
+void EnemyCactus::onCollisionEnter(AGameObject* contact)
 {
 	
 	
 }
 
-void EnemyAirplane::onCollisionExit(AGameObject* contact)
+void EnemyCactus::onCollisionExit(AGameObject* contact)
 {
 }
 

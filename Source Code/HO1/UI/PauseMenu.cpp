@@ -67,7 +67,13 @@ void PauseMenu::initialize()
 void PauseMenu::onButtonClick(UIButton* button)
 {
 	if (button->getName() == "button_yes") {
-		ApplicationManager::getInstance()->applicationQuit();
+		if (SceneManager::getInstance()->getActiveSceneName() == "MainMenuScene") {
+			ApplicationManager::getInstance()->applicationQuit();
+
+		}
+		else {
+		SceneManager::getInstance()->loadScene(SceneManager::MAIN_MENU_SCENE_NAME);
+		}
 	}
 	else if (button->getName() == "button_no") {
 		GameObjectManager::getInstance()->findObjectByName("PauseMenu")->setEnabled(false);

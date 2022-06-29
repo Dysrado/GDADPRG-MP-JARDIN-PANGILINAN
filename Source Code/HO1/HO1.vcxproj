@@ -173,7 +173,7 @@
     <ClCompile Include="Managers\AudioManager.cpp" />
     <ClCompile Include="Components\EnemyBehaviour.cpp" />
     <ClCompile Include="EmptyGameObject.cpp" />
-    <ClCompile Include="EnemyAirplane.cpp" />
+    <ClCompile Include="EnemyCactus.cpp" />
     <ClCompile Include="Components\EnemySwarmHandler.cpp" />
     <ClCompile Include="ObjectPooling\ObjectPoolHolder.cpp" />
     <ClCompile Include="ObjectPooling\APoolable.cpp" />
@@ -188,7 +188,7 @@
     <ClCompile Include="Components\BGMovement.cpp" />
     <ClCompile Include="Components\AComponent.cpp" />
     <ClCompile Include="AGameObject.cpp" />
-    <ClCompile Include="AirplanePlayer.cpp" />
+    <ClCompile Include="DinoPlayer.cpp" />
     <ClCompile Include="BGObject.cpp" />
     <ClCompile Include="Components\GenericInputController.cpp" />
     <ClCompile Include="Components\PlayerInputController.cpp" />
@@ -231,7 +231,7 @@
     <ClInclude Include="Managers\AudioManager.h" />
     <ClInclude Include="Components\EnemyBehaviour.h" />
     <ClInclude Include="EmptyGameObject.h" />
-    <ClInclude Include="EnemyAirplane.h" />
+    <ClInclude Include="EnemyCactus.h" />
     <ClInclude Include="Components\EnemySwarmHandler.h" />
     <ClInclude Include="ObjectPooling\ObjectPoolHolder.h" />
     <ClInclude Include="ObjectPooling\APoolable.h" />
@@ -247,7 +247,7 @@
     <ClInclude Include="Components\BGMovement.h" />
     <ClInclude Include="Components\AComponent.h" />
     <ClInclude Include="AGameObject.h" />
-    <ClInclude Include="AirplanePlayer.h" />
+    <ClInclude Include="DinoPlayer.h" />
     <ClInclude Include="BGObject.h" />
     <ClInclude Include="Components\GenericInputController.h" />
     <ClInclude Include="Components\PlayerInputController.h" />

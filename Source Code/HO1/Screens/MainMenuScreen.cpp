@@ -4,6 +4,8 @@
 #include "../Components/Renderer.h"
 #include "../Managers/ApplicationManager.h"
 #include "../Managers/SceneManager.h"
+#include "../UI/PauseMenu.h"
+#include "../Managers/GameObjectManager.h"
 
 MainMenuScreen::MainMenuScreen(std::string name) : AGameObject(name), ButtonListener()
 {
@@ -12,15 +14,14 @@ MainMenuScreen::MainMenuScreen(std::string name) : AGameObject(name), ButtonList
 
 MainMenuScreen::~MainMenuScreen()
 {
-	/*delete this->button1;
-	delete this->button_1text;
-	delete this->button2;
-	delete this->button_2text;*/
+	
 	AGameObject::~AGameObject();
 }
 
 void MainMenuScreen::initialize()
 {
+	
+
 	sf::Sprite* sprite = new sf::Sprite();
 	sprite->setTexture(*TextureManager::getInstance()->GetTexture("mainMenu"));
 	sf::Vector2u textureSize = sprite->getTexture()->getSize();
@@ -32,16 +33,12 @@ void MainMenuScreen::initialize()
 
 	this->setPosition(Game::WINDOW_WIDTH/2, Game::WINDOW_HEIGHT/2);
 
-
-	// scales the whole menu
-	//this->getTransformable()->setScale(0.5f, 0.5f);
-
 	sf::Texture* btnNormal = TextureManager::getInstance()->GetTexture("btn_normal");
 	sf::Texture* btnPressed = TextureManager::getInstance()->GetTexture("btn_pressed");
 
 	this->button1 = new UIButton("button_1", btnNormal, btnPressed);
 	this->attachChild(this->button1);
-	button1->setPosition(-150, 150);
+	button1->setPosition(-150, 50);
 	button1->getTransformable()->setScale(0.7f, 0.7f);
 
 
@@ -54,7 +51,7 @@ void MainMenuScreen::initialize()
 	
 	this->button2 = new UIButton("button_2", btnNormal, btnPressed);
 	this->attachChild(this->button2);
-	button2->setPosition(150, 150);
+	button2->setPosition(150, 50);
 	button2->getTransformable()->setScale(0.7f, 0.7f);
 
 	this->button_2text = new UIText("text_2"); 
@@ -64,15 +61,20 @@ void MainMenuScreen::initialize()
 	button_2text->setText("EXIT");
 	this->button2->setButtonListener(this);
 	if (music.openFromFile("Media/Audio/Title.ogg"))
-		music.setVolume(15.f);
+		music.setVolume(5.f);
 	music.play();
+	PauseMenu* pauseMenu = new PauseMenu("PauseMenu");
+	GameObjectManager::getInstance()->addObject(pauseMenu);
+	GameObjectManager::getInstance()->findObjectByName("PauseMenu")->setEnabled(false);
 }
 
 void MainMenuScreen::onButtonClick(UIButton* button)
 {
 	if (button->getName() == "button_2") { // Quits the game
-		ApplicationManager::getInstance()->applicationQuit();
-		music.stop();
+		
+		//GameObjectManager::getInstance()->findObjectByName("PauseMenu2")->setEnabled(false);
+		GameObjectManager::getInstance()->findObjectByName("PauseMenu")->setEnabled(true);
+
 	}
 	else if (button->getName() == "button_1") { // Goes to the Level Selector Scene
 		SceneManager::getInstance()->loadScene(SceneManager::LEVEL_SELECTOR_SCENE_NAME);
@@ -82,5 +84,4 @@ void MainMenuScreen::onButtonClick(UIButton* button)
 
 void MainMenuScreen::onButtonReleased(UIButton* button)
 {
-	//std::cout << button->getName() << std::endl;
 }

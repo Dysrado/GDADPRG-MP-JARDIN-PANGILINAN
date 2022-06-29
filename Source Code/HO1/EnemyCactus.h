@@ -5,11 +5,11 @@
 #include "Physics/Collider.h"
 
 
-class EnemyAirplane : public APoolable, public CollisionListener
+class EnemyCactus : public APoolable, public CollisionListener
 {
 public:
-	EnemyAirplane(std::string name);
-	~EnemyAirplane();
+	EnemyCactus(std::string name);
+	~EnemyCactus();
 	void initialize();
 
 	void onRelease();

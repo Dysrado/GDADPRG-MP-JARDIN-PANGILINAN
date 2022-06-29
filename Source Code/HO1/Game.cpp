@@ -7,7 +7,7 @@
 #include "Managers/FontManager.h"
 #include "Managers/ApplicationManager.h"
 #include "UI/HUD.h"
-#include "EnemyAirplane.h"
+#include "EnemyCactus.h"
 #include "EnemyDino.h"
 #include "EmptyGameObject.h"
 #include "Components/EnemySwarmHandler.h"

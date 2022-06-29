@@ -12,7 +12,6 @@ GoalPoint::GoalPoint(std::string name) : AGameObject(name)
 void GoalPoint::initialize()
 {
 	this->setEnabled(true);
-	std::cout << "Declared as " << this->getName() << "\n";
 
 	sprite = new sf::Sprite();
 

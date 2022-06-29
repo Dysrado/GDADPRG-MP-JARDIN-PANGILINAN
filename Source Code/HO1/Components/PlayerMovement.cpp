@@ -1,6 +1,6 @@
 #include "PlayerMovement.h"
 #include "PlayerInputController.h"
-#include "../AirplanePlayer.h"
+#include "../DinoPlayer.h"
 #include <iostream>
 #include "../Game.h"
 
@@ -13,9 +13,9 @@ PlayerMovement::PlayerMovement(std::string name) : AComponent(name, Script){
 
 void PlayerMovement::perform() {
 	elapsed = clock.getElapsedTime();
-	AirplanePlayer* airplanePlayer = (AirplanePlayer*)this->getOwner();
-	PlayerInputController* inputController = (PlayerInputController*)airplanePlayer->getComponentsOfType(ComponentType::Input)[0];
-	sf::Transformable* playerTransform = airplanePlayer->getTransformable();
+	DinoPlayer* dinoPlayer = (DinoPlayer*)this->getOwner();
+	PlayerInputController* inputController = (PlayerInputController*)dinoPlayer->getComponentsOfType(ComponentType::Input)[0];
+	sf::Transformable* playerTransform = dinoPlayer->getTransformable();
 	
 	if (playerTransform == NULL || inputController == NULL) {
 		std::cout << "playerTransformable not found" << std::endl;
