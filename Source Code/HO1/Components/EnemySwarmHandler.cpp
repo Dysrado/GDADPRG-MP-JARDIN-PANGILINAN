@@ -48,20 +48,8 @@ void EnemySwarmHandler::perform()
 
 	if (this->ticks > SPAWN_INTERVAL) { // Spawns each enemies on a time interval
 		this->ticks = 0.0f;
-		randomizeInterval();
 		enemyPool->requestPoolable();
 	}
 
 }
 
-void EnemySwarmHandler::randomizeInterval()
-{
-	// Randomizes the Spawn Pattern
-	float random = 1 + rand() % 2;
-
-	if (random == 2) {
-		enemyPool->requestPoolable();
-		enemyPool->requestPoolable();
-		enemyPool->requestPoolable();
-	}
-}

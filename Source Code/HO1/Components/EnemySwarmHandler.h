@@ -9,9 +9,8 @@ public:
 	void perform();
 
 private:
-	void randomizeInterval();
 	GameObjectPool* enemyPool;
-	const float SPAWN_INTERVAL = 3.f;
+	const float SPAWN_INTERVAL = 5.f;
 	float ticks = 0.0f;
 };
 

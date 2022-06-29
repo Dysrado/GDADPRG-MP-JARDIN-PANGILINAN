@@ -20,7 +20,7 @@ public:
 	
 private:
 	sf::Sprite* sprite = new sf::Sprite();
-	const int LOCATION = 200;
+	const int LOCATION = 210;
 	int counter = 0;
 	Collider* collider;
 	

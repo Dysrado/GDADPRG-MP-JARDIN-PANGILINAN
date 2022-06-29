@@ -15,6 +15,7 @@ public:
 private:
     const float SPEED_MULTIPLIER = 100.f;
     float displacement;
-    const float GOAL_POINT = 60.f;
+    const float GOAL_POINT = 33.f;
+    bool isGoal = false;
 };
 

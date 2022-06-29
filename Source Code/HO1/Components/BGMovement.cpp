@@ -9,6 +9,7 @@ BGMovement::BGMovement(std::string name) : AComponent(name, Script)
 {
 	GoalPoint* goal = new GoalPoint("goal");
 	GameObjectManager::getInstance()->addObject(goal);
+	
 }
 
 bool BGMovement::goalPoint()
@@ -24,6 +25,12 @@ void BGMovement::perform()
 	BGObject* bgObject = (BGObject*)this->getOwner();
 	PlayerInputController* inputController = (PlayerInputController*)bgObject->getComponentsOfType(ComponentType::Input)[0];
 	sf::Transformable* bgObjectTransform = bgObject->getTransformable();
+	
+	/*if (displacement > 8.f &&  isGoal == false) {
+		isGoal = true;
+		std::cout << "Works";
+		GameObjectManager::getInstance()->findObjectByName("goal")->setEnabled(true);
+	}*/
 	// Checks if the object is NULL
 	if (bgObjectTransform == NULL) {
 		std::cout << "bgObjectTransform not found" << std::endl;
