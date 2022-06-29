@@ -82,6 +82,7 @@ void EnemyDino::onRelease() {
 }
 
 void EnemyDino::onActivate() {
+	// Places the EnemyDino on the right side off screen
 	EnemyBehaviour* behaviour = (EnemyBehaviour*)this->findComponentByName("EnemyDinoBehaviour");
 	behaviour->reset();
 	PhysicsManager::getInstance()->trackObject(this->collider);
@@ -97,6 +98,7 @@ APoolable* EnemyDino::clone()
 }
 
 void EnemyDino::update(sf::Time deltaTime) {
+	// Animates the EnemyDino
 	if (this->animClock.getElapsedTime().asSeconds() >= 0.2f) {
 		this->frameCtr += 1;
 		if (this->frameCtr >= 2) {

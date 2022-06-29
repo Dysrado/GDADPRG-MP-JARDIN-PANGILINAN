@@ -91,6 +91,7 @@ void EnemyCactus::onRelease() {
 }
 
 void EnemyCactus::onActivate() {
+	// Places it on the right side off screen
 	EnemyBehaviour* behaviour = (EnemyBehaviour*)this->findComponentByName("EnemyBehaviour");
 	behaviour->reset();
 	

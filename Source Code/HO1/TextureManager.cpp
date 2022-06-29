@@ -24,7 +24,6 @@ void TextureManager::loadAll() {
 	loadTexture("ground2", "Media/Textures/Dino/ground2.png");
 	loadTexture("ground3", "Media/Textures/Dino/ground3.png");
 	loadTexture("mainMenu", "Media/Textures/Dino/MainMenu.png");
-	loadTexture("dino", "Media/Textures/Dino/dino-idle.png");
 	loadTexture("victory", "Media/Textures/Dino/Victory.png");
 	loadTexture("heart", "Media/Textures/UI/bigHeart.png");
 	loadTexture("black", "Media/Textures/Dino/LevelSelect.png");

@@ -12,6 +12,7 @@ void BGObject::initialize()
 
 	sprite = new sf::Sprite();
 	
+	// Chooses which Background texture to use
 	if (SceneManager::getInstance()->getActiveSceneName() == "Level1") {
 		sprite->setTexture(*TextureManager::getInstance()->GetTexture("ground"));
 	}

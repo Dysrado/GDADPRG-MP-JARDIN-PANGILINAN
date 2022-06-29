@@ -1,6 +1,5 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "Entity.h"
 #include <vector>
 #include "TextureManager.h"
 #include "Managers/GameObjectManager.h"

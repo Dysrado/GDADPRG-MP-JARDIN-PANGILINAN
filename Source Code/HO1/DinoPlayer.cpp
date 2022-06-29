@@ -20,9 +20,8 @@ DinoPlayer::DinoPlayer(std::string name) : AGameObject(name), CollisionListener(
 }
 
 void DinoPlayer::initialize(){
-	
-
 	this->setEnabled(true);
+	// Gets the JSON file for the spritesheet
 	FILE* file = fopen("Media/Textures/Spritesheet/dino_final_sheet.json", "rb");
 
 	sf::IntRect frame;
@@ -80,6 +79,7 @@ void DinoPlayer::initialize(){
 
 void DinoPlayer::update(sf::Time deltaTime) {
 	
+	// Animates the player if the player moves left or right
 	if (inputController->isLeft() || inputController->isRight()) {
 		if (this->animClock.getElapsedTime().asSeconds() >= 0.2f) {
 			this->frameCtr += 1;
@@ -90,6 +90,7 @@ void DinoPlayer::update(sf::Time deltaTime) {
 			this->sprite->setTextureRect(this->frames[frameCtr]);
 		}
 	}
+	// If player jumps use this specific frame
 	if (this->transformable.getPosition().y != (Game::WINDOW_HEIGHT / 2) + 150.f) {
 		this->frameCtr = 2;
 		this->sprite->setTextureRect(this->frames[frameCtr]);
@@ -100,7 +101,7 @@ void DinoPlayer::update(sf::Time deltaTime) {
 
 void DinoPlayer::onCollisionEnter(AGameObject* contact)
 {
-	
+	// Collision Check for when the player collides with an enemy
 	if ((contact->getName().find("cactus") != std::string::npos ||
 		contact->getName().find("EnemyDino") != std::string::npos ||
 		contact->getName().find("EnemyBird") != std::string::npos) && isCollided == false) {

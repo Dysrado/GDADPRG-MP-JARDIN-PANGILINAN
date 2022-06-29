@@ -115,6 +115,7 @@ APoolable* EnemyBird::clone()
 
 
 void EnemyBird::update(sf::Time deltaTime) {
+	// Animates the EnemyBird
 	if (this->animClock.getElapsedTime().asSeconds() >= 0.3f) {
 		this->frameCtr += 1;
 		if (this->frameCtr >= 2) {
